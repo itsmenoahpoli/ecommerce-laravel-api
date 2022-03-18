@@ -5,16 +5,16 @@ namespace App\Http\Controllers\API;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-use App\Repositories\ProductRepository;
-use App\Http\Requests\Products\ProductRequest;
+use App\Repositories\OrderRepository;
+use App\Http\Requests\Orders\OrderRequest;
 
-class ProductsController extends Controller
+class OrdersController extends Controller
 {
-    protected $productRepository;
+    protected $orderRepository;
 
-    public function __construct(ProductRepository $productRepository)
+    public function __construct(OrderRepository $orderRepository)
     {
-        $this->productRepository = $productRepository;
+        $this->orderRepository = $orderRepository;
     }
 
     /**
@@ -26,7 +26,7 @@ class ProductsController extends Controller
     {
         $query = $request->query();
 
-        return $this->productRepository->getAll($query);
+        return $this->orderRepository->getAll($query);
     }
 
     /**
@@ -35,9 +35,9 @@ class ProductsController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(ProductRequest $request)
+    public function store(Request $request)
     {
-        return $this->productRepository->create($request->validated());
+        return $this->orderRepository->create($request->all());
     }
 
     /**
@@ -48,7 +48,7 @@ class ProductsController extends Controller
      */
     public function show($id)
     {
-        return $this->productRepository->get($id);
+        return $this->orderRepository->get($id);
     }
 
     /**
@@ -58,9 +58,9 @@ class ProductsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(ProductRequest $request, $id)
+    public function update(Request $request, $id)
     {
-        return $this->productRepository->update($request->validated(), $id);
+        return $this->orderRepository->get($request->all(), $id);
     }
 
     /**
@@ -71,8 +71,8 @@ class ProductsController extends Controller
      */
     public function destroy(Request $request, $id)
     {
-        $deleteType = $request->type || 'soft-delete';
+        $deleteType = $request->deleteType || 'soft';
 
-        return $this->productRepository->destroy($deleteType, $id);
+        return $this->orderRepository->destroy($deleteType, $id);
     }
 }

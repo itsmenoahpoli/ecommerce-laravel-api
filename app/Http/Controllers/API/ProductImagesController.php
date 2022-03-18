@@ -5,28 +5,16 @@ namespace App\Http\Controllers\API;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-use App\Repositories\ProductRepository;
-use App\Http\Requests\Products\ProductRequest;
-
-class ProductsController extends Controller
+class ProductImagesController extends Controller
 {
-    protected $productRepository;
-
-    public function __construct(ProductRepository $productRepository)
-    {
-        $this->productRepository = $productRepository;
-    }
-
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(Request $request)
+    public function index()
     {
-        $query = $request->query();
-
-        return $this->productRepository->getAll($query);
+        //
     }
 
     /**
@@ -35,9 +23,9 @@ class ProductsController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(ProductRequest $request)
+    public function store(Request $request)
     {
-        return $this->productRepository->create($request->validated());
+        //
     }
 
     /**
@@ -48,7 +36,7 @@ class ProductsController extends Controller
      */
     public function show($id)
     {
-        return $this->productRepository->get($id);
+        //
     }
 
     /**
@@ -58,9 +46,9 @@ class ProductsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(ProductRequest $request, $id)
+    public function update(Request $request, $id)
     {
-        return $this->productRepository->update($request->validated(), $id);
+        //
     }
 
     /**
@@ -69,10 +57,8 @@ class ProductsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Request $request, $id)
+    public function destroy($id)
     {
-        $deleteType = $request->type || 'soft-delete';
-
-        return $this->productRepository->destroy($deleteType, $id);
+        //
     }
 }

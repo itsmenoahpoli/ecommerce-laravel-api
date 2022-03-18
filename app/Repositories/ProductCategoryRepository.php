@@ -40,6 +40,7 @@ class ProductCategoryRepository extends APIErrorHandlerService implements Produc
             return response()->json($e->getMessage(), 500);
         }
     }
+
     public function get($id)
     {
         try
@@ -56,6 +57,7 @@ class ProductCategoryRepository extends APIErrorHandlerService implements Produc
             return response()->error($e->getMessage());
         }
     }
+
     public function create($payload)
     {
         try
@@ -68,6 +70,7 @@ class ProductCategoryRepository extends APIErrorHandlerService implements Produc
             return response()->error($e->getMessage());
         }
     }
+
     public function update($payload, $id)
     {
         try
@@ -82,6 +85,7 @@ class ProductCategoryRepository extends APIErrorHandlerService implements Produc
             return response()->error($e->getMessage());
         }
     }
+
     public function destroy($type, $id)
     {
         try

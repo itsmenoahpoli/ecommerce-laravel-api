@@ -2,24 +2,23 @@
 
 namespace App\Repositories;
 
-use App\Repositories\Interfaces\ProductRepositoryInterface;
-use App\Http\Resources\Products\ProductsResource;
-use App\Models\Products\Product;
+use App\Repositories\Interfaces\OrderRepositoryInterface;
+use App\Http\Resources\Products\ProductCategoriesResource;
+use App\Models\Orders\Order;
 
 use App\Services\APIErrorHandlerService;
 
-use Str;
 use Exception;
 
-class ProductRepository extends APIErrorHandlerService implements ProductRepositoryInterface
+class OrderRepository extends APIErrorHandlerService implements OrderRepositoryInterface
 {
     protected $model;
     protected $modelRelationships;
 
-    public function __construct(Product $model)
+    public function __construct(Order $model)
     {
         $this->model = $model;
-        $this->modelRelationships = ['product_categories'];
+        $this->modelRelationships = ['user'];
     }
 
     public function baseModel()
@@ -29,18 +28,13 @@ class ProductRepository extends APIErrorHandlerService implements ProductReposit
         );
     }
 
-    public function generateSku()
-    {
-        return strtoupper(Str::random(10));
-    }
-
     public function getAll($query)
     {
         try
         {
             $data = $this->baseModel()->orderBy('id', 'desc')->get();
 
-            return response()->success(ProductsResource::collection($data));
+            return response()->success(ProductCategoriesResource::collection($data));
         } catch (Exception $e)
         {
             return response()->json($e->getMessage(), 500);
@@ -68,8 +62,6 @@ class ProductRepository extends APIErrorHandlerService implements ProductReposit
     {
         try
         {
-            $payload['sku'] = $this->generateSku();
-
             $data = $this->model->create($payload);
 
             return response()->success($data, 201);
@@ -101,28 +93,6 @@ class ProductRepository extends APIErrorHandlerService implements ProductReposit
             $data = $this->model->delete($id);
 
             return response()->success($data, 204);
-        } catch (Exception $e)
-        {
-            return response()->error($e->getMessage());
-        }
-    }
-
-    public function uploadImage($payload)
-    {
-        try
-        {
-
-        } catch (Exception $e)
-        {
-            return response()->error($e->getMessage());
-        }
-    }
-
-    public function deleteImage($image)
-    {
-        try
-        {
-
         } catch (Exception $e)
         {
             return response()->error($e->getMessage());
