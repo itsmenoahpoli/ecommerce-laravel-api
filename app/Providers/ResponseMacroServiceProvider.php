@@ -26,18 +26,12 @@ class ResponseMacroServiceProvider extends ServiceProvider
     {
         // Success response macro
         Response::macro('success', function ($data, $httpStatusCode = 200) {
-            return Response::json([
-                'status' => $httpStatusCode,
-                'message' => $data
-            ], $httpStatusCode);
+            return Response::json($data, $httpStatusCode);
         });
 
         // Error response macro
-        Response::macro('error', function ($data, $httpStatusCode = 500) {
-            return Response::json([
-                'status' => $httpStatusCode,
-                'message' => $data
-            ]);
+        Response::macro('error', function ($error, $httpStatusCode = 500) {
+            return Response::json($error, $httpStatusCode);
         });
     }
 }
