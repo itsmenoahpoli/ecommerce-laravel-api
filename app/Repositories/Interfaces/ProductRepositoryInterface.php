@@ -9,6 +9,4 @@ interface ProductRepositoryInterface
     public function create($payload);
     public function update($payload, $id);
     public function destroy($id);
-    public function uploadImage($payload);
-    public function deleteImage($image);
 }

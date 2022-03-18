@@ -5,6 +5,7 @@ namespace App\Repositories;
 use App\Repositories\Interfaces\ProductRepositoryInterface;
 use App\Http\Resources\Products\ProductsResource;
 use App\Models\Products\Product;
+use App\Models\Products\ProductImage;
 
 use App\Services\APIErrorHandlerService;
 
@@ -16,10 +17,14 @@ class ProductRepository extends APIErrorHandlerService implements ProductReposit
     protected $model;
     protected $modelRelationships;
 
-    public function __construct(Product $model)
+    protected $productImageModel;
+
+    public function __construct(Product $model, ProductImage $productImageModel)
     {
         $this->model = $model;
-        $this->modelRelationships = ['product_categories'];
+        $this->modelRelationships = ['product_categories', 'product_images'];
+
+        $this->productImageModel = $productImageModel;
     }
 
     public function baseModel()
@@ -79,6 +84,11 @@ class ProductRepository extends APIErrorHandlerService implements ProductReposit
 
             $data = $this->model->create($payload);
 
+            $this->productImageModel->create([
+                'product_id' => $data->id,
+                'img_path' => env('APP_URL').':8000/images/product-images/'.$imageName
+            ]);
+
             return response()->success($data, 201);
         } catch (Exception $e)
         {
@@ -108,28 +118,6 @@ class ProductRepository extends APIErrorHandlerService implements ProductReposit
             $data = $this->model->find($id)->delete();
 
             return response()->success($data, 204);
-        } catch (Exception $e)
-        {
-            return response()->error($e->getMessage());
-        }
-    }
-
-    public function uploadImage($payload)
-    {
-        try
-        {
-
-        } catch (Exception $e)
-        {
-            return response()->error($e->getMessage());
-        }
-    }
-
-    public function deleteImage($image)
-    {
-        try
-        {
-
         } catch (Exception $e)
         {
             return response()->error($e->getMessage());
