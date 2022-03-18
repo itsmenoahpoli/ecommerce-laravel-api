@@ -38,7 +38,8 @@ class ProductRequest extends FormRequest
                     'description' => 'required|string|min:5|max:500',
                     'quantity' => 'required|integer',
                     'price' => 'required|numeric',
-                    'type' => 'string|min:2|max:64'
+                    'type' => 'string|min:2|max:64',
+                    'image' => 'required|mimes:jpg,png'
                 ];
             case 'PATCH':
             case 'PUT':

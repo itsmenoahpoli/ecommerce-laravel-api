@@ -69,6 +69,13 @@ class ProductRepository extends APIErrorHandlerService implements ProductReposit
         try
         {
             $payload['sku'] = $this->generateSku();
+            $payload['type'] = '';
+
+            $imageName = $payload['sku'].'-'.time().'.'.$payload['image']->getClientOriginalExtension();
+            $payload['image']->move(public_path('/images/product-images'), $imageName);
+
+            // After upload remove image from payload
+            array_splice($payload, 4, 1);
 
             $data = $this->model->create($payload);
 
@@ -94,11 +101,11 @@ class ProductRepository extends APIErrorHandlerService implements ProductReposit
         }
     }
 
-    public function destroy($type, $id)
+    public function destroy($id)
     {
         try
         {
-            $data = $this->model->delete($id);
+            $data = $this->model->find($id)->delete();
 
             return response()->success($data, 204);
         } catch (Exception $e)

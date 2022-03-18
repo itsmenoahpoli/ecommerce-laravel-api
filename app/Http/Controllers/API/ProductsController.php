@@ -69,10 +69,9 @@ class ProductsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Request $request, $id)
+    public function destroy($id)
     {
-        $deleteType = $request->type || 'soft-delete';
 
-        return $this->productRepository->destroy($deleteType, $id);
+        return $this->productRepository->destroy($id);
     }
 }
