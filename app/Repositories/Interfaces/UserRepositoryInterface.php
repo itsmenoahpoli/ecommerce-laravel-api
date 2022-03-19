@@ -2,7 +2,7 @@
 
 namespace App\Repositories\Interfaces;
 
-interface OrderRepositoryInterface
+interface UserRepositoryInterface
 {
     public function getAll($query);
     public function get($id);

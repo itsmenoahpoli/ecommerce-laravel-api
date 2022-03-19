@@ -45,7 +45,7 @@ class OrderRepository extends APIErrorHandlerService implements OrderRepositoryI
     {
         try
         {
-            $data = $this->model->where('id', $id)->first();
+            $data = $this->baseModel()->where('id', $id)->first();
 
             if (!$data) {
                 return response()->error('Not Found', 404);
@@ -62,7 +62,7 @@ class OrderRepository extends APIErrorHandlerService implements OrderRepositoryI
     {
         try
         {
-            $data = $this->model->create($payload);
+            $data = $this->baseModel()->create($payload);
 
             return response()->success($data, 201);
         } catch (Exception $e)
@@ -75,7 +75,7 @@ class OrderRepository extends APIErrorHandlerService implements OrderRepositoryI
     {
         try
         {
-            $data = $this->model->findOrFail($id);
+            $data = $this->baseModel()->findOrFail($id);
 
             $data->update($payload);
 
@@ -86,11 +86,11 @@ class OrderRepository extends APIErrorHandlerService implements OrderRepositoryI
         }
     }
 
-    public function destroy($type, $id)
+    public function destroy($id)
     {
         try
         {
-            $data = $this->model->delete($id);
+            $data = $this->baseModel()->find($id)->delete();
 
             return response()->success($data, 204);
         } catch (Exception $e)

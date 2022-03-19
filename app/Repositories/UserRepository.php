@@ -2,29 +2,21 @@
 
 namespace App\Repositories;
 
-use App\Repositories\Interfaces\ProductRepositoryInterface;
-use App\Http\Resources\Products\ProductsResource;
-use App\Models\Products\Product;
-use App\Models\Products\ProductImage;
+use App\Repositories\Interfaces\UserRepositoryInterface;
+use App\Http\Resources\Users\UsersResource;
+use App\Models\User;
 
-use App\Services\APIErrorHandlerService;
-
-use Str;
 use Exception;
 
-class ProductRepository extends APIErrorHandlerService implements ProductRepositoryInterface
+class UserRepository implements UserRepositoryInterface
 {
     protected $model;
     protected $modelRelationships;
 
-    protected $productImageModel;
-
-    public function __construct(Product $model, ProductImage $productImageModel)
+    public function __construct(User $model)
     {
         $this->model = $model;
-        $this->modelRelationships = ['product_categories', 'product_images'];
-
-        $this->productImageModel = $productImageModel;
+        $this->modelRelationships = ['user_addresses'];
     }
 
     public function baseModel()
@@ -34,18 +26,13 @@ class ProductRepository extends APIErrorHandlerService implements ProductReposit
         );
     }
 
-    public function generateSku()
-    {
-        return strtoupper(Str::random(10));
-    }
-
     public function getAll($query)
     {
         try
         {
             $data = $this->baseModel()->orderBy('id', 'desc')->get();
 
-            return response()->success(ProductsResource::collection($data));
+            return response()->success(UsersResource::collection($data));
         } catch (Exception $e)
         {
             return response()->json($e->getMessage(), 500);
@@ -73,27 +60,9 @@ class ProductRepository extends APIErrorHandlerService implements ProductReposit
     {
         try
         {
-            $payload['sku'] = $this->generateSku();
+            $payload['password'] = bcrypt($payload['password']);
 
-            $imageName = $payload['sku'].'-'.time().'.'.$payload['image']->getClientOriginalExtension();
-            $payload['image']->move(public_path('/images/product-images'), $imageName);
-
-            // After upload remove image from payload
-            array_splice($payload, 4, 1);
-
-            $data = $this->baseModel()->create([
-                'sku' => $payload['sku'],
-                'name' => $payload['name'],
-                'description' => $payload['description'],
-                'quantity' => $payload['quantity'],
-                'price' => $payload['price'],
-                'type' => '',
-            ]);
-
-            $this->productImageModel->create([
-                'product_id' => $data->id,
-                'img_path' => env('APP_URL').':8000/images/product-images/'.$imageName
-            ]);
+            $data = $this->baseModel()->create($payload);
 
             return response()->success($data, 201);
         } catch (Exception $e)

@@ -5,16 +5,28 @@ namespace App\Http\Controllers\API;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class ProductImagesController extends Controller
+use App\Repositories\UserRepository;
+// use App\Http\Requests\Users\UserRequest;
+
+class UsersController extends Controller
 {
+    protected $userRepository;
+
+    public function __construct(UserRepository $userRepository)
+    {
+        $this->userRepository = $userRepository;
+    }
+
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        //
+        $query = $request->query();
+
+        return $this->userRepository->getAll($query);
     }
 
     /**
@@ -25,7 +37,7 @@ class ProductImagesController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        return $this->userRepository->create($request->all());
     }
 
     /**
@@ -36,7 +48,7 @@ class ProductImagesController extends Controller
      */
     public function show($id)
     {
-        //
+        return $this->userRepository->get($id);
     }
 
     /**
@@ -48,7 +60,7 @@ class ProductImagesController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        return $this->userRepository->get($request->all(), $id);
     }
 
     /**
@@ -59,6 +71,6 @@ class ProductImagesController extends Controller
      */
     public function destroy($id)
     {
-        //
+        return $this->productCategoryRepository->destroy($id);
     }
 }
