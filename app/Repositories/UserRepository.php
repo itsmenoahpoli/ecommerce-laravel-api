@@ -5,6 +5,7 @@ namespace App\Repositories;
 use App\Repositories\Interfaces\UserRepositoryInterface;
 use App\Http\Resources\Users\UsersResource;
 use App\Models\User;
+use App\Models\UserAddress;
 
 use Exception;
 
@@ -13,10 +14,14 @@ class UserRepository implements UserRepositoryInterface
     protected $model;
     protected $modelRelationships;
 
-    public function __construct(User $model)
+    protected $userAddressModel;
+
+    public function __construct(User $model, UserAddress $userAddressModel)
     {
         $this->model = $model;
-        $this->modelRelationships = ['user_addresses'];
+        $this->modelRelationships = ['user_address'];
+
+        $this->userAddressModel = $userAddressModel;
     }
 
     public function baseModel()
@@ -56,7 +61,7 @@ class UserRepository implements UserRepositoryInterface
         }
     }
 
-    public function create($payload)
+    public function create($payload, $address)
     {
         try
         {
@@ -64,7 +69,22 @@ class UserRepository implements UserRepositoryInterface
 
             $data = $this->baseModel()->create($payload);
 
-            return response()->success($data, 201);
+            if ($address)
+            {
+                $this->userAddressModel->create(
+                    array_merge(
+                        [
+                            'user_id' => $data->id,
+                        ],
+                        $address
+                    )
+                );
+            }
+
+            return response()->success([
+                'user' => $data,
+                'user_address' => $address
+            ], 201);
         } catch (Exception $e)
         {
             return response()->error($e->getMessage());

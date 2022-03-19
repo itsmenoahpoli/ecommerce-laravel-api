@@ -15,6 +15,7 @@ Route::group(['prefix' => 'v1'], function() {
 
     Route::group(['prefix' => 'auth'], function() {
         Route::post('login', [AuthController::class, 'login'])->name('api.auth.login');
+        Route::post('register', [AuthController::class, 'register'])->name('api.auth.register');
     });
 
     Route::apiResource('product-images', ProductImagesController::class)->except(['update']);

@@ -45,8 +45,8 @@ class User extends Authenticatable
         return $this->hasMany('App\Models\Orders\Order');
     }
 
-    public function user_addresses()
+    public function user_address()
     {
-        return $this->hasMany('App\Models\UserAddress');
+        return $this->hasOne('App\Models\UserAddress');
     }
 }
