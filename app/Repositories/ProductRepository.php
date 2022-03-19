@@ -74,7 +74,6 @@ class ProductRepository extends APIErrorHandlerService implements ProductReposit
         try
         {
             $payload['sku'] = $this->generateSku();
-            $payload['type'] = '';
 
             $imageName = $payload['sku'].'-'.time().'.'.$payload['image']->getClientOriginalExtension();
             $payload['image']->move(public_path('/images/product-images'), $imageName);
@@ -82,7 +81,14 @@ class ProductRepository extends APIErrorHandlerService implements ProductReposit
             // After upload remove image from payload
             array_splice($payload, 4, 1);
 
-            $data = $this->model->create($payload);
+            $data = $this->model->create([
+                'sku' => $payload['sku'],
+                'name' => $payload['name'],
+                'description' => $payload['description'],
+                'quantity' => $payload['quantity'],
+                'price' => $payload['price'],
+                'type' => '',
+            ]);
 
             $this->productImageModel->create([
                 'product_id' => $data->id,
