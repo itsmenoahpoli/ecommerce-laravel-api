@@ -41,3 +41,5 @@ class AuthController extends Controller
         return $this->userRepository->create($request->except('address'), $request->address);
     }
 }
+
+// TODO: Add request validation

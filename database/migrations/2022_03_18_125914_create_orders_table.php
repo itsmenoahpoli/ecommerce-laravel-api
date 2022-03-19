@@ -18,12 +18,6 @@ class CreateOrdersTable extends Migration
             $table->foreignId('user_id')->nullable()->constrained('users')->nullOnDelete();
             $table->string('customer_name')->nullable();
             $table->string('customer_email')->nullable();
-            $table->string('address');
-            $table->string('city');
-            $table->string('zip_code');
-            $table->string('contact_number');
-            $table->string('region');
-            $table->string('country')->default('PH');
             $table->float('total_amount', 6, 2);
             $table->longText('order_products');
             $table->longText('delivery_notes');

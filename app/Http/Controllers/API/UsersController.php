@@ -74,3 +74,5 @@ class UsersController extends Controller
         return $this->productCategoryRepository->destroy($id);
     }
 }
+
+// TODO: Add request validation

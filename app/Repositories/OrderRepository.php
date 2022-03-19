@@ -5,6 +5,8 @@ namespace App\Repositories;
 use App\Repositories\Interfaces\OrderRepositoryInterface;
 use App\Http\Resources\Products\ProductCategoriesResource;
 use App\Models\Orders\Order;
+use App\Models\Orders\OrderShippingAddress;
+use App\Models\UserAddress;
 
 use App\Services\APIErrorHandlerService;
 
@@ -15,10 +17,16 @@ class OrderRepository extends APIErrorHandlerService implements OrderRepositoryI
     protected $model;
     protected $modelRelationships;
 
-    public function __construct(Order $model)
+    protected $orderShippingAddress;
+    protected $userAddressModel;
+
+    public function __construct(Order $model, OrderShippingAddress $orderShippingAddress, UserAddress $userAddressModel)
     {
         $this->model = $model;
-        $this->modelRelationships = ['user'];
+        $this->modelRelationships = ['user', 'order_address'];
+
+        $this->orderShippingAddress = $orderShippingAddress;
+        $this->userAddressModel = $userAddressModel;
     }
 
     public function baseModel()
@@ -58,13 +66,41 @@ class OrderRepository extends APIErrorHandlerService implements OrderRepositoryI
         }
     }
 
-    public function create($payload)
+    public function create($payload, $shippingAddress)
     {
         try
         {
+            $payload['order_products'] = json_encode($payload['order_products']);
             $data = $this->baseModel()->create($payload);
 
-            return response()->success($data, 201);
+            $userAddress;
+
+            if ($payload['user_id'])
+            {
+                $userId = $payload['user_id'];
+
+
+                $userAddress = $this->userAddressModel->where('user_id', $userId)->first();
+            }
+
+            if (!$payload['user_id'])
+            {
+                $userAddress = $shippingAddress;
+            }
+
+            $this->orderShippingAddress->create([
+                'order_id' => $data->id,
+                'address' => $userAddress['address'],
+                'barangay' => $userAddress['barangay'],
+                'city' => $userAddress['city'],
+                'zip_code' => $userAddress['zip_code'],
+                'contact_number' => $userAddress['contact_number'],
+                'region' => $userAddress['region']
+            ]);
+
+            $createdOrder = $this->baseModel()->findOrFail($data->id);
+
+            return response()->success($createdOrder, 201);
         } catch (Exception $e)
         {
             return response()->error($e->getMessage());

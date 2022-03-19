@@ -37,7 +37,7 @@ class OrdersController extends Controller
      */
     public function store(Request $request)
     {
-        return $this->orderRepository->create($request->all());
+        return $this->orderRepository->create($request->except('shipping_address'), $request->shipping_address);
     }
 
     /**

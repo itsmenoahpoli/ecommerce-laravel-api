@@ -16,4 +16,9 @@ class Order extends Model
     {
         return $this->belongsTo('App\Models\User');
     }
+
+    public function order_address()
+    {
+        return $this->hasOne('App\Models\Orders\OrderShippingAddress');
+    }
 }
