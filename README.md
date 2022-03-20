@@ -33,12 +33,12 @@ Legends:
 
 -   [x] Authentication API (Login, Customer Registration)
 -   [ ] Authentication API (Account verify, Reset Password)
--   [x] Order status email notification (to customer email)
+-   [ ] Order status email notification (to customer email)
 -   [x] Orders API
--   [x] Order Tracking API (public)
+-   [ ] Order Tracking API (public)
 -   [x] Products API
 -   [ ] Product Categories API
--   [x] Payments API
+-   [ ] Payments API
 -   [x] Users API
 -   [ ] Reports API
 -   [ ] Transactions History API

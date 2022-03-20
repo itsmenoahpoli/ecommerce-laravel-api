@@ -3,11 +3,9 @@
 namespace App\Repositories;
 
 use App\Repositories\Interfaces\OrderRepositoryInterface;
-use App\Http\Resources\Products\ProductCategoriesResource;
+use App\Http\Resources\Orders\OrdersResource;
 use App\Models\Orders\Order;
-use App\Models\Orders\OrderShippingAddress;
-use App\Models\User;
-use App\Models\UserAddress;
+use App\Repositories\UserRepository;
 
 use App\Services\APIErrorHandlerService;
 
@@ -19,17 +17,17 @@ class OrderRepository extends APIErrorHandlerService implements OrderRepositoryI
     protected $model;
     protected $modelRelationships;
 
-    protected $orderShippingAddress;
-    protected $userAddressModel;
+    protected $orderShippingAddressModel;
+    protected $userRepository;
 
-    public function __construct(Order $model, OrderShippingAddress $orderShippingAddress, User $userModel, UserAddress $userAddressModel)
+    public function __construct(Order $model, OrderShippingAddress $orderShippingAddressModel, UserRepository $userRepository)
     {
         $this->model = $model;
         $this->modelRelationships = ['user', 'order_shipping_address'];
 
-        $this->orderShippingAddress = $orderShippingAddress;
-        $this->userModel = $userModel;
-        $this->userAddressModel = $userAddressModel;
+        $this->orderShippingAddressModel = $orderShippingAddressModel;
+
+        $this->userRepository = $userRepository;
     }
 
     public function baseModel()
@@ -50,16 +48,11 @@ class OrderRepository extends APIErrorHandlerService implements OrderRepositoryI
         {
             $data = $this->baseModel()->orderBy('id', 'desc')->get();
 
-            return response()->success(ProductCategoriesResource::collection($data));
+            return response()->success(OrdersResource::collection($data));
         } catch (Exception $e)
         {
             return response()->json($e->getMessage(), 500);
         }
-    }
-
-    public function getCustomerInfo($userId)
-    {
-        return $this->userModel->findOrFail($userId);
     }
 
     public function get($id)
@@ -83,20 +76,22 @@ class OrderRepository extends APIErrorHandlerService implements OrderRepositoryI
     {
         try
         {
+            // TODO: REFACTOR!!!
+
             $payload['reference_code'] = $this->generateReferenceCode();
             $payload['order_products'] = json_encode($payload['order_products']);
-            $payload['customer_name'] = $payload['user_id'] ? null : $payload['customer_name'];
-            $payload['customer_email'] = $payload['user_id'] ? null : $payload['customer_email'];
+            $payload['customer_name'] = $payload['user_id'] ?? null;
+            $payload['customer_email'] = $payload['user_id'] ?? null;
 
-            $data = $this->baseModel()->create($payload);
+            $order = $this->baseModel()->create($payload);
 
             $userAddress;
 
             if ($payload['user_id'])
             {
                 $userId = $payload['user_id'];
-
-                $userAddress = $this->userAddressModel->where('user_id', $userId)->first();
+                $user = $this->userRepository->getUserInfo($userId);
+                $userAddress = $user->user_address;
             }
 
             if (!$payload['user_id'])
@@ -104,17 +99,17 @@ class OrderRepository extends APIErrorHandlerService implements OrderRepositoryI
                 $userAddress = $shippingAddress;
             }
 
-            $this->orderShippingAddress->create([
-                'order_id' => $data->id,
+            $this->orderShippingAddressModel->create([
+                'order_id' => $order->id,
                 'address' => $userAddress['address'],
                 'barangay' => $userAddress['barangay'],
                 'city' => $userAddress['city'],
                 'zip_code' => $userAddress['zip_code'],
                 'contact_number' => $userAddress['contact_number'],
-                'region' => $userAddress['region']
+                'region' => $userAddress['region'],
             ]);
 
-            $createdOrder = $this->baseModel()->findOrFail($data->id);
+            $createdOrder = $this->baseModel()->findOrFail($order->id);
 
             return response()->success($createdOrder, 201);
         } catch (Exception $e)

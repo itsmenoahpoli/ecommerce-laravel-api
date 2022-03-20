@@ -118,4 +118,9 @@ class UserRepository implements UserRepositoryInterface
             return response()->error($e->getMessage());
         }
     }
+
+    public function getUserInfo($userId)
+    {
+        return $this->baseModel()->find($userId);
+    }
 }
