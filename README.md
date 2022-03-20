@@ -34,11 +34,11 @@ Legends:
 -   [x] Authentication API (Login, Customer Registration)
 -   [ ] Authentication API (Account verify, Reset Password)
 -   [x] Order status email notification (to customer email)
--   [ ] Orders API
--   [ ] Order Tracking API (public)
--   [ ] Products API
+-   [x] Orders API
+-   [x] Order Tracking API (public)
+-   [x] Products API
 -   [ ] Product Categories API
--   [ ] Payments API
--   [ ] Users API
+-   [x] Payments API
+-   [x] Users API
 -   [ ] Reports API
 -   [ ] Transactions History API
