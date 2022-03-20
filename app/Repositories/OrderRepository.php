@@ -25,7 +25,7 @@ class OrderRepository extends APIErrorHandlerService implements OrderRepositoryI
     public function __construct(Order $model, OrderShippingAddress $orderShippingAddress, User $userModel, UserAddress $userAddressModel)
     {
         $this->model = $model;
-        $this->modelRelationships = ['user', 'order_address'];
+        $this->modelRelationships = ['user', 'order_shipping_address'];
 
         $this->orderShippingAddress = $orderShippingAddress;
         $this->userModel = $userModel;
@@ -95,7 +95,6 @@ class OrderRepository extends APIErrorHandlerService implements OrderRepositoryI
             if ($payload['user_id'])
             {
                 $userId = $payload['user_id'];
-
 
                 $userAddress = $this->userAddressModel->where('user_id', $userId)->first();
             }

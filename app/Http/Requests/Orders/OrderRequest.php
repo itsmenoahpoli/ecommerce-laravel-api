@@ -13,7 +13,7 @@ class OrderRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +24,18 @@ class OrderRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'user_id' => 'nullable|numeric',
+            'customer_name' => 'string|min:2|max:32',
+            'customer_email' => 'email|min:2|max:64',
+            'total_amount' => 'numeric|required',
+            'delivery_notes' => 'string',
+            'shipping_address.address' => 'string',
+            'shipping_address.barangay' => 'string',
+            'shipping_address.city' => 'string',
+            'shipping_address.zip_code' => 'string',
+            'shipping_address.contact_number' => 'string',
+            'shipping_address.region' => 'string',
+            'order_products' => 'array'
         ];
     }
 }

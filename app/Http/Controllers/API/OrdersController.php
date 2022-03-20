@@ -35,7 +35,7 @@ class OrdersController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(OrderRequest $request)
     {
         return $this->orderRepository->create($request->except('shipping_address'), $request->shipping_address);
     }
@@ -58,7 +58,7 @@ class OrdersController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(OrderRequest $request, $id)
     {
         return $this->orderRepository->get($request->all(), $id);
     }

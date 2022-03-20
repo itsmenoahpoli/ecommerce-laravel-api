@@ -29,6 +29,7 @@ class CustomerRegisterRequest extends FormRequest
             'bday' => 'string',
             'email' => 'string|required|email|min:3|max:100',
             'password' => 'string|required|min:8|max:16',
+            'address' => 'required',
             'address.address' => 'string|required',
             'address.barangay' => 'string|required',
             'address.city' => 'string|required',
