@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
 use App\Http\Requests\Auth\LoginRequest;
+use App\Http\Requests\Auth\CustomerRegisterRequest;
 use App\Repositories\UserRepository;
 
 use Auth;
@@ -21,6 +22,8 @@ class AuthController extends Controller
 
     public function login(LoginRequest $request)
     {
+        return $request->validated();
+
         $credentials = $request->validated();
 
         if (!Auth::attempt($credentials))
@@ -37,10 +40,9 @@ class AuthController extends Controller
         ], 200);
     }
 
-    public function register(Request $request)
+    public function register(CustomerRegisterRequest $request)
     {
+        return $request->validated();
         return $this->userRepository->create($request->except('address'), $request->address);
     }
 }
-
-// TODO: Add request validation
