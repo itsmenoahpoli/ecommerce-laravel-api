@@ -6,10 +6,12 @@ use App\Repositories\Interfaces\OrderRepositoryInterface;
 use App\Http\Resources\Products\ProductCategoriesResource;
 use App\Models\Orders\Order;
 use App\Models\Orders\OrderShippingAddress;
+use App\Models\User;
 use App\Models\UserAddress;
 
 use App\Services\APIErrorHandlerService;
 
+use Str;
 use Exception;
 
 class OrderRepository extends APIErrorHandlerService implements OrderRepositoryInterface
@@ -20,12 +22,13 @@ class OrderRepository extends APIErrorHandlerService implements OrderRepositoryI
     protected $orderShippingAddress;
     protected $userAddressModel;
 
-    public function __construct(Order $model, OrderShippingAddress $orderShippingAddress, UserAddress $userAddressModel)
+    public function __construct(Order $model, OrderShippingAddress $orderShippingAddress, User $userModel, UserAddress $userAddressModel)
     {
         $this->model = $model;
         $this->modelRelationships = ['user', 'order_address'];
 
         $this->orderShippingAddress = $orderShippingAddress;
+        $this->userModel = $userModel;
         $this->userAddressModel = $userAddressModel;
     }
 
@@ -34,6 +37,11 @@ class OrderRepository extends APIErrorHandlerService implements OrderRepositoryI
         return $this->model->with(
             $this->modelRelationships
         );
+    }
+
+    public function generateReferenceCode()
+    {
+        return strtoupper('ORDER-#'.Str::random(10));
     }
 
     public function getAll($query)
@@ -47,6 +55,11 @@ class OrderRepository extends APIErrorHandlerService implements OrderRepositoryI
         {
             return response()->json($e->getMessage(), 500);
         }
+    }
+
+    public function getCustomerInfo($userId)
+    {
+        return $this->userModel->findOrFail($userId);
     }
 
     public function get($id)
@@ -70,7 +83,11 @@ class OrderRepository extends APIErrorHandlerService implements OrderRepositoryI
     {
         try
         {
+            $payload['reference_code'] = $this->generateReferenceCode();
             $payload['order_products'] = json_encode($payload['order_products']);
+            $payload['customer_name'] = $payload['user_id'] ? null : $payload['customer_name'];
+            $payload['customer_email'] = $payload['user_id'] ? null : $payload['customer_email'];
+
             $data = $this->baseModel()->create($payload);
 
             $userAddress;

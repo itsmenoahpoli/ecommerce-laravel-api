@@ -5,6 +5,7 @@ namespace App\Http\Controllers\API;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
+use App\Http\Requests\Auth\LoginRequest;
 use App\Repositories\UserRepository;
 
 use Auth;
@@ -18,9 +19,9 @@ class AuthController extends Controller
         $this->userRepository = $userRepository;
     }
 
-    public function login(Request $request)
+    public function login(LoginRequest $request)
     {
-        $credentials = $request->only('email', 'password');
+        $credentials = $request->validated();
 
         if (!Auth::attempt($credentials))
         {
