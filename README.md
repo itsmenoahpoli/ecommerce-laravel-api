@@ -10,6 +10,8 @@ git clone https://bitbucket.org/itsmenoahpoli/ecommerce-laravel-api/src/master/
 
 cd ecommerce-laravel-api
 
+git checkout develop
+
 composer install
 
 php artisan key:generate
@@ -33,12 +35,12 @@ Legends:
 
 -   [x] Authentication API (Login, Customer Registration)
 -   [ ] Authentication API (Account verify, Reset Password)
--   [ ] Order status email notification (to customer email)
+-   [x] Order status email notification (to customer email)
 -   [x] Orders API
--   [ ] Order Tracking API (public)
+-   [x] Order Tracking API (public)
 -   [x] Products API
 -   [ ] Product Categories API
--   [ ] Payments API
+-   [x] Payments API
 -   [x] Users API
 -   [ ] Reports API
 -   [ ] Transactions History API
