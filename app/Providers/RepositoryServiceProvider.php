@@ -12,6 +12,13 @@ use App\Repositories\Interfaces\ProductRepositoryInterface;
 use App\Repositories\ProductCategoryRepository;
 use App\Repositories\Interfaces\ProductCategoryRepositoryInterface;
 
+
+use App\Repositories\OrderRepository;
+use App\Repositories\Interfaces\OrderRepositoryInterface;
+
+use App\Repositories\UserRepository;
+use App\Repositories\Interfaces\UserRepositoryInterface;
+
 class RepositoryServiceProvider extends ServiceProvider
 {
     /**
@@ -28,6 +35,14 @@ class RepositoryServiceProvider extends ServiceProvider
         $this->app->bind(
             ProductCategoryRepositoryInterface::class,
             ProductCategoryRepository::class
+        );
+        $this->app->bind(
+            OrderRepositoryInterface::class,
+            OrderRepository::class
+        );
+        $this->app->bind(
+           UserRepositoryInterface::class,
+           UserRepository::class
         );
     }
 

@@ -14,7 +14,7 @@ class AddStatusToOrdersTable extends Migration
     public function up()
     {
         Schema::table('orders', function (Blueprint $table) {
-            $table->string('status')->default('PENDING');
+            $table->string('status')->default('PENDING')->after('delivery_notes');
         });
     }
 

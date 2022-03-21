@@ -6,11 +6,9 @@ use App\Repositories\Interfaces\ProductCategoryRepositoryInterface;
 use App\Http\Resources\Products\ProductCategoriesResource;
 use App\Models\Products\ProductCategory;
 
-use App\Services\APIErrorHandlerService;
-
 use Exception;
 
-class ProductCategoryRepository extends APIErrorHandlerService implements ProductCategoryRepositoryInterface
+class ProductCategoryRepository implements ProductCategoryRepositoryInterface
 {
     protected $model;
     protected $modelRelationships;

@@ -5,14 +5,13 @@ namespace App\Repositories;
 use App\Repositories\Interfaces\OrderRepositoryInterface;
 use App\Http\Resources\Orders\OrdersResource;
 use App\Models\Orders\Order;
+use App\Models\Orders\OrderShippingAddress;
 use App\Repositories\UserRepository;
-
-use App\Services\APIErrorHandlerService;
 
 use Str;
 use Exception;
 
-class OrderRepository extends APIErrorHandlerService implements OrderRepositoryInterface
+class OrderRepository implements OrderRepositoryInterface
 {
     protected $model;
     protected $modelRelationships;
@@ -76,22 +75,25 @@ class OrderRepository extends APIErrorHandlerService implements OrderRepositoryI
     {
         try
         {
-            // TODO: REFACTOR!!!
-
-            $payload['reference_code'] = $this->generateReferenceCode();
-            $payload['order_products'] = json_encode($payload['order_products']);
-            $payload['customer_name'] = $payload['user_id'] ?? null;
-            $payload['customer_email'] = $payload['user_id'] ?? null;
-
-            $order = $this->baseModel()->create($payload);
-
             $userAddress;
+            $payload['order_products'] = json_encode($payload['order_products']);
+
+            $order = $this->baseModel()->create([
+                'reference_code' => $this->generateReferenceCode(),
+                'order_products' => $payload['order_products'],
+                'customer_name' => $payload['customer_name'] ?? null,
+                'customer_email' => $payload['customer_email'] ?? null,
+                'total_amount' => $payload['total_amount'],
+                'order_products' => $payload['order_products'],
+                'delivery_notes' => $payload['delivery_notes']
+            ]);
+
+
 
             if ($payload['user_id'])
             {
                 $userId = $payload['user_id'];
-                $user = $this->userRepository->getUserInfo($userId);
-                $userAddress = $user->user_address;
+                $userAddress = $this->userRepository->getUserInfo($userId)->user_address;
             }
 
             if (!$payload['user_id'])

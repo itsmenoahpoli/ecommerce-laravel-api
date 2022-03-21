@@ -7,12 +7,10 @@ use App\Http\Resources\Products\ProductsResource;
 use App\Models\Products\Product;
 use App\Models\Products\ProductImage;
 
-use App\Services\APIErrorHandlerService;
-
 use Str;
 use Exception;
 
-class ProductRepository extends APIErrorHandlerService implements ProductRepositoryInterface
+class ProductRepository implements ProductRepositoryInterface
 {
     protected $model;
     protected $modelRelationships;
