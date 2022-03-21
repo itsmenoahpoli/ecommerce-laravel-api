@@ -7,382 +7,6 @@ servers:
   -
     url: 'http://localhost:8000'
 paths:
-  /api/v1/auth/login:
-    post:
-      summary: ''
-      description: ''
-      parameters:
-        -
-          in: header
-          name: Content-Type
-          description: ''
-          example: application/json
-          schema:
-            type: string
-        -
-          in: header
-          name: Accept
-          description: ''
-          example: application/json
-          schema:
-            type: string
-      responses: {  }
-      tags:
-        - 'Authentication API'
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                email:
-                  type: string
-                  description: 'Must be a valid email address. Must be at least 3 characters. Must not be greater than 100 characters.'
-                  example: yhclgnegxrbkeajxdfujtovzsrronrcnkqclktysbfjagnpgphufzffwrjmpqgqwtbkcwprmcfxh
-                password:
-                  type: string
-                  description: 'Must be at least 8 characters. Must not be greater than 16 characters.'
-                  example: yvumzijdxcmodf
-              required:
-                - email
-                - password
-      security: []
-  /api/v1/auth/register:
-    post:
-      summary: ''
-      description: ''
-      parameters:
-        -
-          in: header
-          name: Content-Type
-          description: ''
-          example: application/json
-          schema:
-            type: string
-        -
-          in: header
-          name: Accept
-          description: ''
-          example: application/json
-          schema:
-            type: string
-      responses: {  }
-      tags:
-        - 'Authentication API'
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                name:
-                  type: string
-                  description: 'Must be at least 2 characters. Must not be greater than 32 characters.'
-                  example: mkvpnzyv
-                gender:
-                  type: string
-                  description: ''
-                  example: ut
-                bday:
-                  type: string
-                  description: ''
-                  example: maxime
-                email:
-                  type: string
-                  description: 'Must be a valid email address. Must be at least 3 characters. Must not be greater than 100 characters.'
-                  example: fbedschjacfgsiwwyyqjxlmziuflolxszsusnoizoykvlcenmyelbbyvadmnurremcp
-                password:
-                  type: string
-                  description: 'Must be at least 8 characters. Must not be greater than 16 characters.'
-                  example: w
-                address:
-                  type: object
-                  description: ''
-                  example: []
-                  properties:
-                    address:
-                      type: string
-                      description: ''
-                      example: ea
-                    barangay:
-                      type: string
-                      description: ''
-                      example: cupiditate
-                    city:
-                      type: string
-                      description: ''
-                      example: praesentium
-                    zip_code:
-                      type: string
-                      description: ''
-                      example: atque
-                    contact_number:
-                      type: string
-                      description: ''
-                      example: non
-                    region:
-                      type: string
-                      description: ''
-                      example: ut
-              required:
-                - name
-                - email
-                - password
-      security: []
-  /api/v1/users:
-    get:
-      summary: 'Display a listing of the resource.'
-      description: ''
-      parameters:
-        -
-          in: header
-          name: Content-Type
-          description: ''
-          example: application/json
-          schema:
-            type: string
-        -
-          in: header
-          name: Accept
-          description: ''
-          example: application/json
-          schema:
-            type: string
-      responses:
-        200:
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: array
-                items:
-                  type: object
-                example: []
-      tags:
-        - Endpoints
-      security: []
-    post:
-      summary: 'Store a newly created resource in storage.'
-      description: ''
-      parameters:
-        -
-          in: header
-          name: Content-Type
-          description: ''
-          example: application/json
-          schema:
-            type: string
-        -
-          in: header
-          name: Accept
-          description: ''
-          example: application/json
-          schema:
-            type: string
-      responses: {  }
-      tags:
-        - Endpoints
-      security: []
-  '/api/v1/users/{id}':
-    get:
-      summary: 'Display the specified resource.'
-      description: ''
-      parameters:
-        -
-          in: header
-          name: Content-Type
-          description: ''
-          example: application/json
-          schema:
-            type: string
-        -
-          in: header
-          name: Accept
-          description: ''
-          example: application/json
-          schema:
-            type: string
-      responses:
-        404:
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: string
-                example: 'Not Found'
-      tags:
-        - Endpoints
-      security: []
-    put:
-      summary: 'Update the specified resource in storage.'
-      description: ''
-      parameters:
-        -
-          in: header
-          name: Content-Type
-          description: ''
-          example: application/json
-          schema:
-            type: string
-        -
-          in: header
-          name: Accept
-          description: ''
-          example: application/json
-          schema:
-            type: string
-      responses: {  }
-      tags:
-        - Endpoints
-      security: []
-    parameters:
-      -
-        in: path
-        name: id
-        description: 'The ID of the user.'
-        example: 6
-        required: true
-        schema:
-          type: integer
-  /api/v1/products:
-    get:
-      summary: 'Display a listing of the resource.'
-      description: ''
-      parameters:
-        -
-          in: header
-          name: Content-Type
-          description: ''
-          example: application/json
-          schema:
-            type: string
-        -
-          in: header
-          name: Accept
-          description: ''
-          example: application/json
-          schema:
-            type: string
-      responses:
-        200:
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: array
-                items:
-                  type: object
-                example: []
-      tags:
-        - Endpoints
-      security: []
-    post:
-      summary: 'Store a newly created resource in storage.'
-      description: ''
-      parameters:
-        -
-          in: header
-          name: Content-Type
-          description: ''
-          example: application/json
-          schema:
-            type: string
-        -
-          in: header
-          name: Accept
-          description: ''
-          example: application/json
-          schema:
-            type: string
-      responses: {  }
-      tags:
-        - Endpoints
-      security: []
-  '/api/v1/products/{id}':
-    get:
-      summary: 'Display the specified resource.'
-      description: ''
-      parameters:
-        -
-          in: header
-          name: Content-Type
-          description: ''
-          example: application/json
-          schema:
-            type: string
-        -
-          in: header
-          name: Accept
-          description: ''
-          example: application/json
-          schema:
-            type: string
-      responses:
-        404:
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: string
-                example: 'Not Found'
-      tags:
-        - Endpoints
-      security: []
-    put:
-      summary: 'Update the specified resource in storage.'
-      description: ''
-      parameters:
-        -
-          in: header
-          name: Content-Type
-          description: ''
-          example: application/json
-          schema:
-            type: string
-        -
-          in: header
-          name: Accept
-          description: ''
-          example: application/json
-          schema:
-            type: string
-      responses: {  }
-      tags:
-        - Endpoints
-      security: []
-    delete:
-      summary: 'Remove the specified resource from storage.'
-      description: ''
-      parameters:
-        -
-          in: header
-          name: Content-Type
-          description: ''
-          example: application/json
-          schema:
-            type: string
-        -
-          in: header
-          name: Accept
-          description: ''
-          example: application/json
-          schema:
-            type: string
-      responses: {  }
-      tags:
-        - Endpoints
-      security: []
-    parameters:
-      -
-        in: path
-        name: id
-        description: 'The ID of the product.'
-        example: ut
-        required: true
-        schema:
-          type: string
   /api/v1/product-categories:
     get:
       summary: 'Display a listing of the resource.'
@@ -413,7 +37,7 @@ paths:
                   type: object
                 example: []
       tags:
-        - Endpoints
+        - 'Product Categories API'
       security: []
     post:
       summary: 'Store a newly created resource in storage.'
@@ -435,7 +59,7 @@ paths:
             type: string
       responses: {  }
       tags:
-        - Endpoints
+        - 'Product Categories API'
       security: []
   '/api/v1/product-categories/{id}':
     get:
@@ -465,7 +89,7 @@ paths:
                 type: string
                 example: 'Not Found'
       tags:
-        - Endpoints
+        - 'Product Categories API'
       security: []
     put:
       summary: 'Update the specified resource in storage.'
@@ -487,7 +111,7 @@ paths:
             type: string
       responses: {  }
       tags:
-        - Endpoints
+        - 'Product Categories API'
       security: []
     delete:
       summary: 'Remove the specified resource from storage.'
@@ -509,18 +133,334 @@ paths:
             type: string
       responses: {  }
       tags:
-        - Endpoints
+        - 'Product Categories API'
       security: []
     parameters:
       -
         in: path
         name: id
         description: 'The ID of the product category.'
-        example: non
+        example: ea
         required: true
         schema:
           type: string
-  /api/v1/orders:
+  /api/v1/products:
+    get:
+      summary: 'Display a listing of the resource.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                example:
+                  -
+                    id: 10
+                    sku: SUO7O6QQFC
+                    name: 'Effie Rowe DVM'
+                    description: 'Ut sequi ea id.'
+                    quantity: 5
+                    price: 500.25
+                    type: Perfume
+                    deleted_at: null
+                    created_at: '2022-03-21T03:04:48.000000Z'
+                    updated_at: '2022-03-21T03:04:48.000000Z'
+                    product_categories: null
+                    product_images: []
+                  -
+                    id: 9
+                    sku: L1XOJMNHIN
+                    name: 'Celine Skiles'
+                    description: 'Voluptatem ipsum in tempora inventore facilis.'
+                    quantity: 5
+                    price: 500.25
+                    type: Perfume
+                    deleted_at: null
+                    created_at: '2022-03-21T03:04:48.000000Z'
+                    updated_at: '2022-03-21T03:04:48.000000Z'
+                    product_categories: null
+                    product_images: []
+                  -
+                    id: 8
+                    sku: ZLYEKX0A8C
+                    name: 'Demarco Beahan'
+                    description: 'Ducimus omnis quo numquam hic sequi.'
+                    quantity: 9
+                    price: 500.25
+                    type: Perfume
+                    deleted_at: null
+                    created_at: '2022-03-21T03:04:48.000000Z'
+                    updated_at: '2022-03-21T03:04:48.000000Z'
+                    product_categories: null
+                    product_images: []
+                  -
+                    id: 7
+                    sku: VK6XGHLKUT
+                    name: 'Mia Reichel III'
+                    description: 'Quaerat commodi eos at culpa quia.'
+                    quantity: 7
+                    price: 500.25
+                    type: Perfume
+                    deleted_at: null
+                    created_at: '2022-03-21T03:04:48.000000Z'
+                    updated_at: '2022-03-21T03:04:48.000000Z'
+                    product_categories: null
+                    product_images: []
+                  -
+                    id: 6
+                    sku: PRSIIFVY4A
+                    name: 'Mr. Joany DuBuque Sr.'
+                    description: 'Et non recusandae rem quia consequatur eos.'
+                    quantity: 7
+                    price: 500.25
+                    type: Perfume
+                    deleted_at: null
+                    created_at: '2022-03-21T03:04:48.000000Z'
+                    updated_at: '2022-03-21T03:04:48.000000Z'
+                    product_categories: null
+                    product_images: []
+                  -
+                    id: 5
+                    sku: UEFFV2MIFT
+                    name: 'Elyssa Kuhic'
+                    description: 'Velit minima omnis magni earum quas.'
+                    quantity: 4
+                    price: 500.25
+                    type: Perfume
+                    deleted_at: null
+                    created_at: '2022-03-21T03:04:48.000000Z'
+                    updated_at: '2022-03-21T03:04:48.000000Z'
+                    product_categories: null
+                    product_images: []
+                  -
+                    id: 4
+                    sku: DSFKBSCH6B
+                    name: 'Vicenta Halvorson'
+                    description: 'Illum incidunt pariatur quibusdam aut qui.'
+                    quantity: 7
+                    price: 500.25
+                    type: Perfume
+                    deleted_at: null
+                    created_at: '2022-03-21T03:04:48.000000Z'
+                    updated_at: '2022-03-21T03:04:48.000000Z'
+                    product_categories: null
+                    product_images: []
+                  -
+                    id: 3
+                    sku: VPSHPXPVL9
+                    name: 'Mavis Collier'
+                    description: 'Odit aut eius quas.'
+                    quantity: 2
+                    price: 500.25
+                    type: Perfume
+                    deleted_at: null
+                    created_at: '2022-03-21T03:04:48.000000Z'
+                    updated_at: '2022-03-21T03:04:48.000000Z'
+                    product_categories: null
+                    product_images: []
+                  -
+                    id: 2
+                    sku: M7AW8G8ZYJ
+                    name: 'Mr. Abraham D''Amore'
+                    description: 'Iusto nam sit mollitia sapiente fugiat vitae.'
+                    quantity: 5
+                    price: 500.25
+                    type: Perfume
+                    deleted_at: null
+                    created_at: '2022-03-21T03:04:48.000000Z'
+                    updated_at: '2022-03-21T03:04:48.000000Z'
+                    product_categories: null
+                    product_images: []
+                  -
+                    id: 1
+                    sku: UGFEDRZDNY
+                    name: 'Mr. Leopoldo Feest Sr.'
+                    description: 'Non harum perspiciatis non asperiores.'
+                    quantity: 9
+                    price: 500.25
+                    type: Perfume
+                    deleted_at: null
+                    created_at: '2022-03-21T03:04:48.000000Z'
+                    updated_at: '2022-03-21T03:04:48.000000Z'
+                    product_categories: null
+                    product_images: []
+      tags:
+        - 'Products API'
+      security: []
+    post:
+      summary: 'Store a newly created resource in storage.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - 'Products API'
+      security: []
+  '/api/v1/products/{id}':
+    get:
+      summary: 'Display the specified resource.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  id: 1
+                  sku: UGFEDRZDNY
+                  name: 'Mr. Leopoldo Feest Sr.'
+                  description: 'Non harum perspiciatis non asperiores.'
+                  quantity: 9
+                  price: 500.25
+                  type: Perfume
+                  deleted_at: null
+                  created_at: '2022-03-21T03:04:48.000000Z'
+                  updated_at: '2022-03-21T03:04:48.000000Z'
+                  product_categories: null
+                  product_images: []
+                properties:
+                  id:
+                    type: integer
+                    example: 1
+                  sku:
+                    type: string
+                    example: UGFEDRZDNY
+                  name:
+                    type: string
+                    example: 'Mr. Leopoldo Feest Sr.'
+                  description:
+                    type: string
+                    example: 'Non harum perspiciatis non asperiores.'
+                  quantity:
+                    type: integer
+                    example: 9
+                  price:
+                    type: number
+                    example: 500.25
+                  type:
+                    type: string
+                    example: Perfume
+                  deleted_at:
+                    type: string
+                    example: null
+                  created_at:
+                    type: string
+                    example: '2022-03-21T03:04:48.000000Z'
+                  updated_at:
+                    type: string
+                    example: '2022-03-21T03:04:48.000000Z'
+                  product_categories:
+                    type: string
+                    example: null
+                  product_images:
+                    type: array
+                    example: []
+      tags:
+        - 'Products API'
+      security: []
+    put:
+      summary: 'Update the specified resource in storage.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - 'Products API'
+      security: []
+    delete:
+      summary: 'Remove the specified resource from storage.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - 'Products API'
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the product.'
+        example: repudiandae
+        required: true
+        schema:
+          type: string
+  /api/v1/users:
     get:
       summary: 'Display a listing of the resource.'
       description: ''
@@ -550,7 +490,7 @@ paths:
                   type: object
                 example: []
       tags:
-        - Endpoints
+        - 'Users API'
       security: []
     post:
       summary: 'Store a newly created resource in storage.'
@@ -572,74 +512,9 @@ paths:
             type: string
       responses: {  }
       tags:
-        - Endpoints
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                user_id:
-                  type: number
-                  description: ''
-                  example: 65.0
-                customer_name:
-                  type: string
-                  description: 'Must be at least 2 characters. Must not be greater than 32 characters.'
-                  example: rolvxahzttadssis
-                customer_email:
-                  type: string
-                  description: 'Must be a valid email address. Must be at least 2 characters. Must not be greater than 64 characters.'
-                  example: aueegphyiqwirifsuykbihtzfqtgvnsskbofrhxxrwakncproounkuivoeblhewj
-                total_amount:
-                  type: number
-                  description: ''
-                  example: 713.19029581
-                delivery_notes:
-                  type: string
-                  description: ''
-                  example: vitae
-                shipping_address:
-                  type: object
-                  description: ''
-                  example: []
-                  properties:
-                    address:
-                      type: string
-                      description: ''
-                      example: et
-                    barangay:
-                      type: string
-                      description: ''
-                      example: aut
-                    city:
-                      type: string
-                      description: ''
-                      example: voluptatem
-                    zip_code:
-                      type: string
-                      description: ''
-                      example: enim
-                    contact_number:
-                      type: string
-                      description: ''
-                      example: explicabo
-                    region:
-                      type: string
-                      description: ''
-                      example: rerum
-                order_products:
-                  type: array
-                  description: ''
-                  example:
-                    - sit
-                  items:
-                    type: string
-              required:
-                - total_amount
+        - 'Users API'
       security: []
-  '/api/v1/orders/{id}':
+  '/api/v1/users/{id}':
     get:
       summary: 'Display the specified resource.'
       description: ''
@@ -667,7 +542,7 @@ paths:
                 type: string
                 example: 'Not Found'
       tags:
-        - Endpoints
+        - 'Users API'
       security: []
     put:
       summary: 'Update the specified resource in storage.'
@@ -689,75 +564,20 @@ paths:
             type: string
       responses: {  }
       tags:
-        - Endpoints
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                user_id:
-                  type: number
-                  description: ''
-                  example: 364060744.9
-                customer_name:
-                  type: string
-                  description: 'Must be at least 2 characters. Must not be greater than 32 characters.'
-                  example: usssdwhvqcetsjinwuxejgq
-                customer_email:
-                  type: string
-                  description: 'Must be a valid email address. Must be at least 2 characters. Must not be greater than 64 characters.'
-                  example: gghakiweqbfmdjsprrjxnq
-                total_amount:
-                  type: number
-                  description: ''
-                  example: 69.127203153
-                delivery_notes:
-                  type: string
-                  description: ''
-                  example: aperiam
-                shipping_address:
-                  type: object
-                  description: ''
-                  example: []
-                  properties:
-                    address:
-                      type: string
-                      description: ''
-                      example: consequuntur
-                    barangay:
-                      type: string
-                      description: ''
-                      example: cumque
-                    city:
-                      type: string
-                      description: ''
-                      example: perferendis
-                    zip_code:
-                      type: string
-                      description: ''
-                      example: eos
-                    contact_number:
-                      type: string
-                      description: ''
-                      example: officia
-                    region:
-                      type: string
-                      description: ''
-                      example: possimus
-                order_products:
-                  type: array
-                  description: ''
-                  example:
-                    - fugiat
-                  items:
-                    type: string
-              required:
-                - total_amount
+        - 'Users API'
       security: []
-    delete:
-      summary: 'Remove the specified resource from storage.'
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the user.'
+        example: 2
+        required: true
+        schema:
+          type: integer
+  /api/v1/auth/login:
+    post:
+      summary: 'Auth user login'
       description: ''
       parameters:
         -
@@ -776,17 +596,109 @@ paths:
             type: string
       responses: {  }
       tags:
-        - Endpoints
-      security: []
-    parameters:
-      -
-        in: path
-        name: id
-        description: 'The ID of the order.'
-        example: consectetur
+        - 'Authentication API'
+      requestBody:
         required: true
-        schema:
-          type: string
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                  description: 'Must be a valid email address. Must be at least 3 characters. Must not be greater than 100 characters.'
+                  example: ectajlmfkrntzdiklsgmkatrdnxnhdpzjeavfvqvsndpktundgkseclrrjmodtopcqlrjhzweyaaeztkynhobjyofrycipxrmkel
+                password:
+                  type: string
+                  description: 'Must be at least 8 characters. Must not be greater than 16 characters.'
+                  example: qemahstpwncxqod
+              required:
+                - email
+                - password
+      security: []
+  /api/v1/auth/register:
+    post:
+      summary: 'Auth customer user registration'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - 'Authentication API'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: 'Must be at least 2 characters. Must not be greater than 32 characters.'
+                  example: jpvqzqeuhmztvxnvnueu
+                gender:
+                  type: string
+                  description: ''
+                  example: doloribus
+                bday:
+                  type: string
+                  description: ''
+                  example: sed
+                email:
+                  type: string
+                  description: 'Must be a valid email address. Must be at least 3 characters. Must not be greater than 100 characters.'
+                  example: yssbdwqjmyfvdbnqoahglbjczfqblutnbmmvlhgkgaxmgpfbaftynapdtnpjnciluicnzk
+                password:
+                  type: string
+                  description: 'Must be at least 8 characters. Must not be greater than 16 characters.'
+                  example: f
+                address:
+                  type: object
+                  description: ''
+                  example: []
+                  properties:
+                    address:
+                      type: string
+                      description: ''
+                      example: nulla
+                    barangay:
+                      type: string
+                      description: ''
+                      example: ex
+                    city:
+                      type: string
+                      description: ''
+                      example: alias
+                    zip_code:
+                      type: string
+                      description: ''
+                      example: assumenda
+                    contact_number:
+                      type: string
+                      description: ''
+                      example: ad
+                    region:
+                      type: string
+                      description: ''
+                      example: sint
+              required:
+                - name
+                - email
+                - password
+      security: []
   /api/v1/health-check:
     get:
       summary: ''
@@ -828,10 +740,289 @@ paths:
       tags:
         - Endpoints
       security: []
+  /api/v1/orders:
+    get:
+      summary: 'Orders List'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                example: []
+      tags:
+        - 'Orders API'
+      security: []
+    post:
+      summary: 'Create Order'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - 'Orders API'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                user_id:
+                  type: number
+                  description: ''
+                  example: 0.097054499
+                customer_name:
+                  type: string
+                  description: 'Must be at least 2 characters. Must not be greater than 32 characters.'
+                  example: u
+                customer_email:
+                  type: string
+                  description: 'Must be a valid email address. Must be at least 2 characters. Must not be greater than 64 characters.'
+                  example: jeaeevgswhvdgaypialzujbdidpexkdyupqejao
+                total_amount:
+                  type: number
+                  description: ''
+                  example: 0.376992
+                delivery_notes:
+                  type: string
+                  description: ''
+                  example: quas
+                shipping_address:
+                  type: object
+                  description: ''
+                  example: []
+                  properties:
+                    address:
+                      type: string
+                      description: ''
+                      example: tempora
+                    barangay:
+                      type: string
+                      description: ''
+                      example: voluptate
+                    city:
+                      type: string
+                      description: ''
+                      example: doloribus
+                    zip_code:
+                      type: string
+                      description: ''
+                      example: consequatur
+                    contact_number:
+                      type: string
+                      description: ''
+                      example: nobis
+                    region:
+                      type: string
+                      description: ''
+                      example: laudantium
+                order_products:
+                  type: array
+                  description: ''
+                  example:
+                    - at
+                  items:
+                    type: string
+              required:
+                - total_amount
+      security: []
+  '/api/v1/orders/{id}':
+    get:
+      summary: 'Show Order'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        404:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: string
+                example: 'Not Found'
+      tags:
+        - 'Orders API'
+      security: []
+    put:
+      summary: 'Update Order'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - 'Orders API'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                user_id:
+                  type: number
+                  description: ''
+                  example: 978085413.8247
+                customer_name:
+                  type: string
+                  description: 'Must be at least 2 characters. Must not be greater than 32 characters.'
+                  example: k
+                customer_email:
+                  type: string
+                  description: 'Must be a valid email address. Must be at least 2 characters. Must not be greater than 64 characters.'
+                  example: ejdvyecsgttxyrf
+                total_amount:
+                  type: number
+                  description: ''
+                  example: 77510.3417778
+                delivery_notes:
+                  type: string
+                  description: ''
+                  example: accusantium
+                shipping_address:
+                  type: object
+                  description: ''
+                  example: []
+                  properties:
+                    address:
+                      type: string
+                      description: ''
+                      example: cumque
+                    barangay:
+                      type: string
+                      description: ''
+                      example: dignissimos
+                    city:
+                      type: string
+                      description: ''
+                      example: repellat
+                    zip_code:
+                      type: string
+                      description: ''
+                      example: quis
+                    contact_number:
+                      type: string
+                      description: ''
+                      example: consequatur
+                    region:
+                      type: string
+                      description: ''
+                      example: expedita
+                order_products:
+                  type: array
+                  description: ''
+                  example:
+                    - veritatis
+                  items:
+                    type: string
+              required:
+                - total_amount
+      security: []
+    delete:
+      summary: 'Delete Order'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - 'Orders API'
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the order.'
+        example: iste
+        required: true
+        schema:
+          type: string
 tags:
+  -
+    name: 'Product Categories API'
+    description: 'APIs for product categories'
+  -
+    name: 'Products API'
+    description: 'APIs for products management'
+  -
+    name: 'Users API'
+    description: 'APIs for users management'
   -
     name: 'Authentication API'
     description: 'APIs for login, account verification, reset password, and customer registration'
   -
     name: Endpoints
     description: ''
+  -
+    name: 'Orders API'
+    description: 'APIs for orders management (create, read, update, delete)'

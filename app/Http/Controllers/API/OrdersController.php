@@ -8,6 +8,10 @@ use Illuminate\Http\Request;
 use App\Repositories\OrderRepository;
 use App\Http\Requests\Orders\OrderRequest;
 
+/**
+ * @group Orders API
+ * APIs for orders management (create, read, update, delete)
+ */
 class OrdersController extends Controller
 {
     protected $orderRepository;
@@ -18,7 +22,7 @@ class OrdersController extends Controller
     }
 
     /**
-     * Display a listing of the resource.
+     * Orders List
      *
      * @return \Illuminate\Http\Response
      */
@@ -30,7 +34,7 @@ class OrdersController extends Controller
     }
 
     /**
-     * Store a newly created resource in storage.
+     * Create Order
      *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
@@ -41,7 +45,7 @@ class OrdersController extends Controller
     }
 
     /**
-     * Display the specified resource.
+     * Show Order
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
@@ -52,7 +56,7 @@ class OrdersController extends Controller
     }
 
     /**
-     * Update the specified resource in storage.
+     * Update Order
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  int  $id
@@ -64,7 +68,7 @@ class OrdersController extends Controller
     }
 
     /**
-     * Remove the specified resource from storage.
+     * Delete Order
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response

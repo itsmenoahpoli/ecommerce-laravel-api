@@ -10,23 +10,79 @@
     ],
     "info": {
         "name": "Ecommerce API RESTful",
-        "_postman_id": "b6763b65-2f7c-43a6-93e9-a88d6401485c",
+        "_postman_id": "39d741da-2d42-42ca-bbc4-292d9c07c42e",
         "description": "Made with Laravel 8.83.5",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
     "item": [
         {
-            "name": "Authentication API",
-            "description": "APIs for login, account verification, reset password, and customer registration",
+            "name": "Product Categories API",
+            "description": "APIs for product categories",
             "item": [
                 {
-                    "name": "api\/v1\/auth\/login",
+                    "name": "Display a listing of the resource.",
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
-                            "path": "api\/v1\/auth\/login",
+                            "path": "api\/v1\/product-categories",
                             "query": [],
-                            "raw": "{{baseUrl}}\/api\/v1\/auth\/login"
+                            "raw": "{{baseUrl}}\/api\/v1\/product-categories"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "x-ratelimit-limit",
+                                    "value": "60"
+                                },
+                                {
+                                    "key": "x-ratelimit-remaining",
+                                    "value": "54"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "[]",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Store a newly created resource in storage.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/v1\/product-categories",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/v1\/product-categories"
                         },
                         "method": "POST",
                         "header": [
@@ -39,10 +95,7 @@
                                 "value": "application\/json"
                             }
                         ],
-                        "body": {
-                            "mode": "raw",
-                            "raw": "{\"email\":\"yhclgnegxrbkeajxdfujtovzsrronrcnkqclktysbfjagnpgphufzffwrjmpqgqwtbkcwprmcfxh\",\"password\":\"yvumzijdxcmodf\"}"
-                        },
+                        "body": null,
                         "description": "",
                         "auth": {
                             "type": "noauth"
@@ -51,15 +104,23 @@
                     "response": []
                 },
                 {
-                    "name": "api\/v1\/auth\/register",
+                    "name": "Display the specified resource.",
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
-                            "path": "api\/v1\/auth\/register",
+                            "path": "api\/v1\/product-categories\/:id",
                             "query": [],
-                            "raw": "{{baseUrl}}\/api\/v1\/auth\/register"
+                            "raw": "{{baseUrl}}\/api\/v1\/product-categories\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "ea",
+                                    "description": "The ID of the product category."
+                                }
+                            ]
                         },
-                        "method": "POST",
+                        "method": "GET",
                         "header": [
                             {
                                 "key": "Content-Type",
@@ -70,10 +131,107 @@
                                 "value": "application\/json"
                             }
                         ],
-                        "body": {
-                            "mode": "raw",
-                            "raw": "{\"name\":\"mkvpnzyv\",\"gender\":\"ut\",\"bday\":\"maxime\",\"email\":\"fbedschjacfgsiwwyyqjxlmziuflolxszsusnoizoykvlcenmyelbbyvadmnurremcp\",\"password\":\"w\",\"address\":{\"address\":\"ea\",\"barangay\":\"cupiditate\",\"city\":\"praesentium\",\"zip_code\":\"atque\",\"contact_number\":\"non\",\"region\":\"ut\"}}"
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "x-ratelimit-limit",
+                                    "value": "60"
+                                },
+                                {
+                                    "key": "x-ratelimit-remaining",
+                                    "value": "53"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 404,
+                            "body": "\"Not Found\"",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Update the specified resource in storage.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/v1\/product-categories\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/v1\/product-categories\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "omnis",
+                                    "description": "The ID of the product category."
+                                }
+                            ]
                         },
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Remove the specified resource from storage.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/v1\/product-categories\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/v1\/product-categories\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "voluptatibus",
+                                    "description": "The ID of the product category."
+                                }
+                            ]
+                        },
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
                         "description": "",
                         "auth": {
                             "type": "noauth"
@@ -84,8 +242,234 @@
             ]
         },
         {
-            "name": "Endpoints",
-            "description": "",
+            "name": "Products API",
+            "description": "APIs for products management",
+            "item": [
+                {
+                    "name": "Display a listing of the resource.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/v1\/products",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/v1\/products"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "x-ratelimit-limit",
+                                    "value": "60"
+                                },
+                                {
+                                    "key": "x-ratelimit-remaining",
+                                    "value": "56"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "[{\"id\":10,\"sku\":\"SUO7O6QQFC\",\"name\":\"Effie Rowe DVM\",\"description\":\"Ut sequi ea id.\",\"quantity\":5,\"price\":500.25,\"type\":\"Perfume\",\"deleted_at\":null,\"created_at\":\"2022-03-21T03:04:48.000000Z\",\"updated_at\":\"2022-03-21T03:04:48.000000Z\",\"product_categories\":null,\"product_images\":[]},{\"id\":9,\"sku\":\"L1XOJMNHIN\",\"name\":\"Celine Skiles\",\"description\":\"Voluptatem ipsum in tempora inventore facilis.\",\"quantity\":5,\"price\":500.25,\"type\":\"Perfume\",\"deleted_at\":null,\"created_at\":\"2022-03-21T03:04:48.000000Z\",\"updated_at\":\"2022-03-21T03:04:48.000000Z\",\"product_categories\":null,\"product_images\":[]},{\"id\":8,\"sku\":\"ZLYEKX0A8C\",\"name\":\"Demarco Beahan\",\"description\":\"Ducimus omnis quo numquam hic sequi.\",\"quantity\":9,\"price\":500.25,\"type\":\"Perfume\",\"deleted_at\":null,\"created_at\":\"2022-03-21T03:04:48.000000Z\",\"updated_at\":\"2022-03-21T03:04:48.000000Z\",\"product_categories\":null,\"product_images\":[]},{\"id\":7,\"sku\":\"VK6XGHLKUT\",\"name\":\"Mia Reichel III\",\"description\":\"Quaerat commodi eos at culpa quia.\",\"quantity\":7,\"price\":500.25,\"type\":\"Perfume\",\"deleted_at\":null,\"created_at\":\"2022-03-21T03:04:48.000000Z\",\"updated_at\":\"2022-03-21T03:04:48.000000Z\",\"product_categories\":null,\"product_images\":[]},{\"id\":6,\"sku\":\"PRSIIFVY4A\",\"name\":\"Mr. Joany DuBuque Sr.\",\"description\":\"Et non recusandae rem quia consequatur eos.\",\"quantity\":7,\"price\":500.25,\"type\":\"Perfume\",\"deleted_at\":null,\"created_at\":\"2022-03-21T03:04:48.000000Z\",\"updated_at\":\"2022-03-21T03:04:48.000000Z\",\"product_categories\":null,\"product_images\":[]},{\"id\":5,\"sku\":\"UEFFV2MIFT\",\"name\":\"Elyssa Kuhic\",\"description\":\"Velit minima omnis magni earum quas.\",\"quantity\":4,\"price\":500.25,\"type\":\"Perfume\",\"deleted_at\":null,\"created_at\":\"2022-03-21T03:04:48.000000Z\",\"updated_at\":\"2022-03-21T03:04:48.000000Z\",\"product_categories\":null,\"product_images\":[]},{\"id\":4,\"sku\":\"DSFKBSCH6B\",\"name\":\"Vicenta Halvorson\",\"description\":\"Illum incidunt pariatur quibusdam aut qui.\",\"quantity\":7,\"price\":500.25,\"type\":\"Perfume\",\"deleted_at\":null,\"created_at\":\"2022-03-21T03:04:48.000000Z\",\"updated_at\":\"2022-03-21T03:04:48.000000Z\",\"product_categories\":null,\"product_images\":[]},{\"id\":3,\"sku\":\"VPSHPXPVL9\",\"name\":\"Mavis Collier\",\"description\":\"Odit aut eius quas.\",\"quantity\":2,\"price\":500.25,\"type\":\"Perfume\",\"deleted_at\":null,\"created_at\":\"2022-03-21T03:04:48.000000Z\",\"updated_at\":\"2022-03-21T03:04:48.000000Z\",\"product_categories\":null,\"product_images\":[]},{\"id\":2,\"sku\":\"M7AW8G8ZYJ\",\"name\":\"Mr. Abraham D'Amore\",\"description\":\"Iusto nam sit mollitia sapiente fugiat vitae.\",\"quantity\":5,\"price\":500.25,\"type\":\"Perfume\",\"deleted_at\":null,\"created_at\":\"2022-03-21T03:04:48.000000Z\",\"updated_at\":\"2022-03-21T03:04:48.000000Z\",\"product_categories\":null,\"product_images\":[]},{\"id\":1,\"sku\":\"UGFEDRZDNY\",\"name\":\"Mr. Leopoldo Feest Sr.\",\"description\":\"Non harum perspiciatis non asperiores.\",\"quantity\":9,\"price\":500.25,\"type\":\"Perfume\",\"deleted_at\":null,\"created_at\":\"2022-03-21T03:04:48.000000Z\",\"updated_at\":\"2022-03-21T03:04:48.000000Z\",\"product_categories\":null,\"product_images\":[]}]",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Store a newly created resource in storage.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/v1\/products",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/v1\/products"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Display the specified resource.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/v1\/products\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/v1\/products\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "repudiandae",
+                                    "description": "The ID of the product."
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "x-ratelimit-limit",
+                                    "value": "60"
+                                },
+                                {
+                                    "key": "x-ratelimit-remaining",
+                                    "value": "55"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "{\"id\":1,\"sku\":\"UGFEDRZDNY\",\"name\":\"Mr. Leopoldo Feest Sr.\",\"description\":\"Non harum perspiciatis non asperiores.\",\"quantity\":9,\"price\":500.25,\"type\":\"Perfume\",\"deleted_at\":null,\"created_at\":\"2022-03-21T03:04:48.000000Z\",\"updated_at\":\"2022-03-21T03:04:48.000000Z\",\"product_categories\":null,\"product_images\":[]}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Update the specified resource in storage.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/v1\/products\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/v1\/products\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "molestiae",
+                                    "description": "The ID of the product."
+                                }
+                            ]
+                        },
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Remove the specified resource from storage.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/v1\/products\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/v1\/products\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "odio",
+                                    "description": "The ID of the product."
+                                }
+                            ]
+                        },
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                }
+            ]
+        },
+        {
+            "name": "Users API",
+            "description": "APIs for users management",
             "item": [
                 {
                     "name": "Display a listing of the resource.",
@@ -183,7 +567,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "6",
+                                    "value": "2",
                                     "description": "The ID of the user."
                                 }
                             ]
@@ -247,7 +631,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "5",
+                                    "value": "2",
                                     "description": "The ID of the user."
                                 }
                             ]
@@ -270,511 +654,21 @@
                         }
                     },
                     "response": []
-                },
+                }
+            ]
+        },
+        {
+            "name": "Authentication API",
+            "description": "APIs for login, account verification, reset password, and customer registration",
+            "item": [
                 {
-                    "name": "Display a listing of the resource.",
+                    "name": "Auth user login",
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
-                            "path": "api\/v1\/products",
+                            "path": "api\/v1\/auth\/login",
                             "query": [],
-                            "raw": "{{baseUrl}}\/api\/v1\/products"
-                        },
-                        "method": "GET",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
-                    },
-                    "response": [
-                        {
-                            "header": [
-                                {
-                                    "key": "cache-control",
-                                    "value": "no-cache, private"
-                                },
-                                {
-                                    "key": "content-type",
-                                    "value": "application\/json"
-                                },
-                                {
-                                    "key": "x-ratelimit-limit",
-                                    "value": "60"
-                                },
-                                {
-                                    "key": "x-ratelimit-remaining",
-                                    "value": "56"
-                                },
-                                {
-                                    "key": "access-control-allow-origin",
-                                    "value": "*"
-                                }
-                            ],
-                            "code": 200,
-                            "body": "[]",
-                            "name": ""
-                        }
-                    ]
-                },
-                {
-                    "name": "Store a newly created resource in storage.",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "api\/v1\/products",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/api\/v1\/products"
-                        },
-                        "method": "POST",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
-                    },
-                    "response": []
-                },
-                {
-                    "name": "Display the specified resource.",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "api\/v1\/products\/:id",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/api\/v1\/products\/:id",
-                            "variable": [
-                                {
-                                    "id": "id",
-                                    "key": "id",
-                                    "value": "ut",
-                                    "description": "The ID of the product."
-                                }
-                            ]
-                        },
-                        "method": "GET",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
-                    },
-                    "response": [
-                        {
-                            "header": [
-                                {
-                                    "key": "cache-control",
-                                    "value": "no-cache, private"
-                                },
-                                {
-                                    "key": "content-type",
-                                    "value": "application\/json"
-                                },
-                                {
-                                    "key": "x-ratelimit-limit",
-                                    "value": "60"
-                                },
-                                {
-                                    "key": "x-ratelimit-remaining",
-                                    "value": "55"
-                                },
-                                {
-                                    "key": "access-control-allow-origin",
-                                    "value": "*"
-                                }
-                            ],
-                            "code": 404,
-                            "body": "\"Not Found\"",
-                            "name": ""
-                        }
-                    ]
-                },
-                {
-                    "name": "Update the specified resource in storage.",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "api\/v1\/products\/:id",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/api\/v1\/products\/:id",
-                            "variable": [
-                                {
-                                    "id": "id",
-                                    "key": "id",
-                                    "value": "sit",
-                                    "description": "The ID of the product."
-                                }
-                            ]
-                        },
-                        "method": "PUT",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
-                    },
-                    "response": []
-                },
-                {
-                    "name": "Remove the specified resource from storage.",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "api\/v1\/products\/:id",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/api\/v1\/products\/:id",
-                            "variable": [
-                                {
-                                    "id": "id",
-                                    "key": "id",
-                                    "value": "quidem",
-                                    "description": "The ID of the product."
-                                }
-                            ]
-                        },
-                        "method": "DELETE",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
-                    },
-                    "response": []
-                },
-                {
-                    "name": "Display a listing of the resource.",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "api\/v1\/product-categories",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/api\/v1\/product-categories"
-                        },
-                        "method": "GET",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
-                    },
-                    "response": [
-                        {
-                            "header": [
-                                {
-                                    "key": "cache-control",
-                                    "value": "no-cache, private"
-                                },
-                                {
-                                    "key": "content-type",
-                                    "value": "application\/json"
-                                },
-                                {
-                                    "key": "x-ratelimit-limit",
-                                    "value": "60"
-                                },
-                                {
-                                    "key": "x-ratelimit-remaining",
-                                    "value": "54"
-                                },
-                                {
-                                    "key": "access-control-allow-origin",
-                                    "value": "*"
-                                }
-                            ],
-                            "code": 200,
-                            "body": "[]",
-                            "name": ""
-                        }
-                    ]
-                },
-                {
-                    "name": "Store a newly created resource in storage.",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "api\/v1\/product-categories",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/api\/v1\/product-categories"
-                        },
-                        "method": "POST",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
-                    },
-                    "response": []
-                },
-                {
-                    "name": "Display the specified resource.",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "api\/v1\/product-categories\/:id",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/api\/v1\/product-categories\/:id",
-                            "variable": [
-                                {
-                                    "id": "id",
-                                    "key": "id",
-                                    "value": "non",
-                                    "description": "The ID of the product category."
-                                }
-                            ]
-                        },
-                        "method": "GET",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
-                    },
-                    "response": [
-                        {
-                            "header": [
-                                {
-                                    "key": "cache-control",
-                                    "value": "no-cache, private"
-                                },
-                                {
-                                    "key": "content-type",
-                                    "value": "application\/json"
-                                },
-                                {
-                                    "key": "x-ratelimit-limit",
-                                    "value": "60"
-                                },
-                                {
-                                    "key": "x-ratelimit-remaining",
-                                    "value": "53"
-                                },
-                                {
-                                    "key": "access-control-allow-origin",
-                                    "value": "*"
-                                }
-                            ],
-                            "code": 404,
-                            "body": "\"Not Found\"",
-                            "name": ""
-                        }
-                    ]
-                },
-                {
-                    "name": "Update the specified resource in storage.",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "api\/v1\/product-categories\/:id",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/api\/v1\/product-categories\/:id",
-                            "variable": [
-                                {
-                                    "id": "id",
-                                    "key": "id",
-                                    "value": "fugit",
-                                    "description": "The ID of the product category."
-                                }
-                            ]
-                        },
-                        "method": "PUT",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
-                    },
-                    "response": []
-                },
-                {
-                    "name": "Remove the specified resource from storage.",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "api\/v1\/product-categories\/:id",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/api\/v1\/product-categories\/:id",
-                            "variable": [
-                                {
-                                    "id": "id",
-                                    "key": "id",
-                                    "value": "praesentium",
-                                    "description": "The ID of the product category."
-                                }
-                            ]
-                        },
-                        "method": "DELETE",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
-                    },
-                    "response": []
-                },
-                {
-                    "name": "Display a listing of the resource.",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "api\/v1\/orders",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/api\/v1\/orders"
-                        },
-                        "method": "GET",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
-                    },
-                    "response": [
-                        {
-                            "header": [
-                                {
-                                    "key": "cache-control",
-                                    "value": "no-cache, private"
-                                },
-                                {
-                                    "key": "content-type",
-                                    "value": "application\/json"
-                                },
-                                {
-                                    "key": "x-ratelimit-limit",
-                                    "value": "60"
-                                },
-                                {
-                                    "key": "x-ratelimit-remaining",
-                                    "value": "52"
-                                },
-                                {
-                                    "key": "access-control-allow-origin",
-                                    "value": "*"
-                                }
-                            ],
-                            "code": 200,
-                            "body": "[]",
-                            "name": ""
-                        }
-                    ]
-                },
-                {
-                    "name": "Store a newly created resource in storage.",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "api\/v1\/orders",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/api\/v1\/orders"
+                            "raw": "{{baseUrl}}\/api\/v1\/auth\/login"
                         },
                         "method": "POST",
                         "header": [
@@ -789,7 +683,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"user_id\":65,\"customer_name\":\"rolvxahzttadssis\",\"customer_email\":\"aueegphyiqwirifsuykbihtzfqtgvnsskbofrhxxrwakncproounkuivoeblhewj\",\"total_amount\":713.19029581,\"delivery_notes\":\"vitae\",\"shipping_address\":{\"address\":\"et\",\"barangay\":\"aut\",\"city\":\"voluptatem\",\"zip_code\":\"enim\",\"contact_number\":\"explicabo\",\"region\":\"rerum\"},\"order_products\":[\"sit\"]}"
+                            "raw": "{\"email\":\"ectajlmfkrntzdiklsgmkatrdnxnhdpzjeavfvqvsndpktundgkseclrrjmodtopcqlrjhzweyaaeztkynhobjyofrycipxrmkel\",\"password\":\"qemahstpwncxqod\"}"
                         },
                         "description": "",
                         "auth": {
@@ -799,87 +693,15 @@
                     "response": []
                 },
                 {
-                    "name": "Display the specified resource.",
+                    "name": "Auth customer user registration",
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
-                            "path": "api\/v1\/orders\/:id",
+                            "path": "api\/v1\/auth\/register",
                             "query": [],
-                            "raw": "{{baseUrl}}\/api\/v1\/orders\/:id",
-                            "variable": [
-                                {
-                                    "id": "id",
-                                    "key": "id",
-                                    "value": "consectetur",
-                                    "description": "The ID of the order."
-                                }
-                            ]
+                            "raw": "{{baseUrl}}\/api\/v1\/auth\/register"
                         },
-                        "method": "GET",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
-                    },
-                    "response": [
-                        {
-                            "header": [
-                                {
-                                    "key": "cache-control",
-                                    "value": "no-cache, private"
-                                },
-                                {
-                                    "key": "content-type",
-                                    "value": "application\/json"
-                                },
-                                {
-                                    "key": "x-ratelimit-limit",
-                                    "value": "60"
-                                },
-                                {
-                                    "key": "x-ratelimit-remaining",
-                                    "value": "51"
-                                },
-                                {
-                                    "key": "access-control-allow-origin",
-                                    "value": "*"
-                                }
-                            ],
-                            "code": 404,
-                            "body": "\"Not Found\"",
-                            "name": ""
-                        }
-                    ]
-                },
-                {
-                    "name": "Update the specified resource in storage.",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "api\/v1\/orders\/:id",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/api\/v1\/orders\/:id",
-                            "variable": [
-                                {
-                                    "id": "id",
-                                    "key": "id",
-                                    "value": "nihil",
-                                    "description": "The ID of the order."
-                                }
-                            ]
-                        },
-                        "method": "PUT",
+                        "method": "POST",
                         "header": [
                             {
                                 "key": "Content-Type",
@@ -892,7 +714,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"user_id\":364060744.9,\"customer_name\":\"usssdwhvqcetsjinwuxejgq\",\"customer_email\":\"gghakiweqbfmdjsprrjxnq\",\"total_amount\":69.127203153,\"delivery_notes\":\"aperiam\",\"shipping_address\":{\"address\":\"consequuntur\",\"barangay\":\"cumque\",\"city\":\"perferendis\",\"zip_code\":\"eos\",\"contact_number\":\"officia\",\"region\":\"possimus\"},\"order_products\":[\"fugiat\"]}"
+                            "raw": "{\"name\":\"jpvqzqeuhmztvxnvnueu\",\"gender\":\"doloribus\",\"bday\":\"sed\",\"email\":\"yssbdwqjmyfvdbnqoahglbjczfqblutnbmmvlhgkgaxmgpfbaftynapdtnpjnciluicnzk\",\"password\":\"f\",\"address\":{\"address\":\"nulla\",\"barangay\":\"ex\",\"city\":\"alias\",\"zip_code\":\"assumenda\",\"contact_number\":\"ad\",\"region\":\"sint\"}}"
                         },
                         "description": "",
                         "auth": {
@@ -900,43 +722,13 @@
                         }
                     },
                     "response": []
-                },
-                {
-                    "name": "Remove the specified resource from storage.",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "api\/v1\/orders\/:id",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/api\/v1\/orders\/:id",
-                            "variable": [
-                                {
-                                    "id": "id",
-                                    "key": "id",
-                                    "value": "explicabo",
-                                    "description": "The ID of the order."
-                                }
-                            ]
-                        },
-                        "method": "DELETE",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
-                    },
-                    "response": []
-                },
+                }
+            ]
+        },
+        {
+            "name": "Endpoints",
+            "description": "",
+            "item": [
                 {
                     "name": "api\/v1\/health-check",
                     "request": {
@@ -992,6 +784,238 @@
                             "name": ""
                         }
                     ]
+                }
+            ]
+        },
+        {
+            "name": "Orders API",
+            "description": "APIs for orders management (create, read, update, delete)",
+            "item": [
+                {
+                    "name": "Orders List",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/v1\/orders",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/v1\/orders"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "x-ratelimit-limit",
+                                    "value": "60"
+                                },
+                                {
+                                    "key": "x-ratelimit-remaining",
+                                    "value": "52"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "[]",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Create Order",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/v1\/orders",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/v1\/orders"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"user_id\":0.097054499,\"customer_name\":\"u\",\"customer_email\":\"jeaeevgswhvdgaypialzujbdidpexkdyupqejao\",\"total_amount\":0.376992,\"delivery_notes\":\"quas\",\"shipping_address\":{\"address\":\"tempora\",\"barangay\":\"voluptate\",\"city\":\"doloribus\",\"zip_code\":\"consequatur\",\"contact_number\":\"nobis\",\"region\":\"laudantium\"},\"order_products\":[\"at\"]}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Show Order",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/v1\/orders\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/v1\/orders\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "iste",
+                                    "description": "The ID of the order."
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "x-ratelimit-limit",
+                                    "value": "60"
+                                },
+                                {
+                                    "key": "x-ratelimit-remaining",
+                                    "value": "51"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 404,
+                            "body": "\"Not Found\"",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Update Order",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/v1\/orders\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/v1\/orders\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "rerum",
+                                    "description": "The ID of the order."
+                                }
+                            ]
+                        },
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"user_id\":978085413.8247,\"customer_name\":\"k\",\"customer_email\":\"ejdvyecsgttxyrf\",\"total_amount\":77510.3417778,\"delivery_notes\":\"accusantium\",\"shipping_address\":{\"address\":\"cumque\",\"barangay\":\"dignissimos\",\"city\":\"repellat\",\"zip_code\":\"quis\",\"contact_number\":\"consequatur\",\"region\":\"expedita\"},\"order_products\":[\"veritatis\"]}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Delete Order",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/v1\/orders\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/v1\/orders\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "quisquam",
+                                    "description": "The ID of the order."
+                                }
+                            ]
+                        },
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
                 }
             ]
         }

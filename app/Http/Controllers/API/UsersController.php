@@ -8,6 +8,10 @@ use Illuminate\Http\Request;
 use App\Repositories\UserRepository;
 // use App\Http\Requests\Users\UserRequest;
 
+/**
+ * @group Users API
+ * APIs for users management
+ */
 class UsersController extends Controller
 {
     protected $userRepository;
@@ -71,7 +75,7 @@ class UsersController extends Controller
      */
     public function destroy($id)
     {
-        return $this->productCategoryRepository->destroy($id);
+        return $this->userRepository->destroy($id);
     }
 }
 

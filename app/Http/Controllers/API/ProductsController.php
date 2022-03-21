@@ -8,6 +8,10 @@ use Illuminate\Http\Request;
 use App\Repositories\ProductRepository;
 use App\Http\Requests\Products\ProductRequest;
 
+/**
+ * @group Products API
+ * APIs for products management
+ */
 class ProductsController extends Controller
 {
     protected $productRepository;

@@ -5,6 +5,10 @@ namespace App\Http\Controllers\API;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
+/**
+ * @group Payments API
+ * APIs for payments
+ */
 class PaymentsController extends Controller
 {
     /**

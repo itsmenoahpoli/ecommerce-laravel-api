@@ -8,7 +8,7 @@ endpoints:
       - POST
     uri: api/v1/auth/login
     metadata:
-      title: ''
+      title: 'Auth user login'
       description: ''
       authenticated: false
       custom: []
@@ -22,14 +22,14 @@ endpoints:
         name: email
         description: 'Must be a valid email address. Must be at least 3 characters. Must not be greater than 100 characters.'
         required: true
-        example: yhclgnegxrbkeajxdfujtovzsrronrcnkqclktysbfjagnpgphufzffwrjmpqgqwtbkcwprmcfxh
+        example: ectajlmfkrntzdiklsgmkatrdnxnhdpzjeavfvqvsndpktundgkseclrrjmodtopcqlrjhzweyaaeztkynhobjyofrycipxrmkel
         type: string
         custom: []
       password:
         name: password
         description: 'Must be at least 8 characters. Must not be greater than 16 characters.'
         required: true
-        example: yvumzijdxcmodf
+        example: qemahstpwncxqod
         type: string
         custom: []
     responses: []
@@ -39,7 +39,7 @@ endpoints:
       - POST
     uri: api/v1/auth/register
     metadata:
-      title: ''
+      title: 'Auth customer user registration'
       description: ''
       authenticated: false
       custom: []
@@ -53,35 +53,35 @@ endpoints:
         name: name
         description: 'Must be at least 2 characters. Must not be greater than 32 characters.'
         required: true
-        example: mkvpnzyv
+        example: jpvqzqeuhmztvxnvnueu
         type: string
         custom: []
       gender:
         name: gender
         description: ''
         required: false
-        example: ut
+        example: doloribus
         type: string
         custom: []
       bday:
         name: bday
         description: ''
         required: false
-        example: maxime
+        example: sed
         type: string
         custom: []
       email:
         name: email
         description: 'Must be a valid email address. Must be at least 3 characters. Must not be greater than 100 characters.'
         required: true
-        example: fbedschjacfgsiwwyyqjxlmziuflolxszsusnoizoykvlcenmyelbbyvadmnurremcp
+        example: yssbdwqjmyfvdbnqoahglbjczfqblutnbmmvlhgkgaxmgpfbaftynapdtnpjnciluicnzk
         type: string
         custom: []
       password:
         name: password
         description: 'Must be at least 8 characters. Must not be greater than 16 characters.'
         required: true
-        example: w
+        example: f
         type: string
         custom: []
       address:
@@ -95,42 +95,42 @@ endpoints:
         name: address.address
         description: ''
         required: true
-        example: ea
+        example: nulla
         type: string
         custom: []
       address.barangay:
         name: address.barangay
         description: ''
         required: true
-        example: cupiditate
+        example: ex
         type: string
         custom: []
       address.city:
         name: address.city
         description: ''
         required: true
-        example: praesentium
+        example: alias
         type: string
         custom: []
       address.zip_code:
         name: address.zip_code
         description: ''
         required: true
-        example: atque
+        example: assumenda
         type: string
         custom: []
       address.contact_number:
         name: address.contact_number
         description: ''
         required: true
-        example: non
+        example: ad
         type: string
         custom: []
       address.region:
         name: address.region
         description: ''
         required: true
-        example: ut
+        example: sint
         type: string
         custom: []
     responses: []

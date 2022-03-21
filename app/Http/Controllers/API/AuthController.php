@@ -25,6 +25,9 @@ class AuthController extends Controller
         $this->userRepository = $userRepository;
     }
 
+    /**
+     * Auth user login
+     */
     public function login(LoginRequest $request)
     {
         return $request->validated();
@@ -45,6 +48,9 @@ class AuthController extends Controller
         ], 200);
     }
 
+    /**
+     * Auth customer user registration
+     */
     public function register(CustomerRegisterRequest $request)
     {
         return $request->validated();

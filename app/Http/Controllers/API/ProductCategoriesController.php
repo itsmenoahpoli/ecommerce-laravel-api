@@ -8,6 +8,10 @@ use Illuminate\Http\Request;
 use App\Repositories\ProductCategoryRepository;
 use App\Http\Requests\Products\ProductCategoryRequest;
 
+/**
+ * @group Product Categories API
+ * APIs for product categories
+ */
 class ProductCategoriesController extends Controller
 {
     protected $productCategoryRepository;
