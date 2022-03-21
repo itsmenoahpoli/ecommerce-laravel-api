@@ -11,6 +11,11 @@ use App\Repositories\UserRepository;
 
 use Auth;
 
+/**
+ * @group Authentication API
+ * APIs for login, account verification, reset password, and customer registration
+ */
+
 class AuthController extends Controller
 {
     protected $userRepository;

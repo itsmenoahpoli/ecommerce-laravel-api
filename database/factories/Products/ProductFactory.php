@@ -25,6 +25,7 @@ class ProductFactory extends Factory
             'description' => $this->faker->text($maxNbChars = rand(40, 55)),
             'quantity' => rand(0, 10),
             'price' => 500.25,
+            'type' => 'Perfume'
         ];
     }
 }

@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>ECOMMERCE_API Documentation</title>
+    <title>Ecommerce API RESTful</title>
 
     <link href="https://fonts.googleapis.com/css?family=PT+Sans&display=swap" rel="stylesheet">
 
@@ -70,17 +70,24 @@
                                                 </ul>
                     
                     <ul id="tocify-header-2" class="tocify-header">
+                <li class="tocify-item level-1" data-unique="authentication-api">
+                    <a href="#authentication-api">Authentication API</a>
+                </li>
+                                    <ul id="tocify-subheader-authentication-api" class="tocify-subheader">
+                                                    <li class="tocify-item level-2" data-unique="authentication-api-POSTapi-v1-auth-login">
+                        <a href="#authentication-api-POSTapi-v1-auth-login">POST api/v1/auth/login</a>
+                    </li>
+                                    <li class="tocify-item level-2" data-unique="authentication-api-POSTapi-v1-auth-register">
+                        <a href="#authentication-api-POSTapi-v1-auth-register">POST api/v1/auth/register</a>
+                    </li>
+                                                    </ul>
+                            </ul>
+                    <ul id="tocify-header-3" class="tocify-header">
                 <li class="tocify-item level-1" data-unique="endpoints">
                     <a href="#endpoints">Endpoints</a>
                 </li>
                                     <ul id="tocify-subheader-endpoints" class="tocify-subheader">
-                                                    <li class="tocify-item level-2" data-unique="endpoints-POSTapi-v1-auth-login">
-                        <a href="#endpoints-POSTapi-v1-auth-login">POST api/v1/auth/login</a>
-                    </li>
-                                    <li class="tocify-item level-2" data-unique="endpoints-POSTapi-v1-auth-register">
-                        <a href="#endpoints-POSTapi-v1-auth-register">POST api/v1/auth/register</a>
-                    </li>
-                                    <li class="tocify-item level-2" data-unique="endpoints-GETapi-v1-users">
+                                                    <li class="tocify-item level-2" data-unique="endpoints-GETapi-v1-users">
                         <a href="#endpoints-GETapi-v1-users">Display a listing of the resource.</a>
                     </li>
                                     <li class="tocify-item level-2" data-unique="endpoints-POSTapi-v1-users">
@@ -171,11 +178,11 @@ You can switch the language used with the tabs at the top right (or from the nav
         <h1 id="authenticating-requests">Authenticating requests</h1>
 <p>This API is not authenticated.</p>
 
-        <h1 id="endpoints">Endpoints</h1>
+        <h1 id="authentication-api">Authentication API</h1>
 
-    
+    <p>APIs for login, account verification, reset password, and customer registration</p>
 
-            <h2 id="endpoints-POSTapi-v1-auth-login">POST api/v1/auth/login</h2>
+            <h2 id="authentication-api-POSTapi-v1-auth-login">POST api/v1/auth/login</h2>
 
 <p>
 </p>
@@ -192,8 +199,8 @@ You can switch the language used with the tabs at the top right (or from the nav
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"email\": \"ylhslvetcjhnmxdqkqauohetmlzbcmhlikrxwbtkgxplsdpdvnohxtmbrsypqlre\",
-    \"password\": \"i\"
+    \"email\": \"yhclgnegxrbkeajxdfujtovzsrronrcnkqclktysbfjagnpgphufzffwrjmpqgqwtbkcwprmcfxh\",
+    \"password\": \"yvumzijdxcmodf\"
 }"
 </code></pre></div>
 
@@ -209,8 +216,8 @@ const headers = {
 };
 
 let body = {
-    "email": "ylhslvetcjhnmxdqkqauohetmlzbcmhlikrxwbtkgxplsdpdvnohxtmbrsypqlre",
-    "password": "i"
+    "email": "yhclgnegxrbkeajxdfujtovzsrronrcnkqclktysbfjagnpgphufzffwrjmpqgqwtbkcwprmcfxh",
+    "password": "yvumzijdxcmodf"
 };
 
 fetch(url, {
@@ -268,7 +275,7 @@ fetch(url, {
                 <input type="text"
                name="email"
                data-endpoint="POSTapi-v1-auth-login"
-               value="ylhslvetcjhnmxdqkqauohetmlzbcmhlikrxwbtkgxplsdpdvnohxtmbrsypqlre"
+               value="yhclgnegxrbkeajxdfujtovzsrronrcnkqclktysbfjagnpgphufzffwrjmpqgqwtbkcwprmcfxh"
                data-component="body" hidden>
     <br>
 <p>Must be a valid email address. Must be at least 3 characters. Must not be greater than 100 characters.</p>
@@ -278,14 +285,14 @@ fetch(url, {
                 <input type="text"
                name="password"
                data-endpoint="POSTapi-v1-auth-login"
-               value="i"
+               value="yvumzijdxcmodf"
                data-component="body" hidden>
     <br>
 <p>Must be at least 8 characters. Must not be greater than 16 characters.</p>
         </p>
         </form>
 
-            <h2 id="endpoints-POSTapi-v1-auth-register">POST api/v1/auth/register</h2>
+            <h2 id="authentication-api-POSTapi-v1-auth-register">POST api/v1/auth/register</h2>
 
 <p>
 </p>
@@ -302,18 +309,18 @@ fetch(url, {
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"name\": \"ppaqearluelowvnyumlt\",
-    \"gender\": \"molestias\",
-    \"bday\": \"laudantium\",
-    \"email\": \"zvrodgouezpiyjejtjxzpvtfemuyazxefmolymffenurthudtlyuwefeloemgdpggjdybnzwfswlqyfbi\",
-    \"password\": \"bedrcggsqm\",
+    \"name\": \"mkvpnzyv\",
+    \"gender\": \"ut\",
+    \"bday\": \"maxime\",
+    \"email\": \"fbedschjacfgsiwwyyqjxlmziuflolxszsusnoizoykvlcenmyelbbyvadmnurremcp\",
+    \"password\": \"w\",
     \"address\": {
-        \"address\": \"quos\",
-        \"barangay\": \"repellendus\",
-        \"city\": \"doloremque\",
-        \"zip_code\": \"labore\",
-        \"contact_number\": \"dolor\",
-        \"region\": \"quis\"
+        \"address\": \"ea\",
+        \"barangay\": \"cupiditate\",
+        \"city\": \"praesentium\",
+        \"zip_code\": \"atque\",
+        \"contact_number\": \"non\",
+        \"region\": \"ut\"
     }
 }"
 </code></pre></div>
@@ -330,18 +337,18 @@ const headers = {
 };
 
 let body = {
-    "name": "ppaqearluelowvnyumlt",
-    "gender": "molestias",
-    "bday": "laudantium",
-    "email": "zvrodgouezpiyjejtjxzpvtfemuyazxefmolymffenurthudtlyuwefeloemgdpggjdybnzwfswlqyfbi",
-    "password": "bedrcggsqm",
+    "name": "mkvpnzyv",
+    "gender": "ut",
+    "bday": "maxime",
+    "email": "fbedschjacfgsiwwyyqjxlmziuflolxszsusnoizoykvlcenmyelbbyvadmnurremcp",
+    "password": "w",
     "address": {
-        "address": "quos",
-        "barangay": "repellendus",
-        "city": "doloremque",
-        "zip_code": "labore",
-        "contact_number": "dolor",
-        "region": "quis"
+        "address": "ea",
+        "barangay": "cupiditate",
+        "city": "praesentium",
+        "zip_code": "atque",
+        "contact_number": "non",
+        "region": "ut"
     }
 };
 
@@ -400,7 +407,7 @@ fetch(url, {
                 <input type="text"
                name="name"
                data-endpoint="POSTapi-v1-auth-register"
-               value="ppaqearluelowvnyumlt"
+               value="mkvpnzyv"
                data-component="body" hidden>
     <br>
 <p>Must be at least 2 characters. Must not be greater than 32 characters.</p>
@@ -410,7 +417,7 @@ fetch(url, {
                 <input type="text"
                name="gender"
                data-endpoint="POSTapi-v1-auth-register"
-               value="molestias"
+               value="ut"
                data-component="body" hidden>
     <br>
 
@@ -420,7 +427,7 @@ fetch(url, {
                 <input type="text"
                name="bday"
                data-endpoint="POSTapi-v1-auth-register"
-               value="laudantium"
+               value="maxime"
                data-component="body" hidden>
     <br>
 
@@ -430,7 +437,7 @@ fetch(url, {
                 <input type="text"
                name="email"
                data-endpoint="POSTapi-v1-auth-register"
-               value="zvrodgouezpiyjejtjxzpvtfemuyazxefmolymffenurthudtlyuwefeloemgdpggjdybnzwfswlqyfbi"
+               value="fbedschjacfgsiwwyyqjxlmziuflolxszsusnoizoykvlcenmyelbbyvadmnurremcp"
                data-component="body" hidden>
     <br>
 <p>Must be a valid email address. Must be at least 3 characters. Must not be greater than 100 characters.</p>
@@ -440,7 +447,7 @@ fetch(url, {
                 <input type="text"
                name="password"
                data-endpoint="POSTapi-v1-auth-register"
-               value="bedrcggsqm"
+               value="w"
                data-component="body" hidden>
     <br>
 <p>Must be at least 8 characters. Must not be greater than 16 characters.</p>
@@ -457,7 +464,7 @@ fetch(url, {
                 <input type="text"
                name="address.address"
                data-endpoint="POSTapi-v1-auth-register"
-               value="quos"
+               value="ea"
                data-component="body" hidden>
     <br>
 
@@ -467,7 +474,7 @@ fetch(url, {
                 <input type="text"
                name="address.barangay"
                data-endpoint="POSTapi-v1-auth-register"
-               value="repellendus"
+               value="cupiditate"
                data-component="body" hidden>
     <br>
 
@@ -477,7 +484,7 @@ fetch(url, {
                 <input type="text"
                name="address.city"
                data-endpoint="POSTapi-v1-auth-register"
-               value="doloremque"
+               value="praesentium"
                data-component="body" hidden>
     <br>
 
@@ -487,7 +494,7 @@ fetch(url, {
                 <input type="text"
                name="address.zip_code"
                data-endpoint="POSTapi-v1-auth-register"
-               value="labore"
+               value="atque"
                data-component="body" hidden>
     <br>
 
@@ -497,7 +504,7 @@ fetch(url, {
                 <input type="text"
                name="address.contact_number"
                data-endpoint="POSTapi-v1-auth-register"
-               value="dolor"
+               value="non"
                data-component="body" hidden>
     <br>
 
@@ -507,7 +514,7 @@ fetch(url, {
                 <input type="text"
                name="address.region"
                data-endpoint="POSTapi-v1-auth-register"
-               value="quis"
+               value="ut"
                data-component="body" hidden>
     <br>
 
@@ -515,6 +522,10 @@ fetch(url, {
                                     </details>
         </p>
         </form>
+
+        <h1 id="endpoints">Endpoints</h1>
+
+    
 
             <h2 id="endpoints-GETapi-v1-users">Display a listing of the resource.</h2>
 
@@ -562,38 +573,12 @@ fetch(url, {
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 34
+x-ratelimit-remaining: 58
 access-control-allow-origin: *
  </code></pre>
         </details>         <pre>
 
-<code class="language-json">[
-    {
-        &quot;id&quot;: 1,
-        &quot;user_address_id&quot;: null,
-        &quot;name&quot;: &quot;John Doe&quot;,
-        &quot;gender&quot;: &quot;male&quot;,
-        &quot;bday&quot;: &quot;01-18-98&quot;,
-        &quot;email&quot;: &quot;john.doe10@domain.com&quot;,
-        &quot;email_verified_at&quot;: null,
-        &quot;type&quot;: null,
-        &quot;created_at&quot;: &quot;2022-03-19T02:06:45.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2022-03-19T02:06:45.000000Z&quot;,
-        &quot;user_address&quot;: {
-            &quot;id&quot;: 1,
-            &quot;user_id&quot;: 1,
-            &quot;address&quot;: &quot;Street address&quot;,
-            &quot;barangay&quot;: &quot;Barangay name&quot;,
-            &quot;city&quot;: &quot;Manila&quot;,
-            &quot;zip_code&quot;: &quot;1233&quot;,
-            &quot;contact_number&quot;: &quot;09088888888&quot;,
-            &quot;region&quot;: &quot;NCR&quot;,
-            &quot;country&quot;: &quot;PH&quot;,
-            &quot;created_at&quot;: &quot;2022-03-19T02:06:45.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-03-19T02:06:45.000000Z&quot;
-        }
-    }
-]</code>
+<code class="language-json">[]</code>
  </pre>
     </span>
 <span id="execution-results-GETapi-v1-users" hidden>
@@ -728,14 +713,14 @@ fetch(url, {
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/v1/users/14" \
+    --get "http://localhost:8000/api/v1/users/6" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/v1/users/14"
+    "http://localhost:8000/api/v1/users/6"
 );
 
 const headers = {
@@ -752,7 +737,7 @@ fetch(url, {
 
 <span id="example-responses-GETapi-v1-users--id-">
             <blockquote>
-            <p>Example response (200):</p>
+            <p>Example response (404):</p>
         </blockquote>
                 <details class="annotation">
             <summary>
@@ -761,36 +746,12 @@ fetch(url, {
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 33
+x-ratelimit-remaining: 57
 access-control-allow-origin: *
  </code></pre>
         </details>         <pre>
 
-<code class="language-json">{
-    &quot;id&quot;: 1,
-    &quot;user_address_id&quot;: null,
-    &quot;name&quot;: &quot;John Doe&quot;,
-    &quot;gender&quot;: &quot;male&quot;,
-    &quot;bday&quot;: &quot;01-18-98&quot;,
-    &quot;email&quot;: &quot;john.doe10@domain.com&quot;,
-    &quot;email_verified_at&quot;: null,
-    &quot;type&quot;: null,
-    &quot;created_at&quot;: &quot;2022-03-19T02:06:45.000000Z&quot;,
-    &quot;updated_at&quot;: &quot;2022-03-19T02:06:45.000000Z&quot;,
-    &quot;user_address&quot;: {
-        &quot;id&quot;: 1,
-        &quot;user_id&quot;: 1,
-        &quot;address&quot;: &quot;Street address&quot;,
-        &quot;barangay&quot;: &quot;Barangay name&quot;,
-        &quot;city&quot;: &quot;Manila&quot;,
-        &quot;zip_code&quot;: &quot;1233&quot;,
-        &quot;contact_number&quot;: &quot;09088888888&quot;,
-        &quot;region&quot;: &quot;NCR&quot;,
-        &quot;country&quot;: &quot;PH&quot;,
-        &quot;created_at&quot;: &quot;2022-03-19T02:06:45.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2022-03-19T02:06:45.000000Z&quot;
-    }
-}</code>
+<code class="language-json">&quot;Not Found&quot;</code>
  </pre>
     </span>
 <span id="execution-results-GETapi-v1-users--id-" hidden>
@@ -838,7 +799,7 @@ access-control-allow-origin: *
                 <input type="number"
                name="id"
                data-endpoint="GETapi-v1-users--id-"
-               value="14"
+               value="6"
                data-component="url" hidden>
     <br>
 <p>The ID of the user.</p>
@@ -858,14 +819,14 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request PUT \
-    "http://localhost:8000/api/v1/users/16" \
+    "http://localhost:8000/api/v1/users/5" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/v1/users/16"
+    "http://localhost:8000/api/v1/users/5"
 );
 
 const headers = {
@@ -931,7 +892,7 @@ fetch(url, {
                 <input type="number"
                name="id"
                data-endpoint="PUTapi-v1-users--id-"
-               value="16"
+               value="5"
                data-component="url" hidden>
     <br>
 <p>The ID of the user.</p>
@@ -984,35 +945,12 @@ fetch(url, {
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 32
+x-ratelimit-remaining: 56
 access-control-allow-origin: *
  </code></pre>
         </details>         <pre>
 
-<code class="language-json">[
-    {
-        &quot;id&quot;: 2,
-        &quot;sku&quot;: &quot;DMT9XWVXJG&quot;,
-        &quot;name&quot;: &quot;COSMIQ+ by Deepblu&quot;,
-        &quot;description&quot;: &quot;COSMIQ+ by Deepblu&quot;,
-        &quot;quantity&quot;: 5,
-        &quot;price&quot;: 575,
-        &quot;type&quot;: &quot;&quot;,
-        &quot;deleted_at&quot;: null,
-        &quot;created_at&quot;: &quot;2022-03-19T06:39:34.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2022-03-19T06:39:34.000000Z&quot;,
-        &quot;product_categories&quot;: null,
-        &quot;product_images&quot;: [
-            {
-                &quot;id&quot;: 2,
-                &quot;product_id&quot;: 2,
-                &quot;img_path&quot;: &quot;http://localhost:8000/images/product-images/DMT9XWVXJG-1647671974.png&quot;,
-                &quot;created_at&quot;: &quot;2022-03-19T06:39:34.000000Z&quot;,
-                &quot;updated_at&quot;: &quot;2022-03-19T06:39:34.000000Z&quot;
-            }
-        ]
-    }
-]</code>
+<code class="language-json">[]</code>
  </pre>
     </span>
 <span id="execution-results-GETapi-v1-products" hidden>
@@ -1147,14 +1085,14 @@ fetch(url, {
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/v1/products/molestias" \
+    --get "http://localhost:8000/api/v1/products/ut" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/v1/products/molestias"
+    "http://localhost:8000/api/v1/products/ut"
 );
 
 const headers = {
@@ -1180,7 +1118,7 @@ fetch(url, {
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 31
+x-ratelimit-remaining: 55
 access-control-allow-origin: *
  </code></pre>
         </details>         <pre>
@@ -1233,7 +1171,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="id"
                data-endpoint="GETapi-v1-products--id-"
-               value="molestias"
+               value="ut"
                data-component="url" hidden>
     <br>
 <p>The ID of the product.</p>
@@ -1253,14 +1191,14 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request PUT \
-    "http://localhost:8000/api/v1/products/qui" \
+    "http://localhost:8000/api/v1/products/sit" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/v1/products/qui"
+    "http://localhost:8000/api/v1/products/sit"
 );
 
 const headers = {
@@ -1326,7 +1264,7 @@ fetch(url, {
                 <input type="text"
                name="id"
                data-endpoint="PUTapi-v1-products--id-"
-               value="qui"
+               value="sit"
                data-component="url" hidden>
     <br>
 <p>The ID of the product.</p>
@@ -1346,14 +1284,14 @@ fetch(url, {
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request DELETE \
-    "http://localhost:8000/api/v1/products/in" \
+    "http://localhost:8000/api/v1/products/quidem" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/v1/products/in"
+    "http://localhost:8000/api/v1/products/quidem"
 );
 
 const headers = {
@@ -1415,7 +1353,7 @@ fetch(url, {
                 <input type="text"
                name="id"
                data-endpoint="DELETEapi-v1-products--id-"
-               value="in"
+               value="quidem"
                data-component="url" hidden>
     <br>
 <p>The ID of the product.</p>
@@ -1468,7 +1406,7 @@ fetch(url, {
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 30
+x-ratelimit-remaining: 54
 access-control-allow-origin: *
  </code></pre>
         </details>         <pre>
@@ -1608,14 +1546,14 @@ fetch(url, {
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/v1/product-categories/quam" \
+    --get "http://localhost:8000/api/v1/product-categories/non" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/v1/product-categories/quam"
+    "http://localhost:8000/api/v1/product-categories/non"
 );
 
 const headers = {
@@ -1641,7 +1579,7 @@ fetch(url, {
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 29
+x-ratelimit-remaining: 53
 access-control-allow-origin: *
  </code></pre>
         </details>         <pre>
@@ -1694,7 +1632,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="id"
                data-endpoint="GETapi-v1-product-categories--id-"
-               value="quam"
+               value="non"
                data-component="url" hidden>
     <br>
 <p>The ID of the product category.</p>
@@ -1714,14 +1652,14 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request PUT \
-    "http://localhost:8000/api/v1/product-categories/ad" \
+    "http://localhost:8000/api/v1/product-categories/fugit" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/v1/product-categories/ad"
+    "http://localhost:8000/api/v1/product-categories/fugit"
 );
 
 const headers = {
@@ -1787,7 +1725,7 @@ fetch(url, {
                 <input type="text"
                name="id"
                data-endpoint="PUTapi-v1-product-categories--id-"
-               value="ad"
+               value="fugit"
                data-component="url" hidden>
     <br>
 <p>The ID of the product category.</p>
@@ -1807,14 +1745,14 @@ fetch(url, {
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request DELETE \
-    "http://localhost:8000/api/v1/product-categories/quaerat" \
+    "http://localhost:8000/api/v1/product-categories/praesentium" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/v1/product-categories/quaerat"
+    "http://localhost:8000/api/v1/product-categories/praesentium"
 );
 
 const headers = {
@@ -1876,7 +1814,7 @@ fetch(url, {
                 <input type="text"
                name="id"
                data-endpoint="DELETEapi-v1-product-categories--id-"
-               value="quaerat"
+               value="praesentium"
                data-component="url" hidden>
     <br>
 <p>The ID of the product category.</p>
@@ -1929,1630 +1867,12 @@ fetch(url, {
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 28
+x-ratelimit-remaining: 52
 access-control-allow-origin: *
  </code></pre>
         </details>         <pre>
 
-<code class="language-json">[
-    {
-        &quot;id&quot;: 63,
-        &quot;reference_code&quot;: &quot;ORDER-#HAS6BWUNE3&quot;,
-        &quot;user_id&quot;: null,
-        &quot;customer_name&quot;: &quot;Kobe Bryant&quot;,
-        &quot;customer_email&quot;: &quot;kobe24@nba.com&quot;,
-        &quot;total_amount&quot;: 500,
-        &quot;order_products&quot;: &quot;[{\&quot;sku\&quot;:\&quot;DMDSOXUNT6\&quot;,\&quot;name\&quot;:\&quot;new product upload\&quot;,\&quot;description\&quot;:\&quot;new product uploadnew product uploadnew product upload\&quot;,\&quot;price\&quot;:500.75,\&quot;quantity\&quot;:1},{\&quot;sku\&quot;:\&quot;AFI9CASWOW\&quot;,\&quot;name\&quot;:\&quot;first product2222\&quot;,\&quot;description\&quot;:\&quot;first product description\&quot;,\&quot;price\&quot;:150.75,\&quot;quantity\&quot;:1},{\&quot;sku\&quot;:\&quot;KCBSD8PE8I\&quot;,\&quot;name\&quot;:\&quot;Laurie Douglas\&quot;,\&quot;description\&quot;:\&quot;Ipsum sapiente autem ut placeat aut.\&quot;,\&quot;price\&quot;:500.25,\&quot;quantity\&quot;:1}]&quot;,
-        &quot;delivery_notes&quot;: &quot;Look for john&quot;,
-        &quot;created_at&quot;: &quot;2022-03-21T00:29:14.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2022-03-21T00:29:14.000000Z&quot;,
-        &quot;status&quot;: &quot;PENDING&quot;,
-        &quot;user&quot;: null,
-        &quot;order_shipping_address&quot;: {
-            &quot;id&quot;: 23,
-            &quot;order_id&quot;: 63,
-            &quot;address&quot;: &quot;Street address&quot;,
-            &quot;barangay&quot;: &quot;Barangay name&quot;,
-            &quot;city&quot;: &quot;Manila&quot;,
-            &quot;zip_code&quot;: &quot;1233&quot;,
-            &quot;contact_number&quot;: &quot;09088888888&quot;,
-            &quot;region&quot;: &quot;NCR&quot;,
-            &quot;country&quot;: &quot;PH&quot;,
-            &quot;created_at&quot;: &quot;2022-03-21T00:29:14.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-03-21T00:29:14.000000Z&quot;
-        }
-    },
-    {
-        &quot;id&quot;: 62,
-        &quot;reference_code&quot;: &quot;ORDER-#GHB12TY71W&quot;,
-        &quot;user_id&quot;: null,
-        &quot;customer_name&quot;: &quot;Kobe Bryant&quot;,
-        &quot;customer_email&quot;: &quot;kobe24@nba.com&quot;,
-        &quot;total_amount&quot;: 500,
-        &quot;order_products&quot;: &quot;[{\&quot;sku\&quot;:\&quot;DMDSOXUNT6\&quot;,\&quot;name\&quot;:\&quot;new product upload\&quot;,\&quot;description\&quot;:\&quot;new product uploadnew product uploadnew product upload\&quot;,\&quot;price\&quot;:500.75,\&quot;quantity\&quot;:1},{\&quot;sku\&quot;:\&quot;AFI9CASWOW\&quot;,\&quot;name\&quot;:\&quot;first product2222\&quot;,\&quot;description\&quot;:\&quot;first product description\&quot;,\&quot;price\&quot;:150.75,\&quot;quantity\&quot;:1},{\&quot;sku\&quot;:\&quot;KCBSD8PE8I\&quot;,\&quot;name\&quot;:\&quot;Laurie Douglas\&quot;,\&quot;description\&quot;:\&quot;Ipsum sapiente autem ut placeat aut.\&quot;,\&quot;price\&quot;:500.25,\&quot;quantity\&quot;:1}]&quot;,
-        &quot;delivery_notes&quot;: &quot;Look for john&quot;,
-        &quot;created_at&quot;: &quot;2022-03-21T00:29:10.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2022-03-21T00:29:10.000000Z&quot;,
-        &quot;status&quot;: &quot;PENDING&quot;,
-        &quot;user&quot;: null,
-        &quot;order_shipping_address&quot;: null
-    },
-    {
-        &quot;id&quot;: 61,
-        &quot;reference_code&quot;: &quot;ORDER-#BM7A2C28WR&quot;,
-        &quot;user_id&quot;: null,
-        &quot;customer_name&quot;: &quot;Kobe Bryant&quot;,
-        &quot;customer_email&quot;: &quot;kobe24@nba.com&quot;,
-        &quot;total_amount&quot;: 500,
-        &quot;order_products&quot;: &quot;[{\&quot;sku\&quot;:\&quot;DMDSOXUNT6\&quot;,\&quot;name\&quot;:\&quot;new product upload\&quot;,\&quot;description\&quot;:\&quot;new product uploadnew product uploadnew product upload\&quot;,\&quot;price\&quot;:500.75,\&quot;quantity\&quot;:1},{\&quot;sku\&quot;:\&quot;AFI9CASWOW\&quot;,\&quot;name\&quot;:\&quot;first product2222\&quot;,\&quot;description\&quot;:\&quot;first product description\&quot;,\&quot;price\&quot;:150.75,\&quot;quantity\&quot;:1},{\&quot;sku\&quot;:\&quot;KCBSD8PE8I\&quot;,\&quot;name\&quot;:\&quot;Laurie Douglas\&quot;,\&quot;description\&quot;:\&quot;Ipsum sapiente autem ut placeat aut.\&quot;,\&quot;price\&quot;:500.25,\&quot;quantity\&quot;:1}]&quot;,
-        &quot;delivery_notes&quot;: &quot;Look for john&quot;,
-        &quot;created_at&quot;: &quot;2022-03-21T00:29:00.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2022-03-21T00:29:00.000000Z&quot;,
-        &quot;status&quot;: &quot;PENDING&quot;,
-        &quot;user&quot;: null,
-        &quot;order_shipping_address&quot;: {
-            &quot;id&quot;: 22,
-            &quot;order_id&quot;: 61,
-            &quot;address&quot;: &quot;Street address&quot;,
-            &quot;barangay&quot;: &quot;Barangay name&quot;,
-            &quot;city&quot;: &quot;Manila&quot;,
-            &quot;zip_code&quot;: &quot;1233&quot;,
-            &quot;contact_number&quot;: &quot;09088888888&quot;,
-            &quot;region&quot;: &quot;NCR&quot;,
-            &quot;country&quot;: &quot;PH&quot;,
-            &quot;created_at&quot;: &quot;2022-03-21T00:29:00.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-03-21T00:29:00.000000Z&quot;
-        }
-    },
-    {
-        &quot;id&quot;: 60,
-        &quot;reference_code&quot;: &quot;ORDER-#YG9VAFJU3C&quot;,
-        &quot;user_id&quot;: null,
-        &quot;customer_name&quot;: &quot;Kobe Bryant&quot;,
-        &quot;customer_email&quot;: &quot;kobe24@nba.com&quot;,
-        &quot;total_amount&quot;: 500,
-        &quot;order_products&quot;: &quot;[{\&quot;sku\&quot;:\&quot;DMDSOXUNT6\&quot;,\&quot;name\&quot;:\&quot;new product upload\&quot;,\&quot;description\&quot;:\&quot;new product uploadnew product uploadnew product upload\&quot;,\&quot;price\&quot;:500.75,\&quot;quantity\&quot;:1},{\&quot;sku\&quot;:\&quot;AFI9CASWOW\&quot;,\&quot;name\&quot;:\&quot;first product2222\&quot;,\&quot;description\&quot;:\&quot;first product description\&quot;,\&quot;price\&quot;:150.75,\&quot;quantity\&quot;:1},{\&quot;sku\&quot;:\&quot;KCBSD8PE8I\&quot;,\&quot;name\&quot;:\&quot;Laurie Douglas\&quot;,\&quot;description\&quot;:\&quot;Ipsum sapiente autem ut placeat aut.\&quot;,\&quot;price\&quot;:500.25,\&quot;quantity\&quot;:1}]&quot;,
-        &quot;delivery_notes&quot;: &quot;Look for john&quot;,
-        &quot;created_at&quot;: &quot;2022-03-21T00:28:56.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2022-03-21T00:28:56.000000Z&quot;,
-        &quot;status&quot;: &quot;PENDING&quot;,
-        &quot;user&quot;: null,
-        &quot;order_shipping_address&quot;: null
-    },
-    {
-        &quot;id&quot;: 59,
-        &quot;reference_code&quot;: &quot;ORDER-#ANKPDBHMKR&quot;,
-        &quot;user_id&quot;: null,
-        &quot;customer_name&quot;: &quot;Kobe Bryant&quot;,
-        &quot;customer_email&quot;: &quot;kobe24@nba.com&quot;,
-        &quot;total_amount&quot;: 500,
-        &quot;order_products&quot;: &quot;[{\&quot;sku\&quot;:\&quot;DMDSOXUNT6\&quot;,\&quot;name\&quot;:\&quot;new product upload\&quot;,\&quot;description\&quot;:\&quot;new product uploadnew product uploadnew product upload\&quot;,\&quot;price\&quot;:500.75,\&quot;quantity\&quot;:1},{\&quot;sku\&quot;:\&quot;AFI9CASWOW\&quot;,\&quot;name\&quot;:\&quot;first product2222\&quot;,\&quot;description\&quot;:\&quot;first product description\&quot;,\&quot;price\&quot;:150.75,\&quot;quantity\&quot;:1},{\&quot;sku\&quot;:\&quot;KCBSD8PE8I\&quot;,\&quot;name\&quot;:\&quot;Laurie Douglas\&quot;,\&quot;description\&quot;:\&quot;Ipsum sapiente autem ut placeat aut.\&quot;,\&quot;price\&quot;:500.25,\&quot;quantity\&quot;:1}]&quot;,
-        &quot;delivery_notes&quot;: &quot;Look for john&quot;,
-        &quot;created_at&quot;: &quot;2022-03-21T00:28:53.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2022-03-21T00:28:53.000000Z&quot;,
-        &quot;status&quot;: &quot;PENDING&quot;,
-        &quot;user&quot;: null,
-        &quot;order_shipping_address&quot;: {
-            &quot;id&quot;: 21,
-            &quot;order_id&quot;: 59,
-            &quot;address&quot;: &quot;address ni kobe&quot;,
-            &quot;barangay&quot;: &quot;Barangay name&quot;,
-            &quot;city&quot;: &quot;Manila&quot;,
-            &quot;zip_code&quot;: &quot;1233&quot;,
-            &quot;contact_number&quot;: &quot;09088888888&quot;,
-            &quot;region&quot;: &quot;NCR&quot;,
-            &quot;country&quot;: &quot;PH&quot;,
-            &quot;created_at&quot;: &quot;2022-03-21T00:28:53.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-03-21T00:28:53.000000Z&quot;
-        }
-    },
-    {
-        &quot;id&quot;: 58,
-        &quot;reference_code&quot;: &quot;ORDER-#SGNS4CXYKM&quot;,
-        &quot;user_id&quot;: null,
-        &quot;customer_name&quot;: &quot;Kobe Bryant&quot;,
-        &quot;customer_email&quot;: &quot;kobe24@nba.com&quot;,
-        &quot;total_amount&quot;: 500,
-        &quot;order_products&quot;: &quot;[{\&quot;sku\&quot;:\&quot;DMDSOXUNT6\&quot;,\&quot;name\&quot;:\&quot;new product upload\&quot;,\&quot;description\&quot;:\&quot;new product uploadnew product uploadnew product upload\&quot;,\&quot;price\&quot;:500.75,\&quot;quantity\&quot;:1},{\&quot;sku\&quot;:\&quot;AFI9CASWOW\&quot;,\&quot;name\&quot;:\&quot;first product2222\&quot;,\&quot;description\&quot;:\&quot;first product description\&quot;,\&quot;price\&quot;:150.75,\&quot;quantity\&quot;:1},{\&quot;sku\&quot;:\&quot;KCBSD8PE8I\&quot;,\&quot;name\&quot;:\&quot;Laurie Douglas\&quot;,\&quot;description\&quot;:\&quot;Ipsum sapiente autem ut placeat aut.\&quot;,\&quot;price\&quot;:500.25,\&quot;quantity\&quot;:1}]&quot;,
-        &quot;delivery_notes&quot;: &quot;Look for john&quot;,
-        &quot;created_at&quot;: &quot;2022-03-21T00:28:49.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2022-03-21T00:28:49.000000Z&quot;,
-        &quot;status&quot;: &quot;PENDING&quot;,
-        &quot;user&quot;: null,
-        &quot;order_shipping_address&quot;: {
-            &quot;id&quot;: 20,
-            &quot;order_id&quot;: 58,
-            &quot;address&quot;: &quot;Street address&quot;,
-            &quot;barangay&quot;: &quot;Barangay name&quot;,
-            &quot;city&quot;: &quot;Manila&quot;,
-            &quot;zip_code&quot;: &quot;1233&quot;,
-            &quot;contact_number&quot;: &quot;09088888888&quot;,
-            &quot;region&quot;: &quot;NCR&quot;,
-            &quot;country&quot;: &quot;PH&quot;,
-            &quot;created_at&quot;: &quot;2022-03-21T00:28:49.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-03-21T00:28:49.000000Z&quot;
-        }
-    },
-    {
-        &quot;id&quot;: 57,
-        &quot;reference_code&quot;: &quot;ORDER-#9GU35FUO2C&quot;,
-        &quot;user_id&quot;: null,
-        &quot;customer_name&quot;: &quot;Kobe Bryant&quot;,
-        &quot;customer_email&quot;: &quot;kobe24@nba.com&quot;,
-        &quot;total_amount&quot;: 500,
-        &quot;order_products&quot;: &quot;[{\&quot;sku\&quot;:\&quot;DMDSOXUNT6\&quot;,\&quot;name\&quot;:\&quot;new product upload\&quot;,\&quot;description\&quot;:\&quot;new product uploadnew product uploadnew product upload\&quot;,\&quot;price\&quot;:500.75,\&quot;quantity\&quot;:1},{\&quot;sku\&quot;:\&quot;AFI9CASWOW\&quot;,\&quot;name\&quot;:\&quot;first product2222\&quot;,\&quot;description\&quot;:\&quot;first product description\&quot;,\&quot;price\&quot;:150.75,\&quot;quantity\&quot;:1},{\&quot;sku\&quot;:\&quot;KCBSD8PE8I\&quot;,\&quot;name\&quot;:\&quot;Laurie Douglas\&quot;,\&quot;description\&quot;:\&quot;Ipsum sapiente autem ut placeat aut.\&quot;,\&quot;price\&quot;:500.25,\&quot;quantity\&quot;:1}]&quot;,
-        &quot;delivery_notes&quot;: &quot;Look for john&quot;,
-        &quot;created_at&quot;: &quot;2022-03-21T00:25:26.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2022-03-21T00:25:26.000000Z&quot;,
-        &quot;status&quot;: &quot;PENDING&quot;,
-        &quot;user&quot;: null,
-        &quot;order_shipping_address&quot;: null
-    },
-    {
-        &quot;id&quot;: 56,
-        &quot;reference_code&quot;: &quot;ORDER-#XHNQ4RB4OS&quot;,
-        &quot;user_id&quot;: null,
-        &quot;customer_name&quot;: &quot;Kobe Bryant&quot;,
-        &quot;customer_email&quot;: &quot;kobe24@nba.com&quot;,
-        &quot;total_amount&quot;: 500,
-        &quot;order_products&quot;: &quot;[{\&quot;sku\&quot;:\&quot;DMDSOXUNT6\&quot;,\&quot;name\&quot;:\&quot;new product upload\&quot;,\&quot;description\&quot;:\&quot;new product uploadnew product uploadnew product upload\&quot;,\&quot;price\&quot;:500.75,\&quot;quantity\&quot;:1},{\&quot;sku\&quot;:\&quot;AFI9CASWOW\&quot;,\&quot;name\&quot;:\&quot;first product2222\&quot;,\&quot;description\&quot;:\&quot;first product description\&quot;,\&quot;price\&quot;:150.75,\&quot;quantity\&quot;:1},{\&quot;sku\&quot;:\&quot;KCBSD8PE8I\&quot;,\&quot;name\&quot;:\&quot;Laurie Douglas\&quot;,\&quot;description\&quot;:\&quot;Ipsum sapiente autem ut placeat aut.\&quot;,\&quot;price\&quot;:500.25,\&quot;quantity\&quot;:1}]&quot;,
-        &quot;delivery_notes&quot;: &quot;Look for john&quot;,
-        &quot;created_at&quot;: &quot;2022-03-21T00:21:16.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2022-03-21T00:21:16.000000Z&quot;,
-        &quot;status&quot;: &quot;PENDING&quot;,
-        &quot;user&quot;: null,
-        &quot;order_shipping_address&quot;: null
-    },
-    {
-        &quot;id&quot;: 55,
-        &quot;reference_code&quot;: &quot;ORDER-#926HT5NSPM&quot;,
-        &quot;user_id&quot;: null,
-        &quot;customer_name&quot;: null,
-        &quot;customer_email&quot;: null,
-        &quot;total_amount&quot;: 500,
-        &quot;order_products&quot;: &quot;[{\&quot;sku\&quot;:\&quot;DMDSOXUNT6\&quot;,\&quot;name\&quot;:\&quot;new product upload\&quot;,\&quot;description\&quot;:\&quot;new product uploadnew product uploadnew product upload\&quot;,\&quot;price\&quot;:500.75,\&quot;quantity\&quot;:1},{\&quot;sku\&quot;:\&quot;AFI9CASWOW\&quot;,\&quot;name\&quot;:\&quot;first product2222\&quot;,\&quot;description\&quot;:\&quot;first product description\&quot;,\&quot;price\&quot;:150.75,\&quot;quantity\&quot;:1},{\&quot;sku\&quot;:\&quot;KCBSD8PE8I\&quot;,\&quot;name\&quot;:\&quot;Laurie Douglas\&quot;,\&quot;description\&quot;:\&quot;Ipsum sapiente autem ut placeat aut.\&quot;,\&quot;price\&quot;:500.25,\&quot;quantity\&quot;:1}]&quot;,
-        &quot;delivery_notes&quot;: &quot;Look for john&quot;,
-        &quot;created_at&quot;: &quot;2022-03-21T00:07:11.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2022-03-21T00:07:11.000000Z&quot;,
-        &quot;status&quot;: &quot;PENDING&quot;,
-        &quot;user&quot;: null,
-        &quot;order_shipping_address&quot;: {
-            &quot;id&quot;: 19,
-            &quot;order_id&quot;: 55,
-            &quot;address&quot;: &quot;address ni kobe&quot;,
-            &quot;barangay&quot;: &quot;Barangay name&quot;,
-            &quot;city&quot;: &quot;Manila&quot;,
-            &quot;zip_code&quot;: &quot;1233&quot;,
-            &quot;contact_number&quot;: &quot;09088888888&quot;,
-            &quot;region&quot;: &quot;NCR&quot;,
-            &quot;country&quot;: &quot;PH&quot;,
-            &quot;created_at&quot;: &quot;2022-03-21T00:07:11.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-03-21T00:07:11.000000Z&quot;
-        }
-    },
-    {
-        &quot;id&quot;: 54,
-        &quot;reference_code&quot;: &quot;ORDER-#INZSPEHE48&quot;,
-        &quot;user_id&quot;: 1,
-        &quot;customer_name&quot;: &quot;1&quot;,
-        &quot;customer_email&quot;: &quot;1&quot;,
-        &quot;total_amount&quot;: 500,
-        &quot;order_products&quot;: &quot;[{\&quot;sku\&quot;:\&quot;DMDSOXUNT6\&quot;,\&quot;name\&quot;:\&quot;new product upload\&quot;,\&quot;description\&quot;:\&quot;new product uploadnew product uploadnew product upload\&quot;,\&quot;price\&quot;:500.75,\&quot;quantity\&quot;:1},{\&quot;sku\&quot;:\&quot;AFI9CASWOW\&quot;,\&quot;name\&quot;:\&quot;first product2222\&quot;,\&quot;description\&quot;:\&quot;first product description\&quot;,\&quot;price\&quot;:150.75,\&quot;quantity\&quot;:1},{\&quot;sku\&quot;:\&quot;KCBSD8PE8I\&quot;,\&quot;name\&quot;:\&quot;Laurie Douglas\&quot;,\&quot;description\&quot;:\&quot;Ipsum sapiente autem ut placeat aut.\&quot;,\&quot;price\&quot;:500.25,\&quot;quantity\&quot;:1}]&quot;,
-        &quot;delivery_notes&quot;: &quot;Look for john&quot;,
-        &quot;created_at&quot;: &quot;2022-03-21T00:07:07.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2022-03-21T00:07:07.000000Z&quot;,
-        &quot;status&quot;: &quot;PENDING&quot;,
-        &quot;user&quot;: {
-            &quot;id&quot;: 1,
-            &quot;user_address_id&quot;: null,
-            &quot;name&quot;: &quot;John Doe&quot;,
-            &quot;gender&quot;: &quot;male&quot;,
-            &quot;bday&quot;: &quot;01-18-98&quot;,
-            &quot;email&quot;: &quot;john.doe10@domain.com&quot;,
-            &quot;email_verified_at&quot;: null,
-            &quot;type&quot;: null,
-            &quot;created_at&quot;: &quot;2022-03-19T02:06:45.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-03-19T02:06:45.000000Z&quot;
-        },
-        &quot;order_shipping_address&quot;: {
-            &quot;id&quot;: 18,
-            &quot;order_id&quot;: 54,
-            &quot;address&quot;: &quot;Street address&quot;,
-            &quot;barangay&quot;: &quot;Barangay name&quot;,
-            &quot;city&quot;: &quot;Manila&quot;,
-            &quot;zip_code&quot;: &quot;1233&quot;,
-            &quot;contact_number&quot;: &quot;09088888888&quot;,
-            &quot;region&quot;: &quot;NCR&quot;,
-            &quot;country&quot;: &quot;PH&quot;,
-            &quot;created_at&quot;: &quot;2022-03-21T00:07:07.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-03-21T00:07:07.000000Z&quot;
-        }
-    },
-    {
-        &quot;id&quot;: 53,
-        &quot;reference_code&quot;: &quot;ORDER-#KKXXTPF1ZB&quot;,
-        &quot;user_id&quot;: 1,
-        &quot;customer_name&quot;: &quot;1&quot;,
-        &quot;customer_email&quot;: &quot;1&quot;,
-        &quot;total_amount&quot;: 500,
-        &quot;order_products&quot;: &quot;[{\&quot;sku\&quot;:\&quot;DMDSOXUNT6\&quot;,\&quot;name\&quot;:\&quot;new product upload\&quot;,\&quot;description\&quot;:\&quot;new product uploadnew product uploadnew product upload\&quot;,\&quot;price\&quot;:500.75,\&quot;quantity\&quot;:1},{\&quot;sku\&quot;:\&quot;AFI9CASWOW\&quot;,\&quot;name\&quot;:\&quot;first product2222\&quot;,\&quot;description\&quot;:\&quot;first product description\&quot;,\&quot;price\&quot;:150.75,\&quot;quantity\&quot;:1},{\&quot;sku\&quot;:\&quot;KCBSD8PE8I\&quot;,\&quot;name\&quot;:\&quot;Laurie Douglas\&quot;,\&quot;description\&quot;:\&quot;Ipsum sapiente autem ut placeat aut.\&quot;,\&quot;price\&quot;:500.25,\&quot;quantity\&quot;:1}]&quot;,
-        &quot;delivery_notes&quot;: &quot;Look for john&quot;,
-        &quot;created_at&quot;: &quot;2022-03-20T14:44:44.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2022-03-20T14:44:44.000000Z&quot;,
-        &quot;status&quot;: &quot;PENDING&quot;,
-        &quot;user&quot;: {
-            &quot;id&quot;: 1,
-            &quot;user_address_id&quot;: null,
-            &quot;name&quot;: &quot;John Doe&quot;,
-            &quot;gender&quot;: &quot;male&quot;,
-            &quot;bday&quot;: &quot;01-18-98&quot;,
-            &quot;email&quot;: &quot;john.doe10@domain.com&quot;,
-            &quot;email_verified_at&quot;: null,
-            &quot;type&quot;: null,
-            &quot;created_at&quot;: &quot;2022-03-19T02:06:45.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-03-19T02:06:45.000000Z&quot;
-        },
-        &quot;order_shipping_address&quot;: {
-            &quot;id&quot;: 17,
-            &quot;order_id&quot;: 53,
-            &quot;address&quot;: &quot;Street address&quot;,
-            &quot;barangay&quot;: &quot;Barangay name&quot;,
-            &quot;city&quot;: &quot;Manila&quot;,
-            &quot;zip_code&quot;: &quot;1233&quot;,
-            &quot;contact_number&quot;: &quot;09088888888&quot;,
-            &quot;region&quot;: &quot;NCR&quot;,
-            &quot;country&quot;: &quot;PH&quot;,
-            &quot;created_at&quot;: &quot;2022-03-20T14:44:44.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-03-20T14:44:44.000000Z&quot;
-        }
-    },
-    {
-        &quot;id&quot;: 52,
-        &quot;reference_code&quot;: &quot;ORDER-#YLK1KTP9CV&quot;,
-        &quot;user_id&quot;: 1,
-        &quot;customer_name&quot;: &quot;1&quot;,
-        &quot;customer_email&quot;: &quot;1&quot;,
-        &quot;total_amount&quot;: 500,
-        &quot;order_products&quot;: &quot;[{\&quot;sku\&quot;:\&quot;DMDSOXUNT6\&quot;,\&quot;name\&quot;:\&quot;new product upload\&quot;,\&quot;description\&quot;:\&quot;new product uploadnew product uploadnew product upload\&quot;,\&quot;price\&quot;:500.75,\&quot;quantity\&quot;:1},{\&quot;sku\&quot;:\&quot;AFI9CASWOW\&quot;,\&quot;name\&quot;:\&quot;first product2222\&quot;,\&quot;description\&quot;:\&quot;first product description\&quot;,\&quot;price\&quot;:150.75,\&quot;quantity\&quot;:1},{\&quot;sku\&quot;:\&quot;KCBSD8PE8I\&quot;,\&quot;name\&quot;:\&quot;Laurie Douglas\&quot;,\&quot;description\&quot;:\&quot;Ipsum sapiente autem ut placeat aut.\&quot;,\&quot;price\&quot;:500.25,\&quot;quantity\&quot;:1}]&quot;,
-        &quot;delivery_notes&quot;: &quot;Look for john&quot;,
-        &quot;created_at&quot;: &quot;2022-03-20T14:44:43.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2022-03-20T14:44:43.000000Z&quot;,
-        &quot;status&quot;: &quot;PENDING&quot;,
-        &quot;user&quot;: {
-            &quot;id&quot;: 1,
-            &quot;user_address_id&quot;: null,
-            &quot;name&quot;: &quot;John Doe&quot;,
-            &quot;gender&quot;: &quot;male&quot;,
-            &quot;bday&quot;: &quot;01-18-98&quot;,
-            &quot;email&quot;: &quot;john.doe10@domain.com&quot;,
-            &quot;email_verified_at&quot;: null,
-            &quot;type&quot;: null,
-            &quot;created_at&quot;: &quot;2022-03-19T02:06:45.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-03-19T02:06:45.000000Z&quot;
-        },
-        &quot;order_shipping_address&quot;: {
-            &quot;id&quot;: 16,
-            &quot;order_id&quot;: 52,
-            &quot;address&quot;: &quot;Street address&quot;,
-            &quot;barangay&quot;: &quot;Barangay name&quot;,
-            &quot;city&quot;: &quot;Manila&quot;,
-            &quot;zip_code&quot;: &quot;1233&quot;,
-            &quot;contact_number&quot;: &quot;09088888888&quot;,
-            &quot;region&quot;: &quot;NCR&quot;,
-            &quot;country&quot;: &quot;PH&quot;,
-            &quot;created_at&quot;: &quot;2022-03-20T14:44:43.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-03-20T14:44:43.000000Z&quot;
-        }
-    },
-    {
-        &quot;id&quot;: 51,
-        &quot;reference_code&quot;: &quot;ORDER-#ORWAVN493E&quot;,
-        &quot;user_id&quot;: 1,
-        &quot;customer_name&quot;: &quot;1&quot;,
-        &quot;customer_email&quot;: &quot;1&quot;,
-        &quot;total_amount&quot;: 500,
-        &quot;order_products&quot;: &quot;[{\&quot;sku\&quot;:\&quot;DMDSOXUNT6\&quot;,\&quot;name\&quot;:\&quot;new product upload\&quot;,\&quot;description\&quot;:\&quot;new product uploadnew product uploadnew product upload\&quot;,\&quot;price\&quot;:500.75,\&quot;quantity\&quot;:1},{\&quot;sku\&quot;:\&quot;AFI9CASWOW\&quot;,\&quot;name\&quot;:\&quot;first product2222\&quot;,\&quot;description\&quot;:\&quot;first product description\&quot;,\&quot;price\&quot;:150.75,\&quot;quantity\&quot;:1},{\&quot;sku\&quot;:\&quot;KCBSD8PE8I\&quot;,\&quot;name\&quot;:\&quot;Laurie Douglas\&quot;,\&quot;description\&quot;:\&quot;Ipsum sapiente autem ut placeat aut.\&quot;,\&quot;price\&quot;:500.25,\&quot;quantity\&quot;:1}]&quot;,
-        &quot;delivery_notes&quot;: &quot;Look for john&quot;,
-        &quot;created_at&quot;: &quot;2022-03-20T14:44:41.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2022-03-20T14:44:41.000000Z&quot;,
-        &quot;status&quot;: &quot;PENDING&quot;,
-        &quot;user&quot;: {
-            &quot;id&quot;: 1,
-            &quot;user_address_id&quot;: null,
-            &quot;name&quot;: &quot;John Doe&quot;,
-            &quot;gender&quot;: &quot;male&quot;,
-            &quot;bday&quot;: &quot;01-18-98&quot;,
-            &quot;email&quot;: &quot;john.doe10@domain.com&quot;,
-            &quot;email_verified_at&quot;: null,
-            &quot;type&quot;: null,
-            &quot;created_at&quot;: &quot;2022-03-19T02:06:45.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-03-19T02:06:45.000000Z&quot;
-        },
-        &quot;order_shipping_address&quot;: {
-            &quot;id&quot;: 15,
-            &quot;order_id&quot;: 51,
-            &quot;address&quot;: &quot;Street address&quot;,
-            &quot;barangay&quot;: &quot;Barangay name&quot;,
-            &quot;city&quot;: &quot;Manila&quot;,
-            &quot;zip_code&quot;: &quot;1233&quot;,
-            &quot;contact_number&quot;: &quot;09088888888&quot;,
-            &quot;region&quot;: &quot;NCR&quot;,
-            &quot;country&quot;: &quot;PH&quot;,
-            &quot;created_at&quot;: &quot;2022-03-20T14:44:41.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-03-20T14:44:41.000000Z&quot;
-        }
-    },
-    {
-        &quot;id&quot;: 50,
-        &quot;reference_code&quot;: &quot;ORDER-#B1CMUYTIPX&quot;,
-        &quot;user_id&quot;: 1,
-        &quot;customer_name&quot;: &quot;1&quot;,
-        &quot;customer_email&quot;: &quot;1&quot;,
-        &quot;total_amount&quot;: 500,
-        &quot;order_products&quot;: &quot;[{\&quot;sku\&quot;:\&quot;DMDSOXUNT6\&quot;,\&quot;name\&quot;:\&quot;new product upload\&quot;,\&quot;description\&quot;:\&quot;new product uploadnew product uploadnew product upload\&quot;,\&quot;price\&quot;:500.75,\&quot;quantity\&quot;:1},{\&quot;sku\&quot;:\&quot;AFI9CASWOW\&quot;,\&quot;name\&quot;:\&quot;first product2222\&quot;,\&quot;description\&quot;:\&quot;first product description\&quot;,\&quot;price\&quot;:150.75,\&quot;quantity\&quot;:1},{\&quot;sku\&quot;:\&quot;KCBSD8PE8I\&quot;,\&quot;name\&quot;:\&quot;Laurie Douglas\&quot;,\&quot;description\&quot;:\&quot;Ipsum sapiente autem ut placeat aut.\&quot;,\&quot;price\&quot;:500.25,\&quot;quantity\&quot;:1}]&quot;,
-        &quot;delivery_notes&quot;: &quot;Look for john&quot;,
-        &quot;created_at&quot;: &quot;2022-03-20T14:43:46.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2022-03-20T14:43:46.000000Z&quot;,
-        &quot;status&quot;: &quot;PENDING&quot;,
-        &quot;user&quot;: {
-            &quot;id&quot;: 1,
-            &quot;user_address_id&quot;: null,
-            &quot;name&quot;: &quot;John Doe&quot;,
-            &quot;gender&quot;: &quot;male&quot;,
-            &quot;bday&quot;: &quot;01-18-98&quot;,
-            &quot;email&quot;: &quot;john.doe10@domain.com&quot;,
-            &quot;email_verified_at&quot;: null,
-            &quot;type&quot;: null,
-            &quot;created_at&quot;: &quot;2022-03-19T02:06:45.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-03-19T02:06:45.000000Z&quot;
-        },
-        &quot;order_shipping_address&quot;: null
-    },
-    {
-        &quot;id&quot;: 49,
-        &quot;reference_code&quot;: &quot;ORDER-#DAQIDPOPEN&quot;,
-        &quot;user_id&quot;: 1,
-        &quot;customer_name&quot;: &quot;1&quot;,
-        &quot;customer_email&quot;: &quot;1&quot;,
-        &quot;total_amount&quot;: 500,
-        &quot;order_products&quot;: &quot;[{\&quot;sku\&quot;:\&quot;DMDSOXUNT6\&quot;,\&quot;name\&quot;:\&quot;new product upload\&quot;,\&quot;description\&quot;:\&quot;new product uploadnew product uploadnew product upload\&quot;,\&quot;price\&quot;:500.75,\&quot;quantity\&quot;:1},{\&quot;sku\&quot;:\&quot;AFI9CASWOW\&quot;,\&quot;name\&quot;:\&quot;first product2222\&quot;,\&quot;description\&quot;:\&quot;first product description\&quot;,\&quot;price\&quot;:150.75,\&quot;quantity\&quot;:1},{\&quot;sku\&quot;:\&quot;KCBSD8PE8I\&quot;,\&quot;name\&quot;:\&quot;Laurie Douglas\&quot;,\&quot;description\&quot;:\&quot;Ipsum sapiente autem ut placeat aut.\&quot;,\&quot;price\&quot;:500.25,\&quot;quantity\&quot;:1}]&quot;,
-        &quot;delivery_notes&quot;: &quot;Look for john&quot;,
-        &quot;created_at&quot;: &quot;2022-03-20T14:43:27.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2022-03-20T14:43:27.000000Z&quot;,
-        &quot;status&quot;: &quot;PENDING&quot;,
-        &quot;user&quot;: {
-            &quot;id&quot;: 1,
-            &quot;user_address_id&quot;: null,
-            &quot;name&quot;: &quot;John Doe&quot;,
-            &quot;gender&quot;: &quot;male&quot;,
-            &quot;bday&quot;: &quot;01-18-98&quot;,
-            &quot;email&quot;: &quot;john.doe10@domain.com&quot;,
-            &quot;email_verified_at&quot;: null,
-            &quot;type&quot;: null,
-            &quot;created_at&quot;: &quot;2022-03-19T02:06:45.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-03-19T02:06:45.000000Z&quot;
-        },
-        &quot;order_shipping_address&quot;: null
-    },
-    {
-        &quot;id&quot;: 48,
-        &quot;reference_code&quot;: &quot;ORDER-#7RUFOYR6QD&quot;,
-        &quot;user_id&quot;: 1,
-        &quot;customer_name&quot;: &quot;1&quot;,
-        &quot;customer_email&quot;: &quot;1&quot;,
-        &quot;total_amount&quot;: 500,
-        &quot;order_products&quot;: &quot;[{\&quot;sku\&quot;:\&quot;DMDSOXUNT6\&quot;,\&quot;name\&quot;:\&quot;new product upload\&quot;,\&quot;description\&quot;:\&quot;new product uploadnew product uploadnew product upload\&quot;,\&quot;price\&quot;:500.75,\&quot;quantity\&quot;:1},{\&quot;sku\&quot;:\&quot;AFI9CASWOW\&quot;,\&quot;name\&quot;:\&quot;first product2222\&quot;,\&quot;description\&quot;:\&quot;first product description\&quot;,\&quot;price\&quot;:150.75,\&quot;quantity\&quot;:1},{\&quot;sku\&quot;:\&quot;KCBSD8PE8I\&quot;,\&quot;name\&quot;:\&quot;Laurie Douglas\&quot;,\&quot;description\&quot;:\&quot;Ipsum sapiente autem ut placeat aut.\&quot;,\&quot;price\&quot;:500.25,\&quot;quantity\&quot;:1}]&quot;,
-        &quot;delivery_notes&quot;: &quot;Look for john&quot;,
-        &quot;created_at&quot;: &quot;2022-03-20T14:43:11.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2022-03-20T14:43:11.000000Z&quot;,
-        &quot;status&quot;: &quot;PENDING&quot;,
-        &quot;user&quot;: {
-            &quot;id&quot;: 1,
-            &quot;user_address_id&quot;: null,
-            &quot;name&quot;: &quot;John Doe&quot;,
-            &quot;gender&quot;: &quot;male&quot;,
-            &quot;bday&quot;: &quot;01-18-98&quot;,
-            &quot;email&quot;: &quot;john.doe10@domain.com&quot;,
-            &quot;email_verified_at&quot;: null,
-            &quot;type&quot;: null,
-            &quot;created_at&quot;: &quot;2022-03-19T02:06:45.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-03-19T02:06:45.000000Z&quot;
-        },
-        &quot;order_shipping_address&quot;: null
-    },
-    {
-        &quot;id&quot;: 47,
-        &quot;reference_code&quot;: &quot;ORDER-#NMQPMUB8ML&quot;,
-        &quot;user_id&quot;: 1,
-        &quot;customer_name&quot;: &quot;1&quot;,
-        &quot;customer_email&quot;: &quot;1&quot;,
-        &quot;total_amount&quot;: 500,
-        &quot;order_products&quot;: &quot;[{\&quot;sku\&quot;:\&quot;DMDSOXUNT6\&quot;,\&quot;name\&quot;:\&quot;new product upload\&quot;,\&quot;description\&quot;:\&quot;new product uploadnew product uploadnew product upload\&quot;,\&quot;price\&quot;:500.75,\&quot;quantity\&quot;:1},{\&quot;sku\&quot;:\&quot;AFI9CASWOW\&quot;,\&quot;name\&quot;:\&quot;first product2222\&quot;,\&quot;description\&quot;:\&quot;first product description\&quot;,\&quot;price\&quot;:150.75,\&quot;quantity\&quot;:1},{\&quot;sku\&quot;:\&quot;KCBSD8PE8I\&quot;,\&quot;name\&quot;:\&quot;Laurie Douglas\&quot;,\&quot;description\&quot;:\&quot;Ipsum sapiente autem ut placeat aut.\&quot;,\&quot;price\&quot;:500.25,\&quot;quantity\&quot;:1}]&quot;,
-        &quot;delivery_notes&quot;: &quot;Look for john&quot;,
-        &quot;created_at&quot;: &quot;2022-03-20T14:42:56.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2022-03-20T14:42:56.000000Z&quot;,
-        &quot;status&quot;: &quot;PENDING&quot;,
-        &quot;user&quot;: {
-            &quot;id&quot;: 1,
-            &quot;user_address_id&quot;: null,
-            &quot;name&quot;: &quot;John Doe&quot;,
-            &quot;gender&quot;: &quot;male&quot;,
-            &quot;bday&quot;: &quot;01-18-98&quot;,
-            &quot;email&quot;: &quot;john.doe10@domain.com&quot;,
-            &quot;email_verified_at&quot;: null,
-            &quot;type&quot;: null,
-            &quot;created_at&quot;: &quot;2022-03-19T02:06:45.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-03-19T02:06:45.000000Z&quot;
-        },
-        &quot;order_shipping_address&quot;: null
-    },
-    {
-        &quot;id&quot;: 46,
-        &quot;reference_code&quot;: &quot;ORDER-#M7HABPS2A7&quot;,
-        &quot;user_id&quot;: 1,
-        &quot;customer_name&quot;: &quot;1&quot;,
-        &quot;customer_email&quot;: &quot;1&quot;,
-        &quot;total_amount&quot;: 500,
-        &quot;order_products&quot;: &quot;[{\&quot;sku\&quot;:\&quot;DMDSOXUNT6\&quot;,\&quot;name\&quot;:\&quot;new product upload\&quot;,\&quot;description\&quot;:\&quot;new product uploadnew product uploadnew product upload\&quot;,\&quot;price\&quot;:500.75,\&quot;quantity\&quot;:1},{\&quot;sku\&quot;:\&quot;AFI9CASWOW\&quot;,\&quot;name\&quot;:\&quot;first product2222\&quot;,\&quot;description\&quot;:\&quot;first product description\&quot;,\&quot;price\&quot;:150.75,\&quot;quantity\&quot;:1},{\&quot;sku\&quot;:\&quot;KCBSD8PE8I\&quot;,\&quot;name\&quot;:\&quot;Laurie Douglas\&quot;,\&quot;description\&quot;:\&quot;Ipsum sapiente autem ut placeat aut.\&quot;,\&quot;price\&quot;:500.25,\&quot;quantity\&quot;:1}]&quot;,
-        &quot;delivery_notes&quot;: &quot;Look for john&quot;,
-        &quot;created_at&quot;: &quot;2022-03-20T14:42:47.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2022-03-20T14:42:47.000000Z&quot;,
-        &quot;status&quot;: &quot;PENDING&quot;,
-        &quot;user&quot;: {
-            &quot;id&quot;: 1,
-            &quot;user_address_id&quot;: null,
-            &quot;name&quot;: &quot;John Doe&quot;,
-            &quot;gender&quot;: &quot;male&quot;,
-            &quot;bday&quot;: &quot;01-18-98&quot;,
-            &quot;email&quot;: &quot;john.doe10@domain.com&quot;,
-            &quot;email_verified_at&quot;: null,
-            &quot;type&quot;: null,
-            &quot;created_at&quot;: &quot;2022-03-19T02:06:45.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-03-19T02:06:45.000000Z&quot;
-        },
-        &quot;order_shipping_address&quot;: null
-    },
-    {
-        &quot;id&quot;: 45,
-        &quot;reference_code&quot;: &quot;ORDER-#ZEVHDKW6HA&quot;,
-        &quot;user_id&quot;: 1,
-        &quot;customer_name&quot;: &quot;1&quot;,
-        &quot;customer_email&quot;: &quot;1&quot;,
-        &quot;total_amount&quot;: 500,
-        &quot;order_products&quot;: &quot;[{\&quot;sku\&quot;:\&quot;DMDSOXUNT6\&quot;,\&quot;name\&quot;:\&quot;new product upload\&quot;,\&quot;description\&quot;:\&quot;new product uploadnew product uploadnew product upload\&quot;,\&quot;price\&quot;:500.75,\&quot;quantity\&quot;:1},{\&quot;sku\&quot;:\&quot;AFI9CASWOW\&quot;,\&quot;name\&quot;:\&quot;first product2222\&quot;,\&quot;description\&quot;:\&quot;first product description\&quot;,\&quot;price\&quot;:150.75,\&quot;quantity\&quot;:1},{\&quot;sku\&quot;:\&quot;KCBSD8PE8I\&quot;,\&quot;name\&quot;:\&quot;Laurie Douglas\&quot;,\&quot;description\&quot;:\&quot;Ipsum sapiente autem ut placeat aut.\&quot;,\&quot;price\&quot;:500.25,\&quot;quantity\&quot;:1}]&quot;,
-        &quot;delivery_notes&quot;: &quot;Look for john&quot;,
-        &quot;created_at&quot;: &quot;2022-03-20T14:42:36.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2022-03-20T14:42:36.000000Z&quot;,
-        &quot;status&quot;: &quot;PENDING&quot;,
-        &quot;user&quot;: {
-            &quot;id&quot;: 1,
-            &quot;user_address_id&quot;: null,
-            &quot;name&quot;: &quot;John Doe&quot;,
-            &quot;gender&quot;: &quot;male&quot;,
-            &quot;bday&quot;: &quot;01-18-98&quot;,
-            &quot;email&quot;: &quot;john.doe10@domain.com&quot;,
-            &quot;email_verified_at&quot;: null,
-            &quot;type&quot;: null,
-            &quot;created_at&quot;: &quot;2022-03-19T02:06:45.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-03-19T02:06:45.000000Z&quot;
-        },
-        &quot;order_shipping_address&quot;: null
-    },
-    {
-        &quot;id&quot;: 44,
-        &quot;reference_code&quot;: &quot;ORDER-#GCROLFQCW6&quot;,
-        &quot;user_id&quot;: 1,
-        &quot;customer_name&quot;: &quot;1&quot;,
-        &quot;customer_email&quot;: &quot;1&quot;,
-        &quot;total_amount&quot;: 500,
-        &quot;order_products&quot;: &quot;[{\&quot;sku\&quot;:\&quot;DMDSOXUNT6\&quot;,\&quot;name\&quot;:\&quot;new product upload\&quot;,\&quot;description\&quot;:\&quot;new product uploadnew product uploadnew product upload\&quot;,\&quot;price\&quot;:500.75,\&quot;quantity\&quot;:1},{\&quot;sku\&quot;:\&quot;AFI9CASWOW\&quot;,\&quot;name\&quot;:\&quot;first product2222\&quot;,\&quot;description\&quot;:\&quot;first product description\&quot;,\&quot;price\&quot;:150.75,\&quot;quantity\&quot;:1},{\&quot;sku\&quot;:\&quot;KCBSD8PE8I\&quot;,\&quot;name\&quot;:\&quot;Laurie Douglas\&quot;,\&quot;description\&quot;:\&quot;Ipsum sapiente autem ut placeat aut.\&quot;,\&quot;price\&quot;:500.25,\&quot;quantity\&quot;:1}]&quot;,
-        &quot;delivery_notes&quot;: &quot;Look for john&quot;,
-        &quot;created_at&quot;: &quot;2022-03-20T14:42:11.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2022-03-20T14:42:11.000000Z&quot;,
-        &quot;status&quot;: &quot;PENDING&quot;,
-        &quot;user&quot;: {
-            &quot;id&quot;: 1,
-            &quot;user_address_id&quot;: null,
-            &quot;name&quot;: &quot;John Doe&quot;,
-            &quot;gender&quot;: &quot;male&quot;,
-            &quot;bday&quot;: &quot;01-18-98&quot;,
-            &quot;email&quot;: &quot;john.doe10@domain.com&quot;,
-            &quot;email_verified_at&quot;: null,
-            &quot;type&quot;: null,
-            &quot;created_at&quot;: &quot;2022-03-19T02:06:45.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-03-19T02:06:45.000000Z&quot;
-        },
-        &quot;order_shipping_address&quot;: null
-    },
-    {
-        &quot;id&quot;: 43,
-        &quot;reference_code&quot;: &quot;ORDER-#S0LM0FA1IV&quot;,
-        &quot;user_id&quot;: 1,
-        &quot;customer_name&quot;: &quot;1&quot;,
-        &quot;customer_email&quot;: &quot;1&quot;,
-        &quot;total_amount&quot;: 500,
-        &quot;order_products&quot;: &quot;[{\&quot;sku\&quot;:\&quot;DMDSOXUNT6\&quot;,\&quot;name\&quot;:\&quot;new product upload\&quot;,\&quot;description\&quot;:\&quot;new product uploadnew product uploadnew product upload\&quot;,\&quot;price\&quot;:500.75,\&quot;quantity\&quot;:1},{\&quot;sku\&quot;:\&quot;AFI9CASWOW\&quot;,\&quot;name\&quot;:\&quot;first product2222\&quot;,\&quot;description\&quot;:\&quot;first product description\&quot;,\&quot;price\&quot;:150.75,\&quot;quantity\&quot;:1},{\&quot;sku\&quot;:\&quot;KCBSD8PE8I\&quot;,\&quot;name\&quot;:\&quot;Laurie Douglas\&quot;,\&quot;description\&quot;:\&quot;Ipsum sapiente autem ut placeat aut.\&quot;,\&quot;price\&quot;:500.25,\&quot;quantity\&quot;:1}]&quot;,
-        &quot;delivery_notes&quot;: &quot;Look for john&quot;,
-        &quot;created_at&quot;: &quot;2022-03-20T14:41:59.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2022-03-20T14:41:59.000000Z&quot;,
-        &quot;status&quot;: &quot;PENDING&quot;,
-        &quot;user&quot;: {
-            &quot;id&quot;: 1,
-            &quot;user_address_id&quot;: null,
-            &quot;name&quot;: &quot;John Doe&quot;,
-            &quot;gender&quot;: &quot;male&quot;,
-            &quot;bday&quot;: &quot;01-18-98&quot;,
-            &quot;email&quot;: &quot;john.doe10@domain.com&quot;,
-            &quot;email_verified_at&quot;: null,
-            &quot;type&quot;: null,
-            &quot;created_at&quot;: &quot;2022-03-19T02:06:45.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-03-19T02:06:45.000000Z&quot;
-        },
-        &quot;order_shipping_address&quot;: null
-    },
-    {
-        &quot;id&quot;: 42,
-        &quot;reference_code&quot;: &quot;ORDER-#OJTKEX7RVD&quot;,
-        &quot;user_id&quot;: 1,
-        &quot;customer_name&quot;: &quot;1&quot;,
-        &quot;customer_email&quot;: &quot;1&quot;,
-        &quot;total_amount&quot;: 500,
-        &quot;order_products&quot;: &quot;[{\&quot;sku\&quot;:\&quot;DMDSOXUNT6\&quot;,\&quot;name\&quot;:\&quot;new product upload\&quot;,\&quot;description\&quot;:\&quot;new product uploadnew product uploadnew product upload\&quot;,\&quot;price\&quot;:500.75,\&quot;quantity\&quot;:1},{\&quot;sku\&quot;:\&quot;AFI9CASWOW\&quot;,\&quot;name\&quot;:\&quot;first product2222\&quot;,\&quot;description\&quot;:\&quot;first product description\&quot;,\&quot;price\&quot;:150.75,\&quot;quantity\&quot;:1},{\&quot;sku\&quot;:\&quot;KCBSD8PE8I\&quot;,\&quot;name\&quot;:\&quot;Laurie Douglas\&quot;,\&quot;description\&quot;:\&quot;Ipsum sapiente autem ut placeat aut.\&quot;,\&quot;price\&quot;:500.25,\&quot;quantity\&quot;:1}]&quot;,
-        &quot;delivery_notes&quot;: &quot;Look for john&quot;,
-        &quot;created_at&quot;: &quot;2022-03-20T14:41:31.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2022-03-20T14:41:31.000000Z&quot;,
-        &quot;status&quot;: &quot;PENDING&quot;,
-        &quot;user&quot;: {
-            &quot;id&quot;: 1,
-            &quot;user_address_id&quot;: null,
-            &quot;name&quot;: &quot;John Doe&quot;,
-            &quot;gender&quot;: &quot;male&quot;,
-            &quot;bday&quot;: &quot;01-18-98&quot;,
-            &quot;email&quot;: &quot;john.doe10@domain.com&quot;,
-            &quot;email_verified_at&quot;: null,
-            &quot;type&quot;: null,
-            &quot;created_at&quot;: &quot;2022-03-19T02:06:45.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-03-19T02:06:45.000000Z&quot;
-        },
-        &quot;order_shipping_address&quot;: null
-    },
-    {
-        &quot;id&quot;: 41,
-        &quot;reference_code&quot;: &quot;ORDER-#BEK5VCMY0E&quot;,
-        &quot;user_id&quot;: 1,
-        &quot;customer_name&quot;: &quot;1&quot;,
-        &quot;customer_email&quot;: &quot;1&quot;,
-        &quot;total_amount&quot;: 500,
-        &quot;order_products&quot;: &quot;[{\&quot;sku\&quot;:\&quot;DMDSOXUNT6\&quot;,\&quot;name\&quot;:\&quot;new product upload\&quot;,\&quot;description\&quot;:\&quot;new product uploadnew product uploadnew product upload\&quot;,\&quot;price\&quot;:500.75,\&quot;quantity\&quot;:1},{\&quot;sku\&quot;:\&quot;AFI9CASWOW\&quot;,\&quot;name\&quot;:\&quot;first product2222\&quot;,\&quot;description\&quot;:\&quot;first product description\&quot;,\&quot;price\&quot;:150.75,\&quot;quantity\&quot;:1},{\&quot;sku\&quot;:\&quot;KCBSD8PE8I\&quot;,\&quot;name\&quot;:\&quot;Laurie Douglas\&quot;,\&quot;description\&quot;:\&quot;Ipsum sapiente autem ut placeat aut.\&quot;,\&quot;price\&quot;:500.25,\&quot;quantity\&quot;:1}]&quot;,
-        &quot;delivery_notes&quot;: &quot;Look for john&quot;,
-        &quot;created_at&quot;: &quot;2022-03-20T14:41:25.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2022-03-20T14:41:25.000000Z&quot;,
-        &quot;status&quot;: &quot;PENDING&quot;,
-        &quot;user&quot;: {
-            &quot;id&quot;: 1,
-            &quot;user_address_id&quot;: null,
-            &quot;name&quot;: &quot;John Doe&quot;,
-            &quot;gender&quot;: &quot;male&quot;,
-            &quot;bday&quot;: &quot;01-18-98&quot;,
-            &quot;email&quot;: &quot;john.doe10@domain.com&quot;,
-            &quot;email_verified_at&quot;: null,
-            &quot;type&quot;: null,
-            &quot;created_at&quot;: &quot;2022-03-19T02:06:45.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-03-19T02:06:45.000000Z&quot;
-        },
-        &quot;order_shipping_address&quot;: null
-    },
-    {
-        &quot;id&quot;: 40,
-        &quot;reference_code&quot;: &quot;ORDER-#UYL8RCPSCJ&quot;,
-        &quot;user_id&quot;: 1,
-        &quot;customer_name&quot;: &quot;1&quot;,
-        &quot;customer_email&quot;: &quot;1&quot;,
-        &quot;total_amount&quot;: 500,
-        &quot;order_products&quot;: &quot;[{\&quot;sku\&quot;:\&quot;DMDSOXUNT6\&quot;,\&quot;name\&quot;:\&quot;new product upload\&quot;,\&quot;description\&quot;:\&quot;new product uploadnew product uploadnew product upload\&quot;,\&quot;price\&quot;:500.75,\&quot;quantity\&quot;:1},{\&quot;sku\&quot;:\&quot;AFI9CASWOW\&quot;,\&quot;name\&quot;:\&quot;first product2222\&quot;,\&quot;description\&quot;:\&quot;first product description\&quot;,\&quot;price\&quot;:150.75,\&quot;quantity\&quot;:1},{\&quot;sku\&quot;:\&quot;KCBSD8PE8I\&quot;,\&quot;name\&quot;:\&quot;Laurie Douglas\&quot;,\&quot;description\&quot;:\&quot;Ipsum sapiente autem ut placeat aut.\&quot;,\&quot;price\&quot;:500.25,\&quot;quantity\&quot;:1}]&quot;,
-        &quot;delivery_notes&quot;: &quot;Look for john&quot;,
-        &quot;created_at&quot;: &quot;2022-03-20T14:41:14.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2022-03-20T14:41:14.000000Z&quot;,
-        &quot;status&quot;: &quot;PENDING&quot;,
-        &quot;user&quot;: {
-            &quot;id&quot;: 1,
-            &quot;user_address_id&quot;: null,
-            &quot;name&quot;: &quot;John Doe&quot;,
-            &quot;gender&quot;: &quot;male&quot;,
-            &quot;bday&quot;: &quot;01-18-98&quot;,
-            &quot;email&quot;: &quot;john.doe10@domain.com&quot;,
-            &quot;email_verified_at&quot;: null,
-            &quot;type&quot;: null,
-            &quot;created_at&quot;: &quot;2022-03-19T02:06:45.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-03-19T02:06:45.000000Z&quot;
-        },
-        &quot;order_shipping_address&quot;: null
-    },
-    {
-        &quot;id&quot;: 39,
-        &quot;reference_code&quot;: &quot;ORDER-#CW5AHUBJUX&quot;,
-        &quot;user_id&quot;: 1,
-        &quot;customer_name&quot;: &quot;1&quot;,
-        &quot;customer_email&quot;: &quot;1&quot;,
-        &quot;total_amount&quot;: 500,
-        &quot;order_products&quot;: &quot;[{\&quot;sku\&quot;:\&quot;DMDSOXUNT6\&quot;,\&quot;name\&quot;:\&quot;new product upload\&quot;,\&quot;description\&quot;:\&quot;new product uploadnew product uploadnew product upload\&quot;,\&quot;price\&quot;:500.75,\&quot;quantity\&quot;:1},{\&quot;sku\&quot;:\&quot;AFI9CASWOW\&quot;,\&quot;name\&quot;:\&quot;first product2222\&quot;,\&quot;description\&quot;:\&quot;first product description\&quot;,\&quot;price\&quot;:150.75,\&quot;quantity\&quot;:1},{\&quot;sku\&quot;:\&quot;KCBSD8PE8I\&quot;,\&quot;name\&quot;:\&quot;Laurie Douglas\&quot;,\&quot;description\&quot;:\&quot;Ipsum sapiente autem ut placeat aut.\&quot;,\&quot;price\&quot;:500.25,\&quot;quantity\&quot;:1}]&quot;,
-        &quot;delivery_notes&quot;: &quot;Look for john&quot;,
-        &quot;created_at&quot;: &quot;2022-03-20T14:39:37.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2022-03-20T14:39:37.000000Z&quot;,
-        &quot;status&quot;: &quot;PENDING&quot;,
-        &quot;user&quot;: {
-            &quot;id&quot;: 1,
-            &quot;user_address_id&quot;: null,
-            &quot;name&quot;: &quot;John Doe&quot;,
-            &quot;gender&quot;: &quot;male&quot;,
-            &quot;bday&quot;: &quot;01-18-98&quot;,
-            &quot;email&quot;: &quot;john.doe10@domain.com&quot;,
-            &quot;email_verified_at&quot;: null,
-            &quot;type&quot;: null,
-            &quot;created_at&quot;: &quot;2022-03-19T02:06:45.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-03-19T02:06:45.000000Z&quot;
-        },
-        &quot;order_shipping_address&quot;: {
-            &quot;id&quot;: 14,
-            &quot;order_id&quot;: 39,
-            &quot;address&quot;: &quot;Street address&quot;,
-            &quot;barangay&quot;: &quot;Barangay name&quot;,
-            &quot;city&quot;: &quot;Manila&quot;,
-            &quot;zip_code&quot;: &quot;1233&quot;,
-            &quot;contact_number&quot;: &quot;09088888888&quot;,
-            &quot;region&quot;: &quot;NCR&quot;,
-            &quot;country&quot;: &quot;PH&quot;,
-            &quot;created_at&quot;: &quot;2022-03-20T14:39:37.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-03-20T14:39:37.000000Z&quot;
-        }
-    },
-    {
-        &quot;id&quot;: 38,
-        &quot;reference_code&quot;: &quot;ORDER-#71APJBGYWK&quot;,
-        &quot;user_id&quot;: null,
-        &quot;customer_name&quot;: null,
-        &quot;customer_email&quot;: null,
-        &quot;total_amount&quot;: 500,
-        &quot;order_products&quot;: &quot;[{\&quot;sku\&quot;:\&quot;DMDSOXUNT6\&quot;,\&quot;name\&quot;:\&quot;new product upload\&quot;,\&quot;description\&quot;:\&quot;new product uploadnew product uploadnew product upload\&quot;,\&quot;price\&quot;:500.75,\&quot;quantity\&quot;:1},{\&quot;sku\&quot;:\&quot;AFI9CASWOW\&quot;,\&quot;name\&quot;:\&quot;first product2222\&quot;,\&quot;description\&quot;:\&quot;first product description\&quot;,\&quot;price\&quot;:150.75,\&quot;quantity\&quot;:1},{\&quot;sku\&quot;:\&quot;KCBSD8PE8I\&quot;,\&quot;name\&quot;:\&quot;Laurie Douglas\&quot;,\&quot;description\&quot;:\&quot;Ipsum sapiente autem ut placeat aut.\&quot;,\&quot;price\&quot;:500.25,\&quot;quantity\&quot;:1}]&quot;,
-        &quot;delivery_notes&quot;: &quot;Look for john&quot;,
-        &quot;created_at&quot;: &quot;2022-03-20T14:39:34.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2022-03-20T14:39:34.000000Z&quot;,
-        &quot;status&quot;: &quot;PENDING&quot;,
-        &quot;user&quot;: null,
-        &quot;order_shipping_address&quot;: {
-            &quot;id&quot;: 13,
-            &quot;order_id&quot;: 38,
-            &quot;address&quot;: &quot;address ni kobe&quot;,
-            &quot;barangay&quot;: &quot;Barangay name&quot;,
-            &quot;city&quot;: &quot;Manila&quot;,
-            &quot;zip_code&quot;: &quot;1233&quot;,
-            &quot;contact_number&quot;: &quot;09088888888&quot;,
-            &quot;region&quot;: &quot;NCR&quot;,
-            &quot;country&quot;: &quot;PH&quot;,
-            &quot;created_at&quot;: &quot;2022-03-20T14:39:34.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-03-20T14:39:34.000000Z&quot;
-        }
-    },
-    {
-        &quot;id&quot;: 37,
-        &quot;reference_code&quot;: &quot;ORDER-#DJTCJ3VGVS&quot;,
-        &quot;user_id&quot;: null,
-        &quot;customer_name&quot;: &quot;Kobe Bryant2&quot;,
-        &quot;customer_email&quot;: &quot;kobe24@nba.com&quot;,
-        &quot;total_amount&quot;: 500,
-        &quot;order_products&quot;: &quot;[{\&quot;sku\&quot;:\&quot;DMDSOXUNT6\&quot;,\&quot;name\&quot;:\&quot;new product upload\&quot;,\&quot;description\&quot;:\&quot;new product uploadnew product uploadnew product upload\&quot;,\&quot;price\&quot;:500.75,\&quot;quantity\&quot;:1},{\&quot;sku\&quot;:\&quot;AFI9CASWOW\&quot;,\&quot;name\&quot;:\&quot;first product2222\&quot;,\&quot;description\&quot;:\&quot;first product description\&quot;,\&quot;price\&quot;:150.75,\&quot;quantity\&quot;:1},{\&quot;sku\&quot;:\&quot;KCBSD8PE8I\&quot;,\&quot;name\&quot;:\&quot;Laurie Douglas\&quot;,\&quot;description\&quot;:\&quot;Ipsum sapiente autem ut placeat aut.\&quot;,\&quot;price\&quot;:500.25,\&quot;quantity\&quot;:1}]&quot;,
-        &quot;delivery_notes&quot;: &quot;Look for john&quot;,
-        &quot;created_at&quot;: &quot;2022-03-20T14:36:49.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2022-03-20T14:36:49.000000Z&quot;,
-        &quot;status&quot;: &quot;PENDING&quot;,
-        &quot;user&quot;: null,
-        &quot;order_shipping_address&quot;: null
-    },
-    {
-        &quot;id&quot;: 36,
-        &quot;reference_code&quot;: &quot;ORDER-#1TRZQNOMVD&quot;,
-        &quot;user_id&quot;: null,
-        &quot;customer_name&quot;: &quot;Kobe Bryant2&quot;,
-        &quot;customer_email&quot;: &quot;kobe24@nba.com&quot;,
-        &quot;total_amount&quot;: 500,
-        &quot;order_products&quot;: &quot;[{\&quot;sku\&quot;:\&quot;DMDSOXUNT6\&quot;,\&quot;name\&quot;:\&quot;new product upload\&quot;,\&quot;description\&quot;:\&quot;new product uploadnew product uploadnew product upload\&quot;,\&quot;price\&quot;:500.75,\&quot;quantity\&quot;:1},{\&quot;sku\&quot;:\&quot;AFI9CASWOW\&quot;,\&quot;name\&quot;:\&quot;first product2222\&quot;,\&quot;description\&quot;:\&quot;first product description\&quot;,\&quot;price\&quot;:150.75,\&quot;quantity\&quot;:1},{\&quot;sku\&quot;:\&quot;KCBSD8PE8I\&quot;,\&quot;name\&quot;:\&quot;Laurie Douglas\&quot;,\&quot;description\&quot;:\&quot;Ipsum sapiente autem ut placeat aut.\&quot;,\&quot;price\&quot;:500.25,\&quot;quantity\&quot;:1}]&quot;,
-        &quot;delivery_notes&quot;: &quot;Look for john&quot;,
-        &quot;created_at&quot;: &quot;2022-03-20T14:36:35.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2022-03-20T14:36:35.000000Z&quot;,
-        &quot;status&quot;: &quot;PENDING&quot;,
-        &quot;user&quot;: null,
-        &quot;order_shipping_address&quot;: null
-    },
-    {
-        &quot;id&quot;: 35,
-        &quot;reference_code&quot;: &quot;ORDER-#N7SRUM4OYC&quot;,
-        &quot;user_id&quot;: null,
-        &quot;customer_name&quot;: &quot;Kobe Bryant2&quot;,
-        &quot;customer_email&quot;: &quot;kobe24@nba.com&quot;,
-        &quot;total_amount&quot;: 500,
-        &quot;order_products&quot;: &quot;[{\&quot;sku\&quot;:\&quot;DMDSOXUNT6\&quot;,\&quot;name\&quot;:\&quot;new product upload\&quot;,\&quot;description\&quot;:\&quot;new product uploadnew product uploadnew product upload\&quot;,\&quot;price\&quot;:500.75,\&quot;quantity\&quot;:1},{\&quot;sku\&quot;:\&quot;AFI9CASWOW\&quot;,\&quot;name\&quot;:\&quot;first product2222\&quot;,\&quot;description\&quot;:\&quot;first product description\&quot;,\&quot;price\&quot;:150.75,\&quot;quantity\&quot;:1},{\&quot;sku\&quot;:\&quot;KCBSD8PE8I\&quot;,\&quot;name\&quot;:\&quot;Laurie Douglas\&quot;,\&quot;description\&quot;:\&quot;Ipsum sapiente autem ut placeat aut.\&quot;,\&quot;price\&quot;:500.25,\&quot;quantity\&quot;:1}]&quot;,
-        &quot;delivery_notes&quot;: &quot;Look for john&quot;,
-        &quot;created_at&quot;: &quot;2022-03-20T14:36:27.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2022-03-20T14:36:27.000000Z&quot;,
-        &quot;status&quot;: &quot;PENDING&quot;,
-        &quot;user&quot;: null,
-        &quot;order_shipping_address&quot;: null
-    },
-    {
-        &quot;id&quot;: 34,
-        &quot;reference_code&quot;: &quot;ORDER-#YTHVQVTJ03&quot;,
-        &quot;user_id&quot;: 1,
-        &quot;customer_name&quot;: null,
-        &quot;customer_email&quot;: null,
-        &quot;total_amount&quot;: 500,
-        &quot;order_products&quot;: &quot;[{\&quot;sku\&quot;:\&quot;DMDSOXUNT6\&quot;,\&quot;name\&quot;:\&quot;new product upload\&quot;,\&quot;description\&quot;:\&quot;new product uploadnew product uploadnew product upload\&quot;,\&quot;price\&quot;:500.75,\&quot;quantity\&quot;:1},{\&quot;sku\&quot;:\&quot;AFI9CASWOW\&quot;,\&quot;name\&quot;:\&quot;first product2222\&quot;,\&quot;description\&quot;:\&quot;first product description\&quot;,\&quot;price\&quot;:150.75,\&quot;quantity\&quot;:1},{\&quot;sku\&quot;:\&quot;KCBSD8PE8I\&quot;,\&quot;name\&quot;:\&quot;Laurie Douglas\&quot;,\&quot;description\&quot;:\&quot;Ipsum sapiente autem ut placeat aut.\&quot;,\&quot;price\&quot;:500.25,\&quot;quantity\&quot;:1}]&quot;,
-        &quot;delivery_notes&quot;: &quot;Look for john&quot;,
-        &quot;created_at&quot;: &quot;2022-03-20T14:36:02.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2022-03-20T14:36:02.000000Z&quot;,
-        &quot;status&quot;: &quot;PENDING&quot;,
-        &quot;user&quot;: {
-            &quot;id&quot;: 1,
-            &quot;user_address_id&quot;: null,
-            &quot;name&quot;: &quot;John Doe&quot;,
-            &quot;gender&quot;: &quot;male&quot;,
-            &quot;bday&quot;: &quot;01-18-98&quot;,
-            &quot;email&quot;: &quot;john.doe10@domain.com&quot;,
-            &quot;email_verified_at&quot;: null,
-            &quot;type&quot;: null,
-            &quot;created_at&quot;: &quot;2022-03-19T02:06:45.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-03-19T02:06:45.000000Z&quot;
-        },
-        &quot;order_shipping_address&quot;: null
-    },
-    {
-        &quot;id&quot;: 33,
-        &quot;reference_code&quot;: &quot;ORDER-#X20I7Y91LT&quot;,
-        &quot;user_id&quot;: 1,
-        &quot;customer_name&quot;: null,
-        &quot;customer_email&quot;: null,
-        &quot;total_amount&quot;: 500,
-        &quot;order_products&quot;: &quot;[{\&quot;sku\&quot;:\&quot;DMDSOXUNT6\&quot;,\&quot;name\&quot;:\&quot;new product upload\&quot;,\&quot;description\&quot;:\&quot;new product uploadnew product uploadnew product upload\&quot;,\&quot;price\&quot;:500.75,\&quot;quantity\&quot;:1},{\&quot;sku\&quot;:\&quot;AFI9CASWOW\&quot;,\&quot;name\&quot;:\&quot;first product2222\&quot;,\&quot;description\&quot;:\&quot;first product description\&quot;,\&quot;price\&quot;:150.75,\&quot;quantity\&quot;:1},{\&quot;sku\&quot;:\&quot;KCBSD8PE8I\&quot;,\&quot;name\&quot;:\&quot;Laurie Douglas\&quot;,\&quot;description\&quot;:\&quot;Ipsum sapiente autem ut placeat aut.\&quot;,\&quot;price\&quot;:500.25,\&quot;quantity\&quot;:1}]&quot;,
-        &quot;delivery_notes&quot;: &quot;Look for john&quot;,
-        &quot;created_at&quot;: &quot;2022-03-20T14:35:16.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2022-03-20T14:35:16.000000Z&quot;,
-        &quot;status&quot;: &quot;PENDING&quot;,
-        &quot;user&quot;: {
-            &quot;id&quot;: 1,
-            &quot;user_address_id&quot;: null,
-            &quot;name&quot;: &quot;John Doe&quot;,
-            &quot;gender&quot;: &quot;male&quot;,
-            &quot;bday&quot;: &quot;01-18-98&quot;,
-            &quot;email&quot;: &quot;john.doe10@domain.com&quot;,
-            &quot;email_verified_at&quot;: null,
-            &quot;type&quot;: null,
-            &quot;created_at&quot;: &quot;2022-03-19T02:06:45.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-03-19T02:06:45.000000Z&quot;
-        },
-        &quot;order_shipping_address&quot;: null
-    },
-    {
-        &quot;id&quot;: 32,
-        &quot;reference_code&quot;: &quot;ORDER-#08VPCK5ED1&quot;,
-        &quot;user_id&quot;: 1,
-        &quot;customer_name&quot;: null,
-        &quot;customer_email&quot;: null,
-        &quot;total_amount&quot;: 500,
-        &quot;order_products&quot;: &quot;[{\&quot;sku\&quot;:\&quot;DMDSOXUNT6\&quot;,\&quot;name\&quot;:\&quot;new product upload\&quot;,\&quot;description\&quot;:\&quot;new product uploadnew product uploadnew product upload\&quot;,\&quot;price\&quot;:500.75,\&quot;quantity\&quot;:1},{\&quot;sku\&quot;:\&quot;AFI9CASWOW\&quot;,\&quot;name\&quot;:\&quot;first product2222\&quot;,\&quot;description\&quot;:\&quot;first product description\&quot;,\&quot;price\&quot;:150.75,\&quot;quantity\&quot;:1},{\&quot;sku\&quot;:\&quot;KCBSD8PE8I\&quot;,\&quot;name\&quot;:\&quot;Laurie Douglas\&quot;,\&quot;description\&quot;:\&quot;Ipsum sapiente autem ut placeat aut.\&quot;,\&quot;price\&quot;:500.25,\&quot;quantity\&quot;:1}]&quot;,
-        &quot;delivery_notes&quot;: &quot;Look for john&quot;,
-        &quot;created_at&quot;: &quot;2022-03-20T14:35:01.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2022-03-20T14:35:01.000000Z&quot;,
-        &quot;status&quot;: &quot;PENDING&quot;,
-        &quot;user&quot;: {
-            &quot;id&quot;: 1,
-            &quot;user_address_id&quot;: null,
-            &quot;name&quot;: &quot;John Doe&quot;,
-            &quot;gender&quot;: &quot;male&quot;,
-            &quot;bday&quot;: &quot;01-18-98&quot;,
-            &quot;email&quot;: &quot;john.doe10@domain.com&quot;,
-            &quot;email_verified_at&quot;: null,
-            &quot;type&quot;: null,
-            &quot;created_at&quot;: &quot;2022-03-19T02:06:45.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-03-19T02:06:45.000000Z&quot;
-        },
-        &quot;order_shipping_address&quot;: null
-    },
-    {
-        &quot;id&quot;: 31,
-        &quot;reference_code&quot;: &quot;ORDER-#YW2JTHFR7I&quot;,
-        &quot;user_id&quot;: 1,
-        &quot;customer_name&quot;: null,
-        &quot;customer_email&quot;: null,
-        &quot;total_amount&quot;: 500,
-        &quot;order_products&quot;: &quot;[{\&quot;sku\&quot;:\&quot;DMDSOXUNT6\&quot;,\&quot;name\&quot;:\&quot;new product upload\&quot;,\&quot;description\&quot;:\&quot;new product uploadnew product uploadnew product upload\&quot;,\&quot;price\&quot;:500.75,\&quot;quantity\&quot;:1},{\&quot;sku\&quot;:\&quot;AFI9CASWOW\&quot;,\&quot;name\&quot;:\&quot;first product2222\&quot;,\&quot;description\&quot;:\&quot;first product description\&quot;,\&quot;price\&quot;:150.75,\&quot;quantity\&quot;:1},{\&quot;sku\&quot;:\&quot;KCBSD8PE8I\&quot;,\&quot;name\&quot;:\&quot;Laurie Douglas\&quot;,\&quot;description\&quot;:\&quot;Ipsum sapiente autem ut placeat aut.\&quot;,\&quot;price\&quot;:500.25,\&quot;quantity\&quot;:1}]&quot;,
-        &quot;delivery_notes&quot;: &quot;Look for john&quot;,
-        &quot;created_at&quot;: &quot;2022-03-20T14:34:53.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2022-03-20T14:34:53.000000Z&quot;,
-        &quot;status&quot;: &quot;PENDING&quot;,
-        &quot;user&quot;: {
-            &quot;id&quot;: 1,
-            &quot;user_address_id&quot;: null,
-            &quot;name&quot;: &quot;John Doe&quot;,
-            &quot;gender&quot;: &quot;male&quot;,
-            &quot;bday&quot;: &quot;01-18-98&quot;,
-            &quot;email&quot;: &quot;john.doe10@domain.com&quot;,
-            &quot;email_verified_at&quot;: null,
-            &quot;type&quot;: null,
-            &quot;created_at&quot;: &quot;2022-03-19T02:06:45.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-03-19T02:06:45.000000Z&quot;
-        },
-        &quot;order_shipping_address&quot;: null
-    },
-    {
-        &quot;id&quot;: 30,
-        &quot;reference_code&quot;: &quot;ORDER-#Z9A5OJKE95&quot;,
-        &quot;user_id&quot;: 1,
-        &quot;customer_name&quot;: null,
-        &quot;customer_email&quot;: null,
-        &quot;total_amount&quot;: 500,
-        &quot;order_products&quot;: &quot;[{\&quot;sku\&quot;:\&quot;DMDSOXUNT6\&quot;,\&quot;name\&quot;:\&quot;new product upload\&quot;,\&quot;description\&quot;:\&quot;new product uploadnew product uploadnew product upload\&quot;,\&quot;price\&quot;:500.75,\&quot;quantity\&quot;:1},{\&quot;sku\&quot;:\&quot;AFI9CASWOW\&quot;,\&quot;name\&quot;:\&quot;first product2222\&quot;,\&quot;description\&quot;:\&quot;first product description\&quot;,\&quot;price\&quot;:150.75,\&quot;quantity\&quot;:1},{\&quot;sku\&quot;:\&quot;KCBSD8PE8I\&quot;,\&quot;name\&quot;:\&quot;Laurie Douglas\&quot;,\&quot;description\&quot;:\&quot;Ipsum sapiente autem ut placeat aut.\&quot;,\&quot;price\&quot;:500.25,\&quot;quantity\&quot;:1}]&quot;,
-        &quot;delivery_notes&quot;: &quot;Look for john&quot;,
-        &quot;created_at&quot;: &quot;2022-03-20T14:34:42.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2022-03-20T14:34:42.000000Z&quot;,
-        &quot;status&quot;: &quot;PENDING&quot;,
-        &quot;user&quot;: {
-            &quot;id&quot;: 1,
-            &quot;user_address_id&quot;: null,
-            &quot;name&quot;: &quot;John Doe&quot;,
-            &quot;gender&quot;: &quot;male&quot;,
-            &quot;bday&quot;: &quot;01-18-98&quot;,
-            &quot;email&quot;: &quot;john.doe10@domain.com&quot;,
-            &quot;email_verified_at&quot;: null,
-            &quot;type&quot;: null,
-            &quot;created_at&quot;: &quot;2022-03-19T02:06:45.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-03-19T02:06:45.000000Z&quot;
-        },
-        &quot;order_shipping_address&quot;: null
-    },
-    {
-        &quot;id&quot;: 29,
-        &quot;reference_code&quot;: &quot;ORDER-#HAF81ERHV5&quot;,
-        &quot;user_id&quot;: 1,
-        &quot;customer_name&quot;: null,
-        &quot;customer_email&quot;: null,
-        &quot;total_amount&quot;: 500,
-        &quot;order_products&quot;: &quot;[{\&quot;sku\&quot;:\&quot;DMDSOXUNT6\&quot;,\&quot;name\&quot;:\&quot;new product upload\&quot;,\&quot;description\&quot;:\&quot;new product uploadnew product uploadnew product upload\&quot;,\&quot;price\&quot;:500.75,\&quot;quantity\&quot;:1},{\&quot;sku\&quot;:\&quot;AFI9CASWOW\&quot;,\&quot;name\&quot;:\&quot;first product2222\&quot;,\&quot;description\&quot;:\&quot;first product description\&quot;,\&quot;price\&quot;:150.75,\&quot;quantity\&quot;:1},{\&quot;sku\&quot;:\&quot;KCBSD8PE8I\&quot;,\&quot;name\&quot;:\&quot;Laurie Douglas\&quot;,\&quot;description\&quot;:\&quot;Ipsum sapiente autem ut placeat aut.\&quot;,\&quot;price\&quot;:500.25,\&quot;quantity\&quot;:1}]&quot;,
-        &quot;delivery_notes&quot;: &quot;Look for john&quot;,
-        &quot;created_at&quot;: &quot;2022-03-20T14:34:35.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2022-03-20T14:34:35.000000Z&quot;,
-        &quot;status&quot;: &quot;PENDING&quot;,
-        &quot;user&quot;: {
-            &quot;id&quot;: 1,
-            &quot;user_address_id&quot;: null,
-            &quot;name&quot;: &quot;John Doe&quot;,
-            &quot;gender&quot;: &quot;male&quot;,
-            &quot;bday&quot;: &quot;01-18-98&quot;,
-            &quot;email&quot;: &quot;john.doe10@domain.com&quot;,
-            &quot;email_verified_at&quot;: null,
-            &quot;type&quot;: null,
-            &quot;created_at&quot;: &quot;2022-03-19T02:06:45.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-03-19T02:06:45.000000Z&quot;
-        },
-        &quot;order_shipping_address&quot;: null
-    },
-    {
-        &quot;id&quot;: 28,
-        &quot;reference_code&quot;: &quot;ORDER-#IDILK9NWAI&quot;,
-        &quot;user_id&quot;: 1,
-        &quot;customer_name&quot;: null,
-        &quot;customer_email&quot;: null,
-        &quot;total_amount&quot;: 500,
-        &quot;order_products&quot;: &quot;[{\&quot;sku\&quot;:\&quot;DMDSOXUNT6\&quot;,\&quot;name\&quot;:\&quot;new product upload\&quot;,\&quot;description\&quot;:\&quot;new product uploadnew product uploadnew product upload\&quot;,\&quot;price\&quot;:500.75,\&quot;quantity\&quot;:1},{\&quot;sku\&quot;:\&quot;AFI9CASWOW\&quot;,\&quot;name\&quot;:\&quot;first product2222\&quot;,\&quot;description\&quot;:\&quot;first product description\&quot;,\&quot;price\&quot;:150.75,\&quot;quantity\&quot;:1},{\&quot;sku\&quot;:\&quot;KCBSD8PE8I\&quot;,\&quot;name\&quot;:\&quot;Laurie Douglas\&quot;,\&quot;description\&quot;:\&quot;Ipsum sapiente autem ut placeat aut.\&quot;,\&quot;price\&quot;:500.25,\&quot;quantity\&quot;:1}]&quot;,
-        &quot;delivery_notes&quot;: &quot;Look for john&quot;,
-        &quot;created_at&quot;: &quot;2022-03-20T14:34:25.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2022-03-20T14:34:25.000000Z&quot;,
-        &quot;status&quot;: &quot;PENDING&quot;,
-        &quot;user&quot;: {
-            &quot;id&quot;: 1,
-            &quot;user_address_id&quot;: null,
-            &quot;name&quot;: &quot;John Doe&quot;,
-            &quot;gender&quot;: &quot;male&quot;,
-            &quot;bday&quot;: &quot;01-18-98&quot;,
-            &quot;email&quot;: &quot;john.doe10@domain.com&quot;,
-            &quot;email_verified_at&quot;: null,
-            &quot;type&quot;: null,
-            &quot;created_at&quot;: &quot;2022-03-19T02:06:45.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-03-19T02:06:45.000000Z&quot;
-        },
-        &quot;order_shipping_address&quot;: null
-    },
-    {
-        &quot;id&quot;: 27,
-        &quot;reference_code&quot;: &quot;ORDER-#UHX6BKVR0A&quot;,
-        &quot;user_id&quot;: 1,
-        &quot;customer_name&quot;: null,
-        &quot;customer_email&quot;: null,
-        &quot;total_amount&quot;: 500,
-        &quot;order_products&quot;: &quot;[{\&quot;sku\&quot;:\&quot;DMDSOXUNT6\&quot;,\&quot;name\&quot;:\&quot;new product upload\&quot;,\&quot;description\&quot;:\&quot;new product uploadnew product uploadnew product upload\&quot;,\&quot;price\&quot;:500.75,\&quot;quantity\&quot;:1},{\&quot;sku\&quot;:\&quot;AFI9CASWOW\&quot;,\&quot;name\&quot;:\&quot;first product2222\&quot;,\&quot;description\&quot;:\&quot;first product description\&quot;,\&quot;price\&quot;:150.75,\&quot;quantity\&quot;:1},{\&quot;sku\&quot;:\&quot;KCBSD8PE8I\&quot;,\&quot;name\&quot;:\&quot;Laurie Douglas\&quot;,\&quot;description\&quot;:\&quot;Ipsum sapiente autem ut placeat aut.\&quot;,\&quot;price\&quot;:500.25,\&quot;quantity\&quot;:1}]&quot;,
-        &quot;delivery_notes&quot;: &quot;Look for john&quot;,
-        &quot;created_at&quot;: &quot;2022-03-20T14:33:26.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2022-03-20T14:33:26.000000Z&quot;,
-        &quot;status&quot;: &quot;PENDING&quot;,
-        &quot;user&quot;: {
-            &quot;id&quot;: 1,
-            &quot;user_address_id&quot;: null,
-            &quot;name&quot;: &quot;John Doe&quot;,
-            &quot;gender&quot;: &quot;male&quot;,
-            &quot;bday&quot;: &quot;01-18-98&quot;,
-            &quot;email&quot;: &quot;john.doe10@domain.com&quot;,
-            &quot;email_verified_at&quot;: null,
-            &quot;type&quot;: null,
-            &quot;created_at&quot;: &quot;2022-03-19T02:06:45.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-03-19T02:06:45.000000Z&quot;
-        },
-        &quot;order_shipping_address&quot;: null
-    },
-    {
-        &quot;id&quot;: 26,
-        &quot;reference_code&quot;: &quot;ORDER-#KR12OQYER7&quot;,
-        &quot;user_id&quot;: 1,
-        &quot;customer_name&quot;: null,
-        &quot;customer_email&quot;: null,
-        &quot;total_amount&quot;: 500,
-        &quot;order_products&quot;: &quot;[{\&quot;sku\&quot;:\&quot;DMDSOXUNT6\&quot;,\&quot;name\&quot;:\&quot;new product upload\&quot;,\&quot;description\&quot;:\&quot;new product uploadnew product uploadnew product upload\&quot;,\&quot;price\&quot;:500.75,\&quot;quantity\&quot;:1},{\&quot;sku\&quot;:\&quot;AFI9CASWOW\&quot;,\&quot;name\&quot;:\&quot;first product2222\&quot;,\&quot;description\&quot;:\&quot;first product description\&quot;,\&quot;price\&quot;:150.75,\&quot;quantity\&quot;:1},{\&quot;sku\&quot;:\&quot;KCBSD8PE8I\&quot;,\&quot;name\&quot;:\&quot;Laurie Douglas\&quot;,\&quot;description\&quot;:\&quot;Ipsum sapiente autem ut placeat aut.\&quot;,\&quot;price\&quot;:500.25,\&quot;quantity\&quot;:1}]&quot;,
-        &quot;delivery_notes&quot;: &quot;Look for john&quot;,
-        &quot;created_at&quot;: &quot;2022-03-20T14:33:13.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2022-03-20T14:33:13.000000Z&quot;,
-        &quot;status&quot;: &quot;PENDING&quot;,
-        &quot;user&quot;: {
-            &quot;id&quot;: 1,
-            &quot;user_address_id&quot;: null,
-            &quot;name&quot;: &quot;John Doe&quot;,
-            &quot;gender&quot;: &quot;male&quot;,
-            &quot;bday&quot;: &quot;01-18-98&quot;,
-            &quot;email&quot;: &quot;john.doe10@domain.com&quot;,
-            &quot;email_verified_at&quot;: null,
-            &quot;type&quot;: null,
-            &quot;created_at&quot;: &quot;2022-03-19T02:06:45.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-03-19T02:06:45.000000Z&quot;
-        },
-        &quot;order_shipping_address&quot;: null
-    },
-    {
-        &quot;id&quot;: 25,
-        &quot;reference_code&quot;: &quot;ORDER-#3FN4RJCGOV&quot;,
-        &quot;user_id&quot;: 1,
-        &quot;customer_name&quot;: null,
-        &quot;customer_email&quot;: null,
-        &quot;total_amount&quot;: 500,
-        &quot;order_products&quot;: &quot;[{\&quot;sku\&quot;:\&quot;DMDSOXUNT6\&quot;,\&quot;name\&quot;:\&quot;new product upload\&quot;,\&quot;description\&quot;:\&quot;new product uploadnew product uploadnew product upload\&quot;,\&quot;price\&quot;:500.75,\&quot;quantity\&quot;:1},{\&quot;sku\&quot;:\&quot;AFI9CASWOW\&quot;,\&quot;name\&quot;:\&quot;first product2222\&quot;,\&quot;description\&quot;:\&quot;first product description\&quot;,\&quot;price\&quot;:150.75,\&quot;quantity\&quot;:1},{\&quot;sku\&quot;:\&quot;KCBSD8PE8I\&quot;,\&quot;name\&quot;:\&quot;Laurie Douglas\&quot;,\&quot;description\&quot;:\&quot;Ipsum sapiente autem ut placeat aut.\&quot;,\&quot;price\&quot;:500.25,\&quot;quantity\&quot;:1}]&quot;,
-        &quot;delivery_notes&quot;: &quot;Look for john&quot;,
-        &quot;created_at&quot;: &quot;2022-03-20T14:33:00.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2022-03-20T14:33:00.000000Z&quot;,
-        &quot;status&quot;: &quot;PENDING&quot;,
-        &quot;user&quot;: {
-            &quot;id&quot;: 1,
-            &quot;user_address_id&quot;: null,
-            &quot;name&quot;: &quot;John Doe&quot;,
-            &quot;gender&quot;: &quot;male&quot;,
-            &quot;bday&quot;: &quot;01-18-98&quot;,
-            &quot;email&quot;: &quot;john.doe10@domain.com&quot;,
-            &quot;email_verified_at&quot;: null,
-            &quot;type&quot;: null,
-            &quot;created_at&quot;: &quot;2022-03-19T02:06:45.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-03-19T02:06:45.000000Z&quot;
-        },
-        &quot;order_shipping_address&quot;: null
-    },
-    {
-        &quot;id&quot;: 24,
-        &quot;reference_code&quot;: &quot;ORDER-#JKBL4YNJX7&quot;,
-        &quot;user_id&quot;: 1,
-        &quot;customer_name&quot;: null,
-        &quot;customer_email&quot;: null,
-        &quot;total_amount&quot;: 500,
-        &quot;order_products&quot;: &quot;[{\&quot;sku\&quot;:\&quot;DMDSOXUNT6\&quot;,\&quot;name\&quot;:\&quot;new product upload\&quot;,\&quot;description\&quot;:\&quot;new product uploadnew product uploadnew product upload\&quot;,\&quot;price\&quot;:500.75,\&quot;quantity\&quot;:1},{\&quot;sku\&quot;:\&quot;AFI9CASWOW\&quot;,\&quot;name\&quot;:\&quot;first product2222\&quot;,\&quot;description\&quot;:\&quot;first product description\&quot;,\&quot;price\&quot;:150.75,\&quot;quantity\&quot;:1},{\&quot;sku\&quot;:\&quot;KCBSD8PE8I\&quot;,\&quot;name\&quot;:\&quot;Laurie Douglas\&quot;,\&quot;description\&quot;:\&quot;Ipsum sapiente autem ut placeat aut.\&quot;,\&quot;price\&quot;:500.25,\&quot;quantity\&quot;:1}]&quot;,
-        &quot;delivery_notes&quot;: &quot;Look for john&quot;,
-        &quot;created_at&quot;: &quot;2022-03-20T14:32:53.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2022-03-20T14:32:53.000000Z&quot;,
-        &quot;status&quot;: &quot;PENDING&quot;,
-        &quot;user&quot;: {
-            &quot;id&quot;: 1,
-            &quot;user_address_id&quot;: null,
-            &quot;name&quot;: &quot;John Doe&quot;,
-            &quot;gender&quot;: &quot;male&quot;,
-            &quot;bday&quot;: &quot;01-18-98&quot;,
-            &quot;email&quot;: &quot;john.doe10@domain.com&quot;,
-            &quot;email_verified_at&quot;: null,
-            &quot;type&quot;: null,
-            &quot;created_at&quot;: &quot;2022-03-19T02:06:45.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-03-19T02:06:45.000000Z&quot;
-        },
-        &quot;order_shipping_address&quot;: null
-    },
-    {
-        &quot;id&quot;: 23,
-        &quot;reference_code&quot;: &quot;ORDER-#TRXGOY4ZYJ&quot;,
-        &quot;user_id&quot;: 1,
-        &quot;customer_name&quot;: null,
-        &quot;customer_email&quot;: null,
-        &quot;total_amount&quot;: 500,
-        &quot;order_products&quot;: &quot;[{\&quot;sku\&quot;:\&quot;DMDSOXUNT6\&quot;,\&quot;name\&quot;:\&quot;new product upload\&quot;,\&quot;description\&quot;:\&quot;new product uploadnew product uploadnew product upload\&quot;,\&quot;price\&quot;:500.75,\&quot;quantity\&quot;:1},{\&quot;sku\&quot;:\&quot;AFI9CASWOW\&quot;,\&quot;name\&quot;:\&quot;first product2222\&quot;,\&quot;description\&quot;:\&quot;first product description\&quot;,\&quot;price\&quot;:150.75,\&quot;quantity\&quot;:1},{\&quot;sku\&quot;:\&quot;KCBSD8PE8I\&quot;,\&quot;name\&quot;:\&quot;Laurie Douglas\&quot;,\&quot;description\&quot;:\&quot;Ipsum sapiente autem ut placeat aut.\&quot;,\&quot;price\&quot;:500.25,\&quot;quantity\&quot;:1}]&quot;,
-        &quot;delivery_notes&quot;: &quot;Look for john&quot;,
-        &quot;created_at&quot;: &quot;2022-03-20T14:32:35.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2022-03-20T14:32:35.000000Z&quot;,
-        &quot;status&quot;: &quot;PENDING&quot;,
-        &quot;user&quot;: {
-            &quot;id&quot;: 1,
-            &quot;user_address_id&quot;: null,
-            &quot;name&quot;: &quot;John Doe&quot;,
-            &quot;gender&quot;: &quot;male&quot;,
-            &quot;bday&quot;: &quot;01-18-98&quot;,
-            &quot;email&quot;: &quot;john.doe10@domain.com&quot;,
-            &quot;email_verified_at&quot;: null,
-            &quot;type&quot;: null,
-            &quot;created_at&quot;: &quot;2022-03-19T02:06:45.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-03-19T02:06:45.000000Z&quot;
-        },
-        &quot;order_shipping_address&quot;: null
-    },
-    {
-        &quot;id&quot;: 22,
-        &quot;reference_code&quot;: &quot;ORDER-#YYXO0VWZSP&quot;,
-        &quot;user_id&quot;: 1,
-        &quot;customer_name&quot;: null,
-        &quot;customer_email&quot;: null,
-        &quot;total_amount&quot;: 500,
-        &quot;order_products&quot;: &quot;[{\&quot;sku\&quot;:\&quot;DMDSOXUNT6\&quot;,\&quot;name\&quot;:\&quot;new product upload\&quot;,\&quot;description\&quot;:\&quot;new product uploadnew product uploadnew product upload\&quot;,\&quot;price\&quot;:500.75,\&quot;quantity\&quot;:1},{\&quot;sku\&quot;:\&quot;AFI9CASWOW\&quot;,\&quot;name\&quot;:\&quot;first product2222\&quot;,\&quot;description\&quot;:\&quot;first product description\&quot;,\&quot;price\&quot;:150.75,\&quot;quantity\&quot;:1},{\&quot;sku\&quot;:\&quot;KCBSD8PE8I\&quot;,\&quot;name\&quot;:\&quot;Laurie Douglas\&quot;,\&quot;description\&quot;:\&quot;Ipsum sapiente autem ut placeat aut.\&quot;,\&quot;price\&quot;:500.25,\&quot;quantity\&quot;:1}]&quot;,
-        &quot;delivery_notes&quot;: &quot;Look for john&quot;,
-        &quot;created_at&quot;: &quot;2022-03-20T14:32:22.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2022-03-20T14:32:22.000000Z&quot;,
-        &quot;status&quot;: &quot;PENDING&quot;,
-        &quot;user&quot;: {
-            &quot;id&quot;: 1,
-            &quot;user_address_id&quot;: null,
-            &quot;name&quot;: &quot;John Doe&quot;,
-            &quot;gender&quot;: &quot;male&quot;,
-            &quot;bday&quot;: &quot;01-18-98&quot;,
-            &quot;email&quot;: &quot;john.doe10@domain.com&quot;,
-            &quot;email_verified_at&quot;: null,
-            &quot;type&quot;: null,
-            &quot;created_at&quot;: &quot;2022-03-19T02:06:45.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-03-19T02:06:45.000000Z&quot;
-        },
-        &quot;order_shipping_address&quot;: null
-    },
-    {
-        &quot;id&quot;: 21,
-        &quot;reference_code&quot;: &quot;ORDER-#PFD6YMPVIH&quot;,
-        &quot;user_id&quot;: 1,
-        &quot;customer_name&quot;: null,
-        &quot;customer_email&quot;: null,
-        &quot;total_amount&quot;: 500,
-        &quot;order_products&quot;: &quot;[{\&quot;sku\&quot;:\&quot;DMDSOXUNT6\&quot;,\&quot;name\&quot;:\&quot;new product upload\&quot;,\&quot;description\&quot;:\&quot;new product uploadnew product uploadnew product upload\&quot;,\&quot;price\&quot;:500.75,\&quot;quantity\&quot;:1},{\&quot;sku\&quot;:\&quot;AFI9CASWOW\&quot;,\&quot;name\&quot;:\&quot;first product2222\&quot;,\&quot;description\&quot;:\&quot;first product description\&quot;,\&quot;price\&quot;:150.75,\&quot;quantity\&quot;:1},{\&quot;sku\&quot;:\&quot;KCBSD8PE8I\&quot;,\&quot;name\&quot;:\&quot;Laurie Douglas\&quot;,\&quot;description\&quot;:\&quot;Ipsum sapiente autem ut placeat aut.\&quot;,\&quot;price\&quot;:500.25,\&quot;quantity\&quot;:1}]&quot;,
-        &quot;delivery_notes&quot;: &quot;Look for john&quot;,
-        &quot;created_at&quot;: &quot;2022-03-20T14:32:16.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2022-03-20T14:32:16.000000Z&quot;,
-        &quot;status&quot;: &quot;PENDING&quot;,
-        &quot;user&quot;: {
-            &quot;id&quot;: 1,
-            &quot;user_address_id&quot;: null,
-            &quot;name&quot;: &quot;John Doe&quot;,
-            &quot;gender&quot;: &quot;male&quot;,
-            &quot;bday&quot;: &quot;01-18-98&quot;,
-            &quot;email&quot;: &quot;john.doe10@domain.com&quot;,
-            &quot;email_verified_at&quot;: null,
-            &quot;type&quot;: null,
-            &quot;created_at&quot;: &quot;2022-03-19T02:06:45.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-03-19T02:06:45.000000Z&quot;
-        },
-        &quot;order_shipping_address&quot;: null
-    },
-    {
-        &quot;id&quot;: 20,
-        &quot;reference_code&quot;: &quot;ORDER-#KAQS1D50AL&quot;,
-        &quot;user_id&quot;: 1,
-        &quot;customer_name&quot;: null,
-        &quot;customer_email&quot;: null,
-        &quot;total_amount&quot;: 500,
-        &quot;order_products&quot;: &quot;[{\&quot;sku\&quot;:\&quot;DMDSOXUNT6\&quot;,\&quot;name\&quot;:\&quot;new product upload\&quot;,\&quot;description\&quot;:\&quot;new product uploadnew product uploadnew product upload\&quot;,\&quot;price\&quot;:500.75,\&quot;quantity\&quot;:1},{\&quot;sku\&quot;:\&quot;AFI9CASWOW\&quot;,\&quot;name\&quot;:\&quot;first product2222\&quot;,\&quot;description\&quot;:\&quot;first product description\&quot;,\&quot;price\&quot;:150.75,\&quot;quantity\&quot;:1},{\&quot;sku\&quot;:\&quot;KCBSD8PE8I\&quot;,\&quot;name\&quot;:\&quot;Laurie Douglas\&quot;,\&quot;description\&quot;:\&quot;Ipsum sapiente autem ut placeat aut.\&quot;,\&quot;price\&quot;:500.25,\&quot;quantity\&quot;:1}]&quot;,
-        &quot;delivery_notes&quot;: &quot;Look for john&quot;,
-        &quot;created_at&quot;: &quot;2022-03-20T14:31:59.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2022-03-20T14:31:59.000000Z&quot;,
-        &quot;status&quot;: &quot;PENDING&quot;,
-        &quot;user&quot;: {
-            &quot;id&quot;: 1,
-            &quot;user_address_id&quot;: null,
-            &quot;name&quot;: &quot;John Doe&quot;,
-            &quot;gender&quot;: &quot;male&quot;,
-            &quot;bday&quot;: &quot;01-18-98&quot;,
-            &quot;email&quot;: &quot;john.doe10@domain.com&quot;,
-            &quot;email_verified_at&quot;: null,
-            &quot;type&quot;: null,
-            &quot;created_at&quot;: &quot;2022-03-19T02:06:45.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-03-19T02:06:45.000000Z&quot;
-        },
-        &quot;order_shipping_address&quot;: null
-    },
-    {
-        &quot;id&quot;: 19,
-        &quot;reference_code&quot;: &quot;ORDER-#VH19CKMBNN&quot;,
-        &quot;user_id&quot;: null,
-        &quot;customer_name&quot;: &quot;Kobe Bryant2&quot;,
-        &quot;customer_email&quot;: &quot;kobe24@nba.com&quot;,
-        &quot;total_amount&quot;: 500,
-        &quot;order_products&quot;: &quot;[{\&quot;sku\&quot;:\&quot;DMDSOXUNT6\&quot;,\&quot;name\&quot;:\&quot;new product upload\&quot;,\&quot;description\&quot;:\&quot;new product uploadnew product uploadnew product upload\&quot;,\&quot;price\&quot;:500.75,\&quot;quantity\&quot;:1},{\&quot;sku\&quot;:\&quot;AFI9CASWOW\&quot;,\&quot;name\&quot;:\&quot;first product2222\&quot;,\&quot;description\&quot;:\&quot;first product description\&quot;,\&quot;price\&quot;:150.75,\&quot;quantity\&quot;:1},{\&quot;sku\&quot;:\&quot;KCBSD8PE8I\&quot;,\&quot;name\&quot;:\&quot;Laurie Douglas\&quot;,\&quot;description\&quot;:\&quot;Ipsum sapiente autem ut placeat aut.\&quot;,\&quot;price\&quot;:500.25,\&quot;quantity\&quot;:1}]&quot;,
-        &quot;delivery_notes&quot;: &quot;Look for john&quot;,
-        &quot;created_at&quot;: &quot;2022-03-20T14:31:04.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2022-03-20T14:31:04.000000Z&quot;,
-        &quot;status&quot;: &quot;PENDING&quot;,
-        &quot;user&quot;: null,
-        &quot;order_shipping_address&quot;: null
-    },
-    {
-        &quot;id&quot;: 18,
-        &quot;reference_code&quot;: &quot;ORDER-#WVY2TEN6RS&quot;,
-        &quot;user_id&quot;: null,
-        &quot;customer_name&quot;: &quot;Kobe Bryant2&quot;,
-        &quot;customer_email&quot;: &quot;kobe24@nba.com&quot;,
-        &quot;total_amount&quot;: 500,
-        &quot;order_products&quot;: &quot;[{\&quot;sku\&quot;:\&quot;DMDSOXUNT6\&quot;,\&quot;name\&quot;:\&quot;new product upload\&quot;,\&quot;description\&quot;:\&quot;new product uploadnew product uploadnew product upload\&quot;,\&quot;price\&quot;:500.75,\&quot;quantity\&quot;:1},{\&quot;sku\&quot;:\&quot;AFI9CASWOW\&quot;,\&quot;name\&quot;:\&quot;first product2222\&quot;,\&quot;description\&quot;:\&quot;first product description\&quot;,\&quot;price\&quot;:150.75,\&quot;quantity\&quot;:1},{\&quot;sku\&quot;:\&quot;KCBSD8PE8I\&quot;,\&quot;name\&quot;:\&quot;Laurie Douglas\&quot;,\&quot;description\&quot;:\&quot;Ipsum sapiente autem ut placeat aut.\&quot;,\&quot;price\&quot;:500.25,\&quot;quantity\&quot;:1}]&quot;,
-        &quot;delivery_notes&quot;: &quot;Look for john&quot;,
-        &quot;created_at&quot;: &quot;2022-03-20T14:30:35.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2022-03-20T14:30:35.000000Z&quot;,
-        &quot;status&quot;: &quot;PENDING&quot;,
-        &quot;user&quot;: null,
-        &quot;order_shipping_address&quot;: null
-    },
-    {
-        &quot;id&quot;: 17,
-        &quot;reference_code&quot;: &quot;ORDER-#OYM8X5EJNT&quot;,
-        &quot;user_id&quot;: null,
-        &quot;customer_name&quot;: &quot;Kobe Bryant2&quot;,
-        &quot;customer_email&quot;: &quot;kobe24@nba.com&quot;,
-        &quot;total_amount&quot;: 500,
-        &quot;order_products&quot;: &quot;[{\&quot;sku\&quot;:\&quot;DMDSOXUNT6\&quot;,\&quot;name\&quot;:\&quot;new product upload\&quot;,\&quot;description\&quot;:\&quot;new product uploadnew product uploadnew product upload\&quot;,\&quot;price\&quot;:500.75,\&quot;quantity\&quot;:1},{\&quot;sku\&quot;:\&quot;AFI9CASWOW\&quot;,\&quot;name\&quot;:\&quot;first product2222\&quot;,\&quot;description\&quot;:\&quot;first product description\&quot;,\&quot;price\&quot;:150.75,\&quot;quantity\&quot;:1},{\&quot;sku\&quot;:\&quot;KCBSD8PE8I\&quot;,\&quot;name\&quot;:\&quot;Laurie Douglas\&quot;,\&quot;description\&quot;:\&quot;Ipsum sapiente autem ut placeat aut.\&quot;,\&quot;price\&quot;:500.25,\&quot;quantity\&quot;:1}]&quot;,
-        &quot;delivery_notes&quot;: &quot;Look for john&quot;,
-        &quot;created_at&quot;: &quot;2022-03-20T14:20:06.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2022-03-20T14:20:06.000000Z&quot;,
-        &quot;status&quot;: &quot;PENDING&quot;,
-        &quot;user&quot;: null,
-        &quot;order_shipping_address&quot;: null
-    },
-    {
-        &quot;id&quot;: 16,
-        &quot;reference_code&quot;: &quot;ORDER-#WASPIJTES2&quot;,
-        &quot;user_id&quot;: null,
-        &quot;customer_name&quot;: &quot;Kobe Bryant2&quot;,
-        &quot;customer_email&quot;: &quot;kobe24@nba.com&quot;,
-        &quot;total_amount&quot;: 500,
-        &quot;order_products&quot;: &quot;[{\&quot;sku\&quot;:\&quot;DMDSOXUNT6\&quot;,\&quot;name\&quot;:\&quot;new product upload\&quot;,\&quot;description\&quot;:\&quot;new product uploadnew product uploadnew product upload\&quot;,\&quot;price\&quot;:500.75,\&quot;quantity\&quot;:1},{\&quot;sku\&quot;:\&quot;AFI9CASWOW\&quot;,\&quot;name\&quot;:\&quot;first product2222\&quot;,\&quot;description\&quot;:\&quot;first product description\&quot;,\&quot;price\&quot;:150.75,\&quot;quantity\&quot;:1},{\&quot;sku\&quot;:\&quot;KCBSD8PE8I\&quot;,\&quot;name\&quot;:\&quot;Laurie Douglas\&quot;,\&quot;description\&quot;:\&quot;Ipsum sapiente autem ut placeat aut.\&quot;,\&quot;price\&quot;:500.25,\&quot;quantity\&quot;:1}]&quot;,
-        &quot;delivery_notes&quot;: &quot;Look for john&quot;,
-        &quot;created_at&quot;: &quot;2022-03-20T14:19:37.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2022-03-20T14:19:37.000000Z&quot;,
-        &quot;status&quot;: &quot;PENDING&quot;,
-        &quot;user&quot;: null,
-        &quot;order_shipping_address&quot;: null
-    },
-    {
-        &quot;id&quot;: 15,
-        &quot;reference_code&quot;: &quot;ORDER-#TU4NXCNWGL&quot;,
-        &quot;user_id&quot;: null,
-        &quot;customer_name&quot;: &quot;Kobe Bryant2&quot;,
-        &quot;customer_email&quot;: &quot;kobe24@nba.com&quot;,
-        &quot;total_amount&quot;: 500,
-        &quot;order_products&quot;: &quot;[{\&quot;sku\&quot;:\&quot;DMDSOXUNT6\&quot;,\&quot;name\&quot;:\&quot;new product upload\&quot;,\&quot;description\&quot;:\&quot;new product uploadnew product uploadnew product upload\&quot;,\&quot;price\&quot;:500.75,\&quot;quantity\&quot;:1},{\&quot;sku\&quot;:\&quot;AFI9CASWOW\&quot;,\&quot;name\&quot;:\&quot;first product2222\&quot;,\&quot;description\&quot;:\&quot;first product description\&quot;,\&quot;price\&quot;:150.75,\&quot;quantity\&quot;:1},{\&quot;sku\&quot;:\&quot;KCBSD8PE8I\&quot;,\&quot;name\&quot;:\&quot;Laurie Douglas\&quot;,\&quot;description\&quot;:\&quot;Ipsum sapiente autem ut placeat aut.\&quot;,\&quot;price\&quot;:500.25,\&quot;quantity\&quot;:1}]&quot;,
-        &quot;delivery_notes&quot;: &quot;Look for john&quot;,
-        &quot;created_at&quot;: &quot;2022-03-20T14:19:36.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2022-03-20T14:19:36.000000Z&quot;,
-        &quot;status&quot;: &quot;PENDING&quot;,
-        &quot;user&quot;: null,
-        &quot;order_shipping_address&quot;: null
-    },
-    {
-        &quot;id&quot;: 14,
-        &quot;reference_code&quot;: &quot;ORDER-#543OSRRNZC&quot;,
-        &quot;user_id&quot;: null,
-        &quot;customer_name&quot;: &quot;Kobe Bryant2&quot;,
-        &quot;customer_email&quot;: &quot;kobe24@nba.com&quot;,
-        &quot;total_amount&quot;: 500,
-        &quot;order_products&quot;: &quot;[{\&quot;sku\&quot;:\&quot;DMDSOXUNT6\&quot;,\&quot;name\&quot;:\&quot;new product upload\&quot;,\&quot;description\&quot;:\&quot;new product uploadnew product uploadnew product upload\&quot;,\&quot;price\&quot;:500.75,\&quot;quantity\&quot;:1},{\&quot;sku\&quot;:\&quot;AFI9CASWOW\&quot;,\&quot;name\&quot;:\&quot;first product2222\&quot;,\&quot;description\&quot;:\&quot;first product description\&quot;,\&quot;price\&quot;:150.75,\&quot;quantity\&quot;:1},{\&quot;sku\&quot;:\&quot;KCBSD8PE8I\&quot;,\&quot;name\&quot;:\&quot;Laurie Douglas\&quot;,\&quot;description\&quot;:\&quot;Ipsum sapiente autem ut placeat aut.\&quot;,\&quot;price\&quot;:500.25,\&quot;quantity\&quot;:1}]&quot;,
-        &quot;delivery_notes&quot;: &quot;Look for john&quot;,
-        &quot;created_at&quot;: &quot;2022-03-20T14:19:15.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2022-03-20T14:19:15.000000Z&quot;,
-        &quot;status&quot;: &quot;PENDING&quot;,
-        &quot;user&quot;: null,
-        &quot;order_shipping_address&quot;: null
-    },
-    {
-        &quot;id&quot;: 13,
-        &quot;reference_code&quot;: &quot;ORDER-#TLBFORIBMI&quot;,
-        &quot;user_id&quot;: null,
-        &quot;customer_name&quot;: &quot;Kobe Bryant2&quot;,
-        &quot;customer_email&quot;: &quot;kobe24@nba.com&quot;,
-        &quot;total_amount&quot;: 500,
-        &quot;order_products&quot;: &quot;[{\&quot;sku\&quot;:\&quot;DMDSOXUNT6\&quot;,\&quot;name\&quot;:\&quot;new product upload\&quot;,\&quot;description\&quot;:\&quot;new product uploadnew product uploadnew product upload\&quot;,\&quot;price\&quot;:500.75,\&quot;quantity\&quot;:1},{\&quot;sku\&quot;:\&quot;AFI9CASWOW\&quot;,\&quot;name\&quot;:\&quot;first product2222\&quot;,\&quot;description\&quot;:\&quot;first product description\&quot;,\&quot;price\&quot;:150.75,\&quot;quantity\&quot;:1},{\&quot;sku\&quot;:\&quot;KCBSD8PE8I\&quot;,\&quot;name\&quot;:\&quot;Laurie Douglas\&quot;,\&quot;description\&quot;:\&quot;Ipsum sapiente autem ut placeat aut.\&quot;,\&quot;price\&quot;:500.25,\&quot;quantity\&quot;:1}]&quot;,
-        &quot;delivery_notes&quot;: &quot;Look for john&quot;,
-        &quot;created_at&quot;: &quot;2022-03-20T14:06:09.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2022-03-20T14:06:09.000000Z&quot;,
-        &quot;status&quot;: &quot;PENDING&quot;,
-        &quot;user&quot;: null,
-        &quot;order_shipping_address&quot;: null
-    },
-    {
-        &quot;id&quot;: 12,
-        &quot;reference_code&quot;: &quot;ORDER-#GVXDMAP2EB&quot;,
-        &quot;user_id&quot;: null,
-        &quot;customer_name&quot;: &quot;Kobe Bryant2&quot;,
-        &quot;customer_email&quot;: &quot;kobe24@nba.com&quot;,
-        &quot;total_amount&quot;: 500,
-        &quot;order_products&quot;: &quot;[{\&quot;sku\&quot;:\&quot;DMDSOXUNT6\&quot;,\&quot;name\&quot;:\&quot;new product upload\&quot;,\&quot;description\&quot;:\&quot;new product uploadnew product uploadnew product upload\&quot;,\&quot;price\&quot;:500.75,\&quot;quantity\&quot;:1},{\&quot;sku\&quot;:\&quot;AFI9CASWOW\&quot;,\&quot;name\&quot;:\&quot;first product2222\&quot;,\&quot;description\&quot;:\&quot;first product description\&quot;,\&quot;price\&quot;:150.75,\&quot;quantity\&quot;:1},{\&quot;sku\&quot;:\&quot;KCBSD8PE8I\&quot;,\&quot;name\&quot;:\&quot;Laurie Douglas\&quot;,\&quot;description\&quot;:\&quot;Ipsum sapiente autem ut placeat aut.\&quot;,\&quot;price\&quot;:500.25,\&quot;quantity\&quot;:1}]&quot;,
-        &quot;delivery_notes&quot;: &quot;Look for john&quot;,
-        &quot;created_at&quot;: &quot;2022-03-20T14:03:43.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2022-03-20T14:03:43.000000Z&quot;,
-        &quot;status&quot;: &quot;PENDING&quot;,
-        &quot;user&quot;: null,
-        &quot;order_shipping_address&quot;: {
-            &quot;id&quot;: 12,
-            &quot;order_id&quot;: 12,
-            &quot;address&quot;: &quot;address ni kobe&quot;,
-            &quot;barangay&quot;: &quot;Barangay name&quot;,
-            &quot;city&quot;: &quot;Manila&quot;,
-            &quot;zip_code&quot;: &quot;1233&quot;,
-            &quot;contact_number&quot;: &quot;09088888888&quot;,
-            &quot;region&quot;: &quot;NCR&quot;,
-            &quot;country&quot;: &quot;PH&quot;,
-            &quot;created_at&quot;: &quot;2022-03-20T14:03:43.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-03-20T14:03:43.000000Z&quot;
-        }
-    },
-    {
-        &quot;id&quot;: 11,
-        &quot;reference_code&quot;: &quot;ORDER-#CY6MP2S0WX&quot;,
-        &quot;user_id&quot;: null,
-        &quot;customer_name&quot;: &quot;Kobe Bryant2&quot;,
-        &quot;customer_email&quot;: &quot;kobe24@nba.com&quot;,
-        &quot;total_amount&quot;: 500,
-        &quot;order_products&quot;: &quot;[{\&quot;sku\&quot;:\&quot;DMDSOXUNT6\&quot;,\&quot;name\&quot;:\&quot;new product upload\&quot;,\&quot;description\&quot;:\&quot;new product uploadnew product uploadnew product upload\&quot;,\&quot;price\&quot;:500.75,\&quot;quantity\&quot;:1},{\&quot;sku\&quot;:\&quot;AFI9CASWOW\&quot;,\&quot;name\&quot;:\&quot;first product2222\&quot;,\&quot;description\&quot;:\&quot;first product description\&quot;,\&quot;price\&quot;:150.75,\&quot;quantity\&quot;:1},{\&quot;sku\&quot;:\&quot;KCBSD8PE8I\&quot;,\&quot;name\&quot;:\&quot;Laurie Douglas\&quot;,\&quot;description\&quot;:\&quot;Ipsum sapiente autem ut placeat aut.\&quot;,\&quot;price\&quot;:500.25,\&quot;quantity\&quot;:1}]&quot;,
-        &quot;delivery_notes&quot;: &quot;Look for john&quot;,
-        &quot;created_at&quot;: &quot;2022-03-20T13:43:57.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2022-03-20T13:43:57.000000Z&quot;,
-        &quot;status&quot;: &quot;PENDING&quot;,
-        &quot;user&quot;: null,
-        &quot;order_shipping_address&quot;: {
-            &quot;id&quot;: 11,
-            &quot;order_id&quot;: 11,
-            &quot;address&quot;: &quot;address ni kobe&quot;,
-            &quot;barangay&quot;: &quot;Barangay name&quot;,
-            &quot;city&quot;: &quot;Manila&quot;,
-            &quot;zip_code&quot;: &quot;1233&quot;,
-            &quot;contact_number&quot;: &quot;09088888888&quot;,
-            &quot;region&quot;: &quot;NCR&quot;,
-            &quot;country&quot;: &quot;PH&quot;,
-            &quot;created_at&quot;: &quot;2022-03-20T13:43:58.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-03-20T13:43:58.000000Z&quot;
-        }
-    },
-    {
-        &quot;id&quot;: 10,
-        &quot;reference_code&quot;: &quot;ORDER-#Z6PKYEQNRK&quot;,
-        &quot;user_id&quot;: 1,
-        &quot;customer_name&quot;: null,
-        &quot;customer_email&quot;: null,
-        &quot;total_amount&quot;: 500,
-        &quot;order_products&quot;: &quot;[{\&quot;sku\&quot;:\&quot;DMDSOXUNT6\&quot;,\&quot;name\&quot;:\&quot;new product upload\&quot;,\&quot;description\&quot;:\&quot;new product uploadnew product uploadnew product upload\&quot;,\&quot;price\&quot;:500.75,\&quot;quantity\&quot;:1},{\&quot;sku\&quot;:\&quot;AFI9CASWOW\&quot;,\&quot;name\&quot;:\&quot;first product2222\&quot;,\&quot;description\&quot;:\&quot;first product description\&quot;,\&quot;price\&quot;:150.75,\&quot;quantity\&quot;:1},{\&quot;sku\&quot;:\&quot;KCBSD8PE8I\&quot;,\&quot;name\&quot;:\&quot;Laurie Douglas\&quot;,\&quot;description\&quot;:\&quot;Ipsum sapiente autem ut placeat aut.\&quot;,\&quot;price\&quot;:500.25,\&quot;quantity\&quot;:1}]&quot;,
-        &quot;delivery_notes&quot;: &quot;Look for john&quot;,
-        &quot;created_at&quot;: &quot;2022-03-20T13:43:43.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2022-03-20T13:43:43.000000Z&quot;,
-        &quot;status&quot;: &quot;PENDING&quot;,
-        &quot;user&quot;: {
-            &quot;id&quot;: 1,
-            &quot;user_address_id&quot;: null,
-            &quot;name&quot;: &quot;John Doe&quot;,
-            &quot;gender&quot;: &quot;male&quot;,
-            &quot;bday&quot;: &quot;01-18-98&quot;,
-            &quot;email&quot;: &quot;john.doe10@domain.com&quot;,
-            &quot;email_verified_at&quot;: null,
-            &quot;type&quot;: null,
-            &quot;created_at&quot;: &quot;2022-03-19T02:06:45.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-03-19T02:06:45.000000Z&quot;
-        },
-        &quot;order_shipping_address&quot;: {
-            &quot;id&quot;: 10,
-            &quot;order_id&quot;: 10,
-            &quot;address&quot;: &quot;Street address&quot;,
-            &quot;barangay&quot;: &quot;Barangay name&quot;,
-            &quot;city&quot;: &quot;Manila&quot;,
-            &quot;zip_code&quot;: &quot;1233&quot;,
-            &quot;contact_number&quot;: &quot;09088888888&quot;,
-            &quot;region&quot;: &quot;NCR&quot;,
-            &quot;country&quot;: &quot;PH&quot;,
-            &quot;created_at&quot;: &quot;2022-03-20T13:43:43.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-03-20T13:43:43.000000Z&quot;
-        }
-    },
-    {
-        &quot;id&quot;: 9,
-        &quot;reference_code&quot;: &quot;ORDER-#EQ1YX9YCYB&quot;,
-        &quot;user_id&quot;: null,
-        &quot;customer_name&quot;: &quot;Kobe Bryant2&quot;,
-        &quot;customer_email&quot;: &quot;kobe24@nba.com&quot;,
-        &quot;total_amount&quot;: 500,
-        &quot;order_products&quot;: &quot;[{\&quot;sku\&quot;:\&quot;DMDSOXUNT6\&quot;,\&quot;name\&quot;:\&quot;new product upload\&quot;,\&quot;description\&quot;:\&quot;new product uploadnew product uploadnew product upload\&quot;,\&quot;price\&quot;:500.75,\&quot;quantity\&quot;:1},{\&quot;sku\&quot;:\&quot;AFI9CASWOW\&quot;,\&quot;name\&quot;:\&quot;first product2222\&quot;,\&quot;description\&quot;:\&quot;first product description\&quot;,\&quot;price\&quot;:150.75,\&quot;quantity\&quot;:1},{\&quot;sku\&quot;:\&quot;KCBSD8PE8I\&quot;,\&quot;name\&quot;:\&quot;Laurie Douglas\&quot;,\&quot;description\&quot;:\&quot;Ipsum sapiente autem ut placeat aut.\&quot;,\&quot;price\&quot;:500.25,\&quot;quantity\&quot;:1}]&quot;,
-        &quot;delivery_notes&quot;: &quot;Look for john&quot;,
-        &quot;created_at&quot;: &quot;2022-03-20T13:43:30.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2022-03-20T13:43:30.000000Z&quot;,
-        &quot;status&quot;: &quot;PENDING&quot;,
-        &quot;user&quot;: null,
-        &quot;order_shipping_address&quot;: {
-            &quot;id&quot;: 9,
-            &quot;order_id&quot;: 9,
-            &quot;address&quot;: &quot;address ni kobe&quot;,
-            &quot;barangay&quot;: &quot;Barangay name&quot;,
-            &quot;city&quot;: &quot;Manila&quot;,
-            &quot;zip_code&quot;: &quot;1233&quot;,
-            &quot;contact_number&quot;: &quot;09088888888&quot;,
-            &quot;region&quot;: &quot;NCR&quot;,
-            &quot;country&quot;: &quot;PH&quot;,
-            &quot;created_at&quot;: &quot;2022-03-20T13:43:30.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-03-20T13:43:30.000000Z&quot;
-        }
-    },
-    {
-        &quot;id&quot;: 8,
-        &quot;reference_code&quot;: &quot;ORDER-#SQXA8LGTT8&quot;,
-        &quot;user_id&quot;: null,
-        &quot;customer_name&quot;: &quot;Kobe Bryant2&quot;,
-        &quot;customer_email&quot;: &quot;kobe24@nba.com&quot;,
-        &quot;total_amount&quot;: 500,
-        &quot;order_products&quot;: &quot;[{\&quot;sku\&quot;:\&quot;DMDSOXUNT6\&quot;,\&quot;name\&quot;:\&quot;new product upload\&quot;,\&quot;description\&quot;:\&quot;new product uploadnew product uploadnew product upload\&quot;,\&quot;price\&quot;:500.75,\&quot;quantity\&quot;:1},{\&quot;sku\&quot;:\&quot;AFI9CASWOW\&quot;,\&quot;name\&quot;:\&quot;first product2222\&quot;,\&quot;description\&quot;:\&quot;first product description\&quot;,\&quot;price\&quot;:150.75,\&quot;quantity\&quot;:1},{\&quot;sku\&quot;:\&quot;KCBSD8PE8I\&quot;,\&quot;name\&quot;:\&quot;Laurie Douglas\&quot;,\&quot;description\&quot;:\&quot;Ipsum sapiente autem ut placeat aut.\&quot;,\&quot;price\&quot;:500.25,\&quot;quantity\&quot;:1}]&quot;,
-        &quot;delivery_notes&quot;: &quot;Look for john&quot;,
-        &quot;created_at&quot;: &quot;2022-03-20T13:43:17.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2022-03-20T13:43:17.000000Z&quot;,
-        &quot;status&quot;: &quot;PENDING&quot;,
-        &quot;user&quot;: null,
-        &quot;order_shipping_address&quot;: {
-            &quot;id&quot;: 8,
-            &quot;order_id&quot;: 8,
-            &quot;address&quot;: &quot;address ni hindi naka-login&quot;,
-            &quot;barangay&quot;: &quot;Barangay name&quot;,
-            &quot;city&quot;: &quot;Manila&quot;,
-            &quot;zip_code&quot;: &quot;1233&quot;,
-            &quot;contact_number&quot;: &quot;09088888888&quot;,
-            &quot;region&quot;: &quot;NCR&quot;,
-            &quot;country&quot;: &quot;PH&quot;,
-            &quot;created_at&quot;: &quot;2022-03-20T13:43:17.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-03-20T13:43:17.000000Z&quot;
-        }
-    },
-    {
-        &quot;id&quot;: 7,
-        &quot;reference_code&quot;: &quot;ORDER-#LU1EWTCT4I&quot;,
-        &quot;user_id&quot;: 1,
-        &quot;customer_name&quot;: null,
-        &quot;customer_email&quot;: null,
-        &quot;total_amount&quot;: 500,
-        &quot;order_products&quot;: &quot;[{\&quot;sku\&quot;:\&quot;DMDSOXUNT6\&quot;,\&quot;name\&quot;:\&quot;new product upload\&quot;,\&quot;description\&quot;:\&quot;new product uploadnew product uploadnew product upload\&quot;,\&quot;price\&quot;:500.75,\&quot;quantity\&quot;:1},{\&quot;sku\&quot;:\&quot;AFI9CASWOW\&quot;,\&quot;name\&quot;:\&quot;first product2222\&quot;,\&quot;description\&quot;:\&quot;first product description\&quot;,\&quot;price\&quot;:150.75,\&quot;quantity\&quot;:1},{\&quot;sku\&quot;:\&quot;KCBSD8PE8I\&quot;,\&quot;name\&quot;:\&quot;Laurie Douglas\&quot;,\&quot;description\&quot;:\&quot;Ipsum sapiente autem ut placeat aut.\&quot;,\&quot;price\&quot;:500.25,\&quot;quantity\&quot;:1}]&quot;,
-        &quot;delivery_notes&quot;: &quot;Look for john&quot;,
-        &quot;created_at&quot;: &quot;2022-03-20T13:40:24.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2022-03-20T13:40:24.000000Z&quot;,
-        &quot;status&quot;: &quot;PENDING&quot;,
-        &quot;user&quot;: {
-            &quot;id&quot;: 1,
-            &quot;user_address_id&quot;: null,
-            &quot;name&quot;: &quot;John Doe&quot;,
-            &quot;gender&quot;: &quot;male&quot;,
-            &quot;bday&quot;: &quot;01-18-98&quot;,
-            &quot;email&quot;: &quot;john.doe10@domain.com&quot;,
-            &quot;email_verified_at&quot;: null,
-            &quot;type&quot;: null,
-            &quot;created_at&quot;: &quot;2022-03-19T02:06:45.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-03-19T02:06:45.000000Z&quot;
-        },
-        &quot;order_shipping_address&quot;: {
-            &quot;id&quot;: 7,
-            &quot;order_id&quot;: 7,
-            &quot;address&quot;: &quot;Street address&quot;,
-            &quot;barangay&quot;: &quot;Barangay name&quot;,
-            &quot;city&quot;: &quot;Manila&quot;,
-            &quot;zip_code&quot;: &quot;1233&quot;,
-            &quot;contact_number&quot;: &quot;09088888888&quot;,
-            &quot;region&quot;: &quot;NCR&quot;,
-            &quot;country&quot;: &quot;PH&quot;,
-            &quot;created_at&quot;: &quot;2022-03-20T13:40:24.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-03-20T13:40:24.000000Z&quot;
-        }
-    },
-    {
-        &quot;id&quot;: 6,
-        &quot;reference_code&quot;: &quot;ORDER-#JDOYNT8MBV&quot;,
-        &quot;user_id&quot;: 1,
-        &quot;customer_name&quot;: &quot;John Doe&quot;,
-        &quot;customer_email&quot;: &quot;john.doe10@domain.com&quot;,
-        &quot;total_amount&quot;: 500,
-        &quot;order_products&quot;: &quot;[{\&quot;sku\&quot;:\&quot;DMDSOXUNT6\&quot;,\&quot;name\&quot;:\&quot;new product upload\&quot;,\&quot;description\&quot;:\&quot;new product uploadnew product uploadnew product upload\&quot;,\&quot;price\&quot;:500.75,\&quot;quantity\&quot;:1},{\&quot;sku\&quot;:\&quot;AFI9CASWOW\&quot;,\&quot;name\&quot;:\&quot;first product2222\&quot;,\&quot;description\&quot;:\&quot;first product description\&quot;,\&quot;price\&quot;:150.75,\&quot;quantity\&quot;:1},{\&quot;sku\&quot;:\&quot;KCBSD8PE8I\&quot;,\&quot;name\&quot;:\&quot;Laurie Douglas\&quot;,\&quot;description\&quot;:\&quot;Ipsum sapiente autem ut placeat aut.\&quot;,\&quot;price\&quot;:500.25,\&quot;quantity\&quot;:1}]&quot;,
-        &quot;delivery_notes&quot;: &quot;Look for john&quot;,
-        &quot;created_at&quot;: &quot;2022-03-19T02:11:36.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2022-03-19T02:11:36.000000Z&quot;,
-        &quot;status&quot;: &quot;PENDING&quot;,
-        &quot;user&quot;: {
-            &quot;id&quot;: 1,
-            &quot;user_address_id&quot;: null,
-            &quot;name&quot;: &quot;John Doe&quot;,
-            &quot;gender&quot;: &quot;male&quot;,
-            &quot;bday&quot;: &quot;01-18-98&quot;,
-            &quot;email&quot;: &quot;john.doe10@domain.com&quot;,
-            &quot;email_verified_at&quot;: null,
-            &quot;type&quot;: null,
-            &quot;created_at&quot;: &quot;2022-03-19T02:06:45.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-03-19T02:06:45.000000Z&quot;
-        },
-        &quot;order_shipping_address&quot;: {
-            &quot;id&quot;: 6,
-            &quot;order_id&quot;: 6,
-            &quot;address&quot;: &quot;Street address&quot;,
-            &quot;barangay&quot;: &quot;Barangay name&quot;,
-            &quot;city&quot;: &quot;Manila&quot;,
-            &quot;zip_code&quot;: &quot;1233&quot;,
-            &quot;contact_number&quot;: &quot;09088888888&quot;,
-            &quot;region&quot;: &quot;NCR&quot;,
-            &quot;country&quot;: &quot;PH&quot;,
-            &quot;created_at&quot;: &quot;2022-03-19T02:11:36.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-03-19T02:11:36.000000Z&quot;
-        }
-    },
-    {
-        &quot;id&quot;: 5,
-        &quot;reference_code&quot;: &quot;ORDER-#M1XGMCEMCO&quot;,
-        &quot;user_id&quot;: 1,
-        &quot;customer_name&quot;: null,
-        &quot;customer_email&quot;: null,
-        &quot;total_amount&quot;: 500,
-        &quot;order_products&quot;: &quot;[{\&quot;sku\&quot;:\&quot;DMDSOXUNT6\&quot;,\&quot;name\&quot;:\&quot;new product upload\&quot;,\&quot;description\&quot;:\&quot;new product uploadnew product uploadnew product upload\&quot;,\&quot;price\&quot;:500.75,\&quot;quantity\&quot;:1},{\&quot;sku\&quot;:\&quot;AFI9CASWOW\&quot;,\&quot;name\&quot;:\&quot;first product2222\&quot;,\&quot;description\&quot;:\&quot;first product description\&quot;,\&quot;price\&quot;:150.75,\&quot;quantity\&quot;:1},{\&quot;sku\&quot;:\&quot;KCBSD8PE8I\&quot;,\&quot;name\&quot;:\&quot;Laurie Douglas\&quot;,\&quot;description\&quot;:\&quot;Ipsum sapiente autem ut placeat aut.\&quot;,\&quot;price\&quot;:500.25,\&quot;quantity\&quot;:1}]&quot;,
-        &quot;delivery_notes&quot;: &quot;Look for john&quot;,
-        &quot;created_at&quot;: &quot;2022-03-19T02:08:52.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2022-03-19T02:08:52.000000Z&quot;,
-        &quot;status&quot;: &quot;PENDING&quot;,
-        &quot;user&quot;: {
-            &quot;id&quot;: 1,
-            &quot;user_address_id&quot;: null,
-            &quot;name&quot;: &quot;John Doe&quot;,
-            &quot;gender&quot;: &quot;male&quot;,
-            &quot;bday&quot;: &quot;01-18-98&quot;,
-            &quot;email&quot;: &quot;john.doe10@domain.com&quot;,
-            &quot;email_verified_at&quot;: null,
-            &quot;type&quot;: null,
-            &quot;created_at&quot;: &quot;2022-03-19T02:06:45.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-03-19T02:06:45.000000Z&quot;
-        },
-        &quot;order_shipping_address&quot;: {
-            &quot;id&quot;: 5,
-            &quot;order_id&quot;: 5,
-            &quot;address&quot;: &quot;Street address&quot;,
-            &quot;barangay&quot;: &quot;Barangay name&quot;,
-            &quot;city&quot;: &quot;Manila&quot;,
-            &quot;zip_code&quot;: &quot;1233&quot;,
-            &quot;contact_number&quot;: &quot;09088888888&quot;,
-            &quot;region&quot;: &quot;NCR&quot;,
-            &quot;country&quot;: &quot;PH&quot;,
-            &quot;created_at&quot;: &quot;2022-03-19T02:08:52.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-03-19T02:08:52.000000Z&quot;
-        }
-    },
-    {
-        &quot;id&quot;: 4,
-        &quot;reference_code&quot;: &quot;ORDER-#QKXR30WC9L&quot;,
-        &quot;user_id&quot;: null,
-        &quot;customer_name&quot;: &quot;Kobe Bryant2&quot;,
-        &quot;customer_email&quot;: &quot;kobe24@nba.com&quot;,
-        &quot;total_amount&quot;: 500,
-        &quot;order_products&quot;: &quot;[{\&quot;sku\&quot;:\&quot;DMDSOXUNT6\&quot;,\&quot;name\&quot;:\&quot;new product upload\&quot;,\&quot;description\&quot;:\&quot;new product uploadnew product uploadnew product upload\&quot;,\&quot;price\&quot;:500.75,\&quot;quantity\&quot;:1},{\&quot;sku\&quot;:\&quot;AFI9CASWOW\&quot;,\&quot;name\&quot;:\&quot;first product2222\&quot;,\&quot;description\&quot;:\&quot;first product description\&quot;,\&quot;price\&quot;:150.75,\&quot;quantity\&quot;:1},{\&quot;sku\&quot;:\&quot;KCBSD8PE8I\&quot;,\&quot;name\&quot;:\&quot;Laurie Douglas\&quot;,\&quot;description\&quot;:\&quot;Ipsum sapiente autem ut placeat aut.\&quot;,\&quot;price\&quot;:500.25,\&quot;quantity\&quot;:1}]&quot;,
-        &quot;delivery_notes&quot;: &quot;Look for john&quot;,
-        &quot;created_at&quot;: &quot;2022-03-19T02:08:48.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2022-03-19T02:08:48.000000Z&quot;,
-        &quot;status&quot;: &quot;PENDING&quot;,
-        &quot;user&quot;: null,
-        &quot;order_shipping_address&quot;: {
-            &quot;id&quot;: 4,
-            &quot;order_id&quot;: 4,
-            &quot;address&quot;: &quot;address ni hindi naka-login&quot;,
-            &quot;barangay&quot;: &quot;Barangay name&quot;,
-            &quot;city&quot;: &quot;Manila&quot;,
-            &quot;zip_code&quot;: &quot;1233&quot;,
-            &quot;contact_number&quot;: &quot;09088888888&quot;,
-            &quot;region&quot;: &quot;NCR&quot;,
-            &quot;country&quot;: &quot;PH&quot;,
-            &quot;created_at&quot;: &quot;2022-03-19T02:08:48.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-03-19T02:08:48.000000Z&quot;
-        }
-    },
-    {
-        &quot;id&quot;: 3,
-        &quot;reference_code&quot;: &quot;ORDER-#MM4MML8VAS&quot;,
-        &quot;user_id&quot;: null,
-        &quot;customer_name&quot;: &quot;Kobe Bryant&quot;,
-        &quot;customer_email&quot;: &quot;kobe24@nba.com&quot;,
-        &quot;total_amount&quot;: 500,
-        &quot;order_products&quot;: &quot;[{\&quot;sku\&quot;:\&quot;DMDSOXUNT6\&quot;,\&quot;name\&quot;:\&quot;new product upload\&quot;,\&quot;description\&quot;:\&quot;new product uploadnew product uploadnew product upload\&quot;,\&quot;price\&quot;:500.75,\&quot;quantity\&quot;:1},{\&quot;sku\&quot;:\&quot;AFI9CASWOW\&quot;,\&quot;name\&quot;:\&quot;first product2222\&quot;,\&quot;description\&quot;:\&quot;first product description\&quot;,\&quot;price\&quot;:150.75,\&quot;quantity\&quot;:1},{\&quot;sku\&quot;:\&quot;KCBSD8PE8I\&quot;,\&quot;name\&quot;:\&quot;Laurie Douglas\&quot;,\&quot;description\&quot;:\&quot;Ipsum sapiente autem ut placeat aut.\&quot;,\&quot;price\&quot;:500.25,\&quot;quantity\&quot;:1}]&quot;,
-        &quot;delivery_notes&quot;: &quot;Look for john&quot;,
-        &quot;created_at&quot;: &quot;2022-03-19T02:08:03.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2022-03-19T02:08:03.000000Z&quot;,
-        &quot;status&quot;: &quot;PENDING&quot;,
-        &quot;user&quot;: null,
-        &quot;order_shipping_address&quot;: {
-            &quot;id&quot;: 3,
-            &quot;order_id&quot;: 3,
-            &quot;address&quot;: &quot;address ni hindi naka-login&quot;,
-            &quot;barangay&quot;: &quot;Barangay name&quot;,
-            &quot;city&quot;: &quot;Manila&quot;,
-            &quot;zip_code&quot;: &quot;1233&quot;,
-            &quot;contact_number&quot;: &quot;09088888888&quot;,
-            &quot;region&quot;: &quot;NCR&quot;,
-            &quot;country&quot;: &quot;PH&quot;,
-            &quot;created_at&quot;: &quot;2022-03-19T02:08:03.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-03-19T02:08:03.000000Z&quot;
-        }
-    },
-    {
-        &quot;id&quot;: 2,
-        &quot;reference_code&quot;: &quot;ORDER-#ET0DWZCFKS&quot;,
-        &quot;user_id&quot;: null,
-        &quot;customer_name&quot;: null,
-        &quot;customer_email&quot;: null,
-        &quot;total_amount&quot;: 500,
-        &quot;order_products&quot;: &quot;[{\&quot;sku\&quot;:\&quot;DMDSOXUNT6\&quot;,\&quot;name\&quot;:\&quot;new product upload\&quot;,\&quot;description\&quot;:\&quot;new product uploadnew product uploadnew product upload\&quot;,\&quot;price\&quot;:500.75,\&quot;quantity\&quot;:1},{\&quot;sku\&quot;:\&quot;AFI9CASWOW\&quot;,\&quot;name\&quot;:\&quot;first product2222\&quot;,\&quot;description\&quot;:\&quot;first product description\&quot;,\&quot;price\&quot;:150.75,\&quot;quantity\&quot;:1},{\&quot;sku\&quot;:\&quot;KCBSD8PE8I\&quot;,\&quot;name\&quot;:\&quot;Laurie Douglas\&quot;,\&quot;description\&quot;:\&quot;Ipsum sapiente autem ut placeat aut.\&quot;,\&quot;price\&quot;:500.25,\&quot;quantity\&quot;:1}]&quot;,
-        &quot;delivery_notes&quot;: &quot;Look for john&quot;,
-        &quot;created_at&quot;: &quot;2022-03-19T02:07:08.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2022-03-19T02:07:08.000000Z&quot;,
-        &quot;status&quot;: &quot;PENDING&quot;,
-        &quot;user&quot;: null,
-        &quot;order_shipping_address&quot;: {
-            &quot;id&quot;: 2,
-            &quot;order_id&quot;: 2,
-            &quot;address&quot;: &quot;address ni hindi naka-login&quot;,
-            &quot;barangay&quot;: &quot;Barangay name&quot;,
-            &quot;city&quot;: &quot;Manila&quot;,
-            &quot;zip_code&quot;: &quot;1233&quot;,
-            &quot;contact_number&quot;: &quot;09088888888&quot;,
-            &quot;region&quot;: &quot;NCR&quot;,
-            &quot;country&quot;: &quot;PH&quot;,
-            &quot;created_at&quot;: &quot;2022-03-19T02:07:08.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-03-19T02:07:08.000000Z&quot;
-        }
-    },
-    {
-        &quot;id&quot;: 1,
-        &quot;reference_code&quot;: &quot;ORDER-#G12EYM8YT0&quot;,
-        &quot;user_id&quot;: 1,
-        &quot;customer_name&quot;: null,
-        &quot;customer_email&quot;: null,
-        &quot;total_amount&quot;: 500,
-        &quot;order_products&quot;: &quot;[{\&quot;sku\&quot;:\&quot;DMDSOXUNT6\&quot;,\&quot;name\&quot;:\&quot;new product upload\&quot;,\&quot;description\&quot;:\&quot;new product uploadnew product uploadnew product upload\&quot;,\&quot;price\&quot;:500.75,\&quot;quantity\&quot;:1},{\&quot;sku\&quot;:\&quot;AFI9CASWOW\&quot;,\&quot;name\&quot;:\&quot;first product2222\&quot;,\&quot;description\&quot;:\&quot;first product description\&quot;,\&quot;price\&quot;:150.75,\&quot;quantity\&quot;:1},{\&quot;sku\&quot;:\&quot;KCBSD8PE8I\&quot;,\&quot;name\&quot;:\&quot;Laurie Douglas\&quot;,\&quot;description\&quot;:\&quot;Ipsum sapiente autem ut placeat aut.\&quot;,\&quot;price\&quot;:500.25,\&quot;quantity\&quot;:1}]&quot;,
-        &quot;delivery_notes&quot;: &quot;Look for john&quot;,
-        &quot;created_at&quot;: &quot;2022-03-19T02:06:57.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2022-03-19T02:06:57.000000Z&quot;,
-        &quot;status&quot;: &quot;PENDING&quot;,
-        &quot;user&quot;: {
-            &quot;id&quot;: 1,
-            &quot;user_address_id&quot;: null,
-            &quot;name&quot;: &quot;John Doe&quot;,
-            &quot;gender&quot;: &quot;male&quot;,
-            &quot;bday&quot;: &quot;01-18-98&quot;,
-            &quot;email&quot;: &quot;john.doe10@domain.com&quot;,
-            &quot;email_verified_at&quot;: null,
-            &quot;type&quot;: null,
-            &quot;created_at&quot;: &quot;2022-03-19T02:06:45.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-03-19T02:06:45.000000Z&quot;
-        },
-        &quot;order_shipping_address&quot;: {
-            &quot;id&quot;: 1,
-            &quot;order_id&quot;: 1,
-            &quot;address&quot;: &quot;Street address&quot;,
-            &quot;barangay&quot;: &quot;Barangay name&quot;,
-            &quot;city&quot;: &quot;Manila&quot;,
-            &quot;zip_code&quot;: &quot;1233&quot;,
-            &quot;contact_number&quot;: &quot;09088888888&quot;,
-            &quot;region&quot;: &quot;NCR&quot;,
-            &quot;country&quot;: &quot;PH&quot;,
-            &quot;created_at&quot;: &quot;2022-03-19T02:06:57.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-03-19T02:06:57.000000Z&quot;
-        }
-    }
-]</code>
+<code class="language-json">[]</code>
  </pre>
     </span>
 <span id="execution-results-GETapi-v1-orders" hidden>
@@ -3613,21 +1933,21 @@ access-control-allow-origin: *
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"user_id\": 176.223,
-    \"customer_name\": \"foqziocw\",
-    \"customer_email\": \"arnkpajtybrfwmgvpfhxvuawhynnhunykxmqvbowxutrjxztqrbztrexmhygosk\",
-    \"total_amount\": 1638.3,
-    \"delivery_notes\": \"molestiae\",
+    \"user_id\": 65,
+    \"customer_name\": \"rolvxahzttadssis\",
+    \"customer_email\": \"aueegphyiqwirifsuykbihtzfqtgvnsskbofrhxxrwakncproounkuivoeblhewj\",
+    \"total_amount\": 713.19029581,
+    \"delivery_notes\": \"vitae\",
     \"shipping_address\": {
-        \"address\": \"perferendis\",
-        \"barangay\": \"libero\",
-        \"city\": \"fuga\",
-        \"zip_code\": \"deserunt\",
-        \"contact_number\": \"perspiciatis\",
-        \"region\": \"repellat\"
+        \"address\": \"et\",
+        \"barangay\": \"aut\",
+        \"city\": \"voluptatem\",
+        \"zip_code\": \"enim\",
+        \"contact_number\": \"explicabo\",
+        \"region\": \"rerum\"
     },
     \"order_products\": [
-        \"vitae\"
+        \"sit\"
     ]
 }"
 </code></pre></div>
@@ -3644,21 +1964,21 @@ const headers = {
 };
 
 let body = {
-    "user_id": 176.223,
-    "customer_name": "foqziocw",
-    "customer_email": "arnkpajtybrfwmgvpfhxvuawhynnhunykxmqvbowxutrjxztqrbztrexmhygosk",
-    "total_amount": 1638.3,
-    "delivery_notes": "molestiae",
+    "user_id": 65,
+    "customer_name": "rolvxahzttadssis",
+    "customer_email": "aueegphyiqwirifsuykbihtzfqtgvnsskbofrhxxrwakncproounkuivoeblhewj",
+    "total_amount": 713.19029581,
+    "delivery_notes": "vitae",
     "shipping_address": {
-        "address": "perferendis",
-        "barangay": "libero",
-        "city": "fuga",
-        "zip_code": "deserunt",
-        "contact_number": "perspiciatis",
-        "region": "repellat"
+        "address": "et",
+        "barangay": "aut",
+        "city": "voluptatem",
+        "zip_code": "enim",
+        "contact_number": "explicabo",
+        "region": "rerum"
     },
     "order_products": [
-        "vitae"
+        "sit"
     ]
 };
 
@@ -3717,7 +2037,7 @@ fetch(url, {
                 <input type="number"
                name="user_id"
                data-endpoint="POSTapi-v1-orders"
-               value="176.223"
+               value="65"
                data-component="body" hidden>
     <br>
 
@@ -3727,7 +2047,7 @@ fetch(url, {
                 <input type="text"
                name="customer_name"
                data-endpoint="POSTapi-v1-orders"
-               value="foqziocw"
+               value="rolvxahzttadssis"
                data-component="body" hidden>
     <br>
 <p>Must be at least 2 characters. Must not be greater than 32 characters.</p>
@@ -3737,7 +2057,7 @@ fetch(url, {
                 <input type="text"
                name="customer_email"
                data-endpoint="POSTapi-v1-orders"
-               value="arnkpajtybrfwmgvpfhxvuawhynnhunykxmqvbowxutrjxztqrbztrexmhygosk"
+               value="aueegphyiqwirifsuykbihtzfqtgvnsskbofrhxxrwakncproounkuivoeblhewj"
                data-component="body" hidden>
     <br>
 <p>Must be a valid email address. Must be at least 2 characters. Must not be greater than 64 characters.</p>
@@ -3747,7 +2067,7 @@ fetch(url, {
                 <input type="number"
                name="total_amount"
                data-endpoint="POSTapi-v1-orders"
-               value="1638.3"
+               value="713.19029581"
                data-component="body" hidden>
     <br>
 
@@ -3757,7 +2077,7 @@ fetch(url, {
                 <input type="text"
                name="delivery_notes"
                data-endpoint="POSTapi-v1-orders"
-               value="molestiae"
+               value="vitae"
                data-component="body" hidden>
     <br>
 
@@ -3774,7 +2094,7 @@ fetch(url, {
                 <input type="text"
                name="shipping_address.address"
                data-endpoint="POSTapi-v1-orders"
-               value="perferendis"
+               value="et"
                data-component="body" hidden>
     <br>
 
@@ -3784,7 +2104,7 @@ fetch(url, {
                 <input type="text"
                name="shipping_address.barangay"
                data-endpoint="POSTapi-v1-orders"
-               value="libero"
+               value="aut"
                data-component="body" hidden>
     <br>
 
@@ -3794,7 +2114,7 @@ fetch(url, {
                 <input type="text"
                name="shipping_address.city"
                data-endpoint="POSTapi-v1-orders"
-               value="fuga"
+               value="voluptatem"
                data-component="body" hidden>
     <br>
 
@@ -3804,7 +2124,7 @@ fetch(url, {
                 <input type="text"
                name="shipping_address.zip_code"
                data-endpoint="POSTapi-v1-orders"
-               value="deserunt"
+               value="enim"
                data-component="body" hidden>
     <br>
 
@@ -3814,7 +2134,7 @@ fetch(url, {
                 <input type="text"
                name="shipping_address.contact_number"
                data-endpoint="POSTapi-v1-orders"
-               value="perspiciatis"
+               value="explicabo"
                data-component="body" hidden>
     <br>
 
@@ -3824,7 +2144,7 @@ fetch(url, {
                 <input type="text"
                name="shipping_address.region"
                data-endpoint="POSTapi-v1-orders"
-               value="repellat"
+               value="rerum"
                data-component="body" hidden>
     <br>
 
@@ -3859,14 +2179,14 @@ fetch(url, {
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/v1/orders/provident" \
+    --get "http://localhost:8000/api/v1/orders/consectetur" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/v1/orders/provident"
+    "http://localhost:8000/api/v1/orders/consectetur"
 );
 
 const headers = {
@@ -3883,7 +2203,7 @@ fetch(url, {
 
 <span id="example-responses-GETapi-v1-orders--id-">
             <blockquote>
-            <p>Example response (200):</p>
+            <p>Example response (404):</p>
         </blockquote>
                 <details class="annotation">
             <summary>
@@ -3892,49 +2212,12 @@ fetch(url, {
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 27
+x-ratelimit-remaining: 51
 access-control-allow-origin: *
  </code></pre>
         </details>         <pre>
 
-<code class="language-json">{
-    &quot;id&quot;: 1,
-    &quot;reference_code&quot;: &quot;ORDER-#G12EYM8YT0&quot;,
-    &quot;user_id&quot;: 1,
-    &quot;customer_name&quot;: null,
-    &quot;customer_email&quot;: null,
-    &quot;total_amount&quot;: 500,
-    &quot;order_products&quot;: &quot;[{\&quot;sku\&quot;:\&quot;DMDSOXUNT6\&quot;,\&quot;name\&quot;:\&quot;new product upload\&quot;,\&quot;description\&quot;:\&quot;new product uploadnew product uploadnew product upload\&quot;,\&quot;price\&quot;:500.75,\&quot;quantity\&quot;:1},{\&quot;sku\&quot;:\&quot;AFI9CASWOW\&quot;,\&quot;name\&quot;:\&quot;first product2222\&quot;,\&quot;description\&quot;:\&quot;first product description\&quot;,\&quot;price\&quot;:150.75,\&quot;quantity\&quot;:1},{\&quot;sku\&quot;:\&quot;KCBSD8PE8I\&quot;,\&quot;name\&quot;:\&quot;Laurie Douglas\&quot;,\&quot;description\&quot;:\&quot;Ipsum sapiente autem ut placeat aut.\&quot;,\&quot;price\&quot;:500.25,\&quot;quantity\&quot;:1}]&quot;,
-    &quot;delivery_notes&quot;: &quot;Look for john&quot;,
-    &quot;created_at&quot;: &quot;2022-03-19T02:06:57.000000Z&quot;,
-    &quot;updated_at&quot;: &quot;2022-03-19T02:06:57.000000Z&quot;,
-    &quot;status&quot;: &quot;PENDING&quot;,
-    &quot;user&quot;: {
-        &quot;id&quot;: 1,
-        &quot;user_address_id&quot;: null,
-        &quot;name&quot;: &quot;John Doe&quot;,
-        &quot;gender&quot;: &quot;male&quot;,
-        &quot;bday&quot;: &quot;01-18-98&quot;,
-        &quot;email&quot;: &quot;john.doe10@domain.com&quot;,
-        &quot;email_verified_at&quot;: null,
-        &quot;type&quot;: null,
-        &quot;created_at&quot;: &quot;2022-03-19T02:06:45.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2022-03-19T02:06:45.000000Z&quot;
-    },
-    &quot;order_shipping_address&quot;: {
-        &quot;id&quot;: 1,
-        &quot;order_id&quot;: 1,
-        &quot;address&quot;: &quot;Street address&quot;,
-        &quot;barangay&quot;: &quot;Barangay name&quot;,
-        &quot;city&quot;: &quot;Manila&quot;,
-        &quot;zip_code&quot;: &quot;1233&quot;,
-        &quot;contact_number&quot;: &quot;09088888888&quot;,
-        &quot;region&quot;: &quot;NCR&quot;,
-        &quot;country&quot;: &quot;PH&quot;,
-        &quot;created_at&quot;: &quot;2022-03-19T02:06:57.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2022-03-19T02:06:57.000000Z&quot;
-    }
-}</code>
+<code class="language-json">&quot;Not Found&quot;</code>
  </pre>
     </span>
 <span id="execution-results-GETapi-v1-orders--id-" hidden>
@@ -3982,7 +2265,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="id"
                data-endpoint="GETapi-v1-orders--id-"
-               value="provident"
+               value="consectetur"
                data-component="url" hidden>
     <br>
 <p>The ID of the order.</p>
@@ -4002,25 +2285,25 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request PUT \
-    "http://localhost:8000/api/v1/orders/est" \
+    "http://localhost:8000/api/v1/orders/nihil" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"user_id\": 8920078.67135891,
-    \"customer_name\": \"geldhgfkmjkdjkaing\",
-    \"customer_email\": \"uywmuujvqtdomruyndxfcjgi\",
-    \"total_amount\": 179220,
-    \"delivery_notes\": \"laborum\",
+    \"user_id\": 364060744.9,
+    \"customer_name\": \"usssdwhvqcetsjinwuxejgq\",
+    \"customer_email\": \"gghakiweqbfmdjsprrjxnq\",
+    \"total_amount\": 69.127203153,
+    \"delivery_notes\": \"aperiam\",
     \"shipping_address\": {
-        \"address\": \"sequi\",
-        \"barangay\": \"ea\",
-        \"city\": \"facilis\",
-        \"zip_code\": \"nihil\",
-        \"contact_number\": \"odio\",
-        \"region\": \"voluptate\"
+        \"address\": \"consequuntur\",
+        \"barangay\": \"cumque\",
+        \"city\": \"perferendis\",
+        \"zip_code\": \"eos\",
+        \"contact_number\": \"officia\",
+        \"region\": \"possimus\"
     },
     \"order_products\": [
-        \"ipsam\"
+        \"fugiat\"
     ]
 }"
 </code></pre></div>
@@ -4028,7 +2311,7 @@ access-control-allow-origin: *
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/v1/orders/est"
+    "http://localhost:8000/api/v1/orders/nihil"
 );
 
 const headers = {
@@ -4037,21 +2320,21 @@ const headers = {
 };
 
 let body = {
-    "user_id": 8920078.67135891,
-    "customer_name": "geldhgfkmjkdjkaing",
-    "customer_email": "uywmuujvqtdomruyndxfcjgi",
-    "total_amount": 179220,
-    "delivery_notes": "laborum",
+    "user_id": 364060744.9,
+    "customer_name": "usssdwhvqcetsjinwuxejgq",
+    "customer_email": "gghakiweqbfmdjsprrjxnq",
+    "total_amount": 69.127203153,
+    "delivery_notes": "aperiam",
     "shipping_address": {
-        "address": "sequi",
-        "barangay": "ea",
-        "city": "facilis",
-        "zip_code": "nihil",
-        "contact_number": "odio",
-        "region": "voluptate"
+        "address": "consequuntur",
+        "barangay": "cumque",
+        "city": "perferendis",
+        "zip_code": "eos",
+        "contact_number": "officia",
+        "region": "possimus"
     },
     "order_products": [
-        "ipsam"
+        "fugiat"
     ]
 };
 
@@ -4114,7 +2397,7 @@ fetch(url, {
                 <input type="text"
                name="id"
                data-endpoint="PUTapi-v1-orders--id-"
-               value="est"
+               value="nihil"
                data-component="url" hidden>
     <br>
 <p>The ID of the order.</p>
@@ -4125,7 +2408,7 @@ fetch(url, {
                 <input type="number"
                name="user_id"
                data-endpoint="PUTapi-v1-orders--id-"
-               value="8920078.6713589"
+               value="364060744.9"
                data-component="body" hidden>
     <br>
 
@@ -4135,7 +2418,7 @@ fetch(url, {
                 <input type="text"
                name="customer_name"
                data-endpoint="PUTapi-v1-orders--id-"
-               value="geldhgfkmjkdjkaing"
+               value="usssdwhvqcetsjinwuxejgq"
                data-component="body" hidden>
     <br>
 <p>Must be at least 2 characters. Must not be greater than 32 characters.</p>
@@ -4145,7 +2428,7 @@ fetch(url, {
                 <input type="text"
                name="customer_email"
                data-endpoint="PUTapi-v1-orders--id-"
-               value="uywmuujvqtdomruyndxfcjgi"
+               value="gghakiweqbfmdjsprrjxnq"
                data-component="body" hidden>
     <br>
 <p>Must be a valid email address. Must be at least 2 characters. Must not be greater than 64 characters.</p>
@@ -4155,7 +2438,7 @@ fetch(url, {
                 <input type="number"
                name="total_amount"
                data-endpoint="PUTapi-v1-orders--id-"
-               value="179220"
+               value="69.127203153"
                data-component="body" hidden>
     <br>
 
@@ -4165,7 +2448,7 @@ fetch(url, {
                 <input type="text"
                name="delivery_notes"
                data-endpoint="PUTapi-v1-orders--id-"
-               value="laborum"
+               value="aperiam"
                data-component="body" hidden>
     <br>
 
@@ -4182,7 +2465,7 @@ fetch(url, {
                 <input type="text"
                name="shipping_address.address"
                data-endpoint="PUTapi-v1-orders--id-"
-               value="sequi"
+               value="consequuntur"
                data-component="body" hidden>
     <br>
 
@@ -4192,7 +2475,7 @@ fetch(url, {
                 <input type="text"
                name="shipping_address.barangay"
                data-endpoint="PUTapi-v1-orders--id-"
-               value="ea"
+               value="cumque"
                data-component="body" hidden>
     <br>
 
@@ -4202,7 +2485,7 @@ fetch(url, {
                 <input type="text"
                name="shipping_address.city"
                data-endpoint="PUTapi-v1-orders--id-"
-               value="facilis"
+               value="perferendis"
                data-component="body" hidden>
     <br>
 
@@ -4212,7 +2495,7 @@ fetch(url, {
                 <input type="text"
                name="shipping_address.zip_code"
                data-endpoint="PUTapi-v1-orders--id-"
-               value="nihil"
+               value="eos"
                data-component="body" hidden>
     <br>
 
@@ -4222,7 +2505,7 @@ fetch(url, {
                 <input type="text"
                name="shipping_address.contact_number"
                data-endpoint="PUTapi-v1-orders--id-"
-               value="odio"
+               value="officia"
                data-component="body" hidden>
     <br>
 
@@ -4232,7 +2515,7 @@ fetch(url, {
                 <input type="text"
                name="shipping_address.region"
                data-endpoint="PUTapi-v1-orders--id-"
-               value="voluptate"
+               value="possimus"
                data-component="body" hidden>
     <br>
 
@@ -4267,14 +2550,14 @@ fetch(url, {
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request DELETE \
-    "http://localhost:8000/api/v1/orders/dignissimos" \
+    "http://localhost:8000/api/v1/orders/explicabo" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/v1/orders/dignissimos"
+    "http://localhost:8000/api/v1/orders/explicabo"
 );
 
 const headers = {
@@ -4336,7 +2619,7 @@ fetch(url, {
                 <input type="text"
                name="id"
                data-endpoint="DELETEapi-v1-orders--id-"
-               value="dignissimos"
+               value="explicabo"
                data-component="url" hidden>
     <br>
 <p>The ID of the order.</p>
@@ -4389,7 +2672,7 @@ fetch(url, {
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 35
+x-ratelimit-remaining: 59
 access-control-allow-origin: *
  </code></pre>
         </details>         <pre>
