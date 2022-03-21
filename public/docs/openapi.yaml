@@ -5,7 +5,7 @@ info:
   version: 1.0.0
 servers:
   -
-    url: 'http://localhost'
+    url: 'http://localhost:8000'
 paths:
   /api/v1/auth/login:
     post:
@@ -39,11 +39,11 @@ paths:
                 email:
                   type: string
                   description: 'Must be a valid email address. Must be at least 3 characters. Must not be greater than 100 characters.'
-                  example: suyugcagcmllgnnsfbvptgbbxnmpqlkybrbcoljsxoyqzyfzpxykhvywrofpxdonruskilpxoaupyz
+                  example: ylhslvetcjhnmxdqkqauohetmlzbcmhlikrxwbtkgxplsdpdvnohxtmbrsypqlre
                 password:
                   type: string
                   description: 'Must be at least 8 characters. Must not be greater than 16 characters.'
-                  example: cqunymkibcwa
+                  example: i
               required:
                 - email
                 - password
@@ -80,23 +80,23 @@ paths:
                 name:
                   type: string
                   description: 'Must be at least 2 characters. Must not be greater than 32 characters.'
-                  example: lzqhruyfevevtmqubyievtpesm
+                  example: ppaqearluelowvnyumlt
                 gender:
                   type: string
                   description: ''
-                  example: omnis
+                  example: molestias
                 bday:
                   type: string
                   description: ''
-                  example: sed
+                  example: laudantium
                 email:
                   type: string
                   description: 'Must be a valid email address. Must be at least 3 characters. Must not be greater than 100 characters.'
-                  example: wmnxbyiujpsytmajwqqyghffpbpvymjcekl
+                  example: zvrodgouezpiyjejtjxzpvtfemuyazxefmolymffenurthudtlyuwefeloemgdpggjdybnzwfswlqyfbi
                 password:
                   type: string
                   description: 'Must be at least 8 characters. Must not be greater than 16 characters.'
-                  example: swkyiijjxngzhlry
+                  example: bedrcggsqm
                 address:
                   type: object
                   description: ''
@@ -105,72 +105,31 @@ paths:
                     address:
                       type: string
                       description: ''
-                      example: est
+                      example: quos
                     barangay:
                       type: string
                       description: ''
-                      example: facilis
+                      example: repellendus
                     city:
                       type: string
                       description: ''
-                      example: quibusdam
+                      example: doloremque
                     zip_code:
                       type: string
                       description: ''
-                      example: minus
+                      example: labore
                     contact_number:
                       type: string
                       description: ''
-                      example: modi
+                      example: dolor
                     region:
                       type: string
                       description: ''
-                      example: et
+                      example: quis
               required:
                 - name
                 - email
                 - password
-      security: []
-  /api/v1/health-check:
-    get:
-      summary: ''
-      description: ''
-      parameters:
-        -
-          in: header
-          name: Content-Type
-          description: ''
-          example: application/json
-          schema:
-            type: string
-        -
-          in: header
-          name: Accept
-          description: ''
-          example: application/json
-          schema:
-            type: string
-      responses:
-        200:
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: object
-                example:
-                  status: online
-                  services:
-                    mysql_db: online
-                properties:
-                  status:
-                    type: string
-                    example: online
-                  services:
-                    type: object
-                    example:
-                      mysql_db: online
-      tags:
-        - Endpoints
       security: []
   /api/v1/users:
     get:
@@ -373,7 +332,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the user.'
-        example: 9
+        example: 14
         required: true
         schema:
           type: integer
@@ -529,7 +488,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the product.'
-        example: nemo
+        example: molestias
         required: true
         schema:
           type: string
@@ -666,7 +625,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the product category.'
-        example: veritatis
+        example: quam
         required: true
         schema:
           type: string
@@ -2228,23 +2187,23 @@ paths:
                 user_id:
                   type: number
                   description: ''
-                  example: 1.864174886
+                  example: 176.223
                 customer_name:
                   type: string
                   description: 'Must be at least 2 characters. Must not be greater than 32 characters.'
-                  example: mkuwea
+                  example: foqziocw
                 customer_email:
                   type: string
                   description: 'Must be a valid email address. Must be at least 2 characters. Must not be greater than 64 characters.'
-                  example: tjafnxrpuo
+                  example: arnkpajtybrfwmgvpfhxvuawhynnhunykxmqvbowxutrjxztqrbztrexmhygosk
                 total_amount:
                   type: number
                   description: ''
-                  example: 1381298.0
+                  example: 1638.3
                 delivery_notes:
                   type: string
                   description: ''
-                  example: voluptatem
+                  example: molestiae
                 shipping_address:
                   type: object
                   description: ''
@@ -2253,32 +2212,32 @@ paths:
                     address:
                       type: string
                       description: ''
-                      example: dolorum
+                      example: perferendis
                     barangay:
                       type: string
                       description: ''
-                      example: omnis
+                      example: libero
                     city:
                       type: string
                       description: ''
-                      example: enim
+                      example: fuga
                     zip_code:
                       type: string
                       description: ''
-                      example: sint
+                      example: deserunt
                     contact_number:
                       type: string
                       description: ''
-                      example: et
+                      example: perspiciatis
                     region:
                       type: string
                       description: ''
-                      example: sit
+                      example: repellat
                 order_products:
                   type: array
                   description: ''
                   example:
-                    - veritatis
+                    - vitae
                   items:
                     type: string
               required:
@@ -2440,23 +2399,23 @@ paths:
                 user_id:
                   type: number
                   description: ''
-                  example: 763851.314
+                  example: 8920078.6713589
                 customer_name:
                   type: string
                   description: 'Must be at least 2 characters. Must not be greater than 32 characters.'
-                  example: cikhvlmwtpb
+                  example: geldhgfkmjkdjkaing
                 customer_email:
                   type: string
                   description: 'Must be a valid email address. Must be at least 2 characters. Must not be greater than 64 characters.'
-                  example: ztynixvmtmalevuehzpndsjowbh
+                  example: uywmuujvqtdomruyndxfcjgi
                 total_amount:
                   type: number
                   description: ''
-                  example: 660.43446
+                  example: 179220.0
                 delivery_notes:
                   type: string
                   description: ''
-                  example: qui
+                  example: laborum
                 shipping_address:
                   type: object
                   description: ''
@@ -2465,32 +2424,32 @@ paths:
                     address:
                       type: string
                       description: ''
-                      example: dolores
+                      example: sequi
                     barangay:
                       type: string
                       description: ''
-                      example: ut
+                      example: ea
                     city:
                       type: string
                       description: ''
-                      example: iusto
+                      example: facilis
                     zip_code:
                       type: string
                       description: ''
-                      example: ut
+                      example: nihil
                     contact_number:
                       type: string
                       description: ''
-                      example: fugiat
+                      example: odio
                     region:
                       type: string
                       description: ''
-                      example: non
+                      example: voluptate
                 order_products:
                   type: array
                   description: ''
                   example:
-                    - qui
+                    - ipsam
                   items:
                     type: string
               required:
@@ -2523,10 +2482,51 @@ paths:
         in: path
         name: id
         description: 'The ID of the order.'
-        example: dolor
+        example: provident
         required: true
         schema:
           type: string
+  /api/v1/health-check:
+    get:
+      summary: ''
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  status: online
+                  services:
+                    mysql_db: online
+                properties:
+                  status:
+                    type: string
+                    example: online
+                  services:
+                    type: object
+                    example:
+                      mysql_db: online
+      tags:
+        - Endpoints
+      security: []
 tags:
   -
     name: Endpoints

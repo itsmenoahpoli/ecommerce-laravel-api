@@ -13,10 +13,6 @@ class CreateOrderShippingAddressesTable extends Migration
      */
     public function up()
     {
-        Schema::table('orders', function (Blueprint $table) {
-            $table->dropColumn(['address', 'city', 'zip_code', 'contact_number', 'region', 'country']);
-        });
-
         Schema::create('order_shipping_addresses', function (Blueprint $table) {
             $table->id();
             $table->foreignId('order_id')->constrained('orders')->cascadeOnDelete();

@@ -20,14 +20,14 @@ endpoints:
         name: email
         description: 'Must be a valid email address. Must be at least 3 characters. Must not be greater than 100 characters.'
         required: true
-        example: suyugcagcmllgnnsfbvptgbbxnmpqlkybrbcoljsxoyqzyfzpxykhvywrofpxdonruskilpxoaupyz
+        example: ylhslvetcjhnmxdqkqauohetmlzbcmhlikrxwbtkgxplsdpdvnohxtmbrsypqlre
         type: string
         custom: []
       password:
         name: password
         description: 'Must be at least 8 characters. Must not be greater than 16 characters.'
         required: true
-        example: cqunymkibcwa
+        example: i
         type: string
         custom: []
     responses: []
@@ -51,35 +51,35 @@ endpoints:
         name: name
         description: 'Must be at least 2 characters. Must not be greater than 32 characters.'
         required: true
-        example: lzqhruyfevevtmqubyievtpesm
+        example: ppaqearluelowvnyumlt
         type: string
         custom: []
       gender:
         name: gender
         description: ''
         required: false
-        example: omnis
+        example: molestias
         type: string
         custom: []
       bday:
         name: bday
         description: ''
         required: false
-        example: sed
+        example: laudantium
         type: string
         custom: []
       email:
         name: email
         description: 'Must be a valid email address. Must be at least 3 characters. Must not be greater than 100 characters.'
         required: true
-        example: wmnxbyiujpsytmajwqqyghffpbpvymjcekl
+        example: zvrodgouezpiyjejtjxzpvtfemuyazxefmolymffenurthudtlyuwefeloemgdpggjdybnzwfswlqyfbi
         type: string
         custom: []
       password:
         name: password
         description: 'Must be at least 8 characters. Must not be greater than 16 characters.'
         required: true
-        example: swkyiijjxngzhlry
+        example: bedrcggsqm
         type: string
         custom: []
       address:
@@ -93,72 +93,45 @@ endpoints:
         name: address.address
         description: ''
         required: true
-        example: est
+        example: quos
         type: string
         custom: []
       address.barangay:
         name: address.barangay
         description: ''
         required: true
-        example: facilis
+        example: repellendus
         type: string
         custom: []
       address.city:
         name: address.city
         description: ''
         required: true
-        example: quibusdam
+        example: doloremque
         type: string
         custom: []
       address.zip_code:
         name: address.zip_code
         description: ''
         required: true
-        example: minus
+        example: labore
         type: string
         custom: []
       address.contact_number:
         name: address.contact_number
         description: ''
         required: true
-        example: modi
+        example: dolor
         type: string
         custom: []
       address.region:
         name: address.region
         description: ''
         required: true
-        example: et
+        example: quis
         type: string
         custom: []
     responses: []
-    responseFields: []
-  -
-    httpMethods:
-      - GET
-    uri: api/v1/health-check
-    metadata:
-      title: ''
-      description: ''
-      authenticated: false
-      custom: []
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters: []
-    queryParameters: []
-    bodyParameters: []
-    responses:
-      -
-        status: 200
-        content: '{"status":"online","services":{"mysql_db":"online"}}'
-        headers:
-          cache-control: 'no-cache, private'
-          content-type: application/json
-          x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '59'
-          access-control-allow-origin: '*'
-        description: null
     responseFields: []
   -
     httpMethods:
@@ -183,7 +156,7 @@ endpoints:
           cache-control: 'no-cache, private'
           content-type: application/json
           x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '58'
+          x-ratelimit-remaining: '34'
           access-control-allow-origin: '*'
         description: null
     responseFields: []
@@ -221,7 +194,7 @@ endpoints:
         name: id
         description: 'The ID of the user.'
         required: true
-        example: 9
+        example: 14
         type: integer
         custom: []
     queryParameters: []
@@ -234,7 +207,7 @@ endpoints:
           cache-control: 'no-cache, private'
           content-type: application/json
           x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '57'
+          x-ratelimit-remaining: '33'
           access-control-allow-origin: '*'
         description: null
     responseFields: []
@@ -256,7 +229,7 @@ endpoints:
         name: id
         description: 'The ID of the user.'
         required: true
-        example: 7
+        example: 16
         type: integer
         custom: []
     queryParameters: []
@@ -286,7 +259,7 @@ endpoints:
           cache-control: 'no-cache, private'
           content-type: application/json
           x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '56'
+          x-ratelimit-remaining: '32'
           access-control-allow-origin: '*'
         description: null
     responseFields: []
@@ -324,7 +297,7 @@ endpoints:
         name: id
         description: 'The ID of the product.'
         required: true
-        example: nemo
+        example: molestias
         type: string
         custom: []
     queryParameters: []
@@ -337,7 +310,7 @@ endpoints:
           cache-control: 'no-cache, private'
           content-type: application/json
           x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '55'
+          x-ratelimit-remaining: '31'
           access-control-allow-origin: '*'
         description: null
     responseFields: []
@@ -359,7 +332,7 @@ endpoints:
         name: id
         description: 'The ID of the product.'
         required: true
-        example: est
+        example: qui
         type: string
         custom: []
     queryParameters: []
@@ -383,7 +356,7 @@ endpoints:
         name: id
         description: 'The ID of the product.'
         required: true
-        example: quod
+        example: in
         type: string
         custom: []
     queryParameters: []
@@ -413,7 +386,7 @@ endpoints:
           cache-control: 'no-cache, private'
           content-type: application/json
           x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '54'
+          x-ratelimit-remaining: '30'
           access-control-allow-origin: '*'
         description: null
     responseFields: []
@@ -451,7 +424,7 @@ endpoints:
         name: id
         description: 'The ID of the product category.'
         required: true
-        example: veritatis
+        example: quam
         type: string
         custom: []
     queryParameters: []
@@ -464,7 +437,7 @@ endpoints:
           cache-control: 'no-cache, private'
           content-type: application/json
           x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '53'
+          x-ratelimit-remaining: '29'
           access-control-allow-origin: '*'
         description: null
     responseFields: []
@@ -486,7 +459,7 @@ endpoints:
         name: id
         description: 'The ID of the product category.'
         required: true
-        example: at
+        example: ad
         type: string
         custom: []
     queryParameters: []
@@ -510,7 +483,7 @@ endpoints:
         name: id
         description: 'The ID of the product category.'
         required: true
-        example: est
+        example: quaerat
         type: string
         custom: []
     queryParameters: []
@@ -540,7 +513,7 @@ endpoints:
           cache-control: 'no-cache, private'
           content-type: application/json
           x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '52'
+          x-ratelimit-remaining: '28'
           access-control-allow-origin: '*'
         description: null
     responseFields: []
@@ -563,35 +536,35 @@ endpoints:
         name: user_id
         description: ''
         required: false
-        example: 1.864174886
+        example: 176.223
         type: number
         custom: []
       customer_name:
         name: customer_name
         description: 'Must be at least 2 characters. Must not be greater than 32 characters.'
         required: false
-        example: mkuwea
+        example: foqziocw
         type: string
         custom: []
       customer_email:
         name: customer_email
         description: 'Must be a valid email address. Must be at least 2 characters. Must not be greater than 64 characters.'
         required: false
-        example: tjafnxrpuo
+        example: arnkpajtybrfwmgvpfhxvuawhynnhunykxmqvbowxutrjxztqrbztrexmhygosk
         type: string
         custom: []
       total_amount:
         name: total_amount
         description: ''
         required: true
-        example: 1381298.0
+        example: 1638.3
         type: number
         custom: []
       delivery_notes:
         name: delivery_notes
         description: ''
         required: false
-        example: voluptatem
+        example: molestiae
         type: string
         custom: []
       shipping_address:
@@ -605,42 +578,42 @@ endpoints:
         name: shipping_address.address
         description: ''
         required: false
-        example: dolorum
+        example: perferendis
         type: string
         custom: []
       shipping_address.barangay:
         name: shipping_address.barangay
         description: ''
         required: false
-        example: omnis
+        example: libero
         type: string
         custom: []
       shipping_address.city:
         name: shipping_address.city
         description: ''
         required: false
-        example: enim
+        example: fuga
         type: string
         custom: []
       shipping_address.zip_code:
         name: shipping_address.zip_code
         description: ''
         required: false
-        example: sint
+        example: deserunt
         type: string
         custom: []
       shipping_address.contact_number:
         name: shipping_address.contact_number
         description: ''
         required: false
-        example: et
+        example: perspiciatis
         type: string
         custom: []
       shipping_address.region:
         name: shipping_address.region
         description: ''
         required: false
-        example: sit
+        example: repellat
         type: string
         custom: []
       order_products:
@@ -648,7 +621,7 @@ endpoints:
         description: ''
         required: false
         example:
-          - veritatis
+          - vitae
         type: 'string[]'
         custom: []
     responses: []
@@ -670,7 +643,7 @@ endpoints:
         name: id
         description: 'The ID of the order.'
         required: true
-        example: dolor
+        example: provident
         type: string
         custom: []
     queryParameters: []
@@ -683,7 +656,7 @@ endpoints:
           cache-control: 'no-cache, private'
           content-type: application/json
           x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '51'
+          x-ratelimit-remaining: '27'
           access-control-allow-origin: '*'
         description: null
     responseFields: []
@@ -705,7 +678,7 @@ endpoints:
         name: id
         description: 'The ID of the order.'
         required: true
-        example: consequuntur
+        example: est
         type: string
         custom: []
     queryParameters: []
@@ -714,35 +687,35 @@ endpoints:
         name: user_id
         description: ''
         required: false
-        example: 763851.314
+        example: 8920078.6713589
         type: number
         custom: []
       customer_name:
         name: customer_name
         description: 'Must be at least 2 characters. Must not be greater than 32 characters.'
         required: false
-        example: cikhvlmwtpb
+        example: geldhgfkmjkdjkaing
         type: string
         custom: []
       customer_email:
         name: customer_email
         description: 'Must be a valid email address. Must be at least 2 characters. Must not be greater than 64 characters.'
         required: false
-        example: ztynixvmtmalevuehzpndsjowbh
+        example: uywmuujvqtdomruyndxfcjgi
         type: string
         custom: []
       total_amount:
         name: total_amount
         description: ''
         required: true
-        example: 660.43446
+        example: 179220.0
         type: number
         custom: []
       delivery_notes:
         name: delivery_notes
         description: ''
         required: false
-        example: qui
+        example: laborum
         type: string
         custom: []
       shipping_address:
@@ -756,42 +729,42 @@ endpoints:
         name: shipping_address.address
         description: ''
         required: false
-        example: dolores
+        example: sequi
         type: string
         custom: []
       shipping_address.barangay:
         name: shipping_address.barangay
         description: ''
         required: false
-        example: ut
+        example: ea
         type: string
         custom: []
       shipping_address.city:
         name: shipping_address.city
         description: ''
         required: false
-        example: iusto
+        example: facilis
         type: string
         custom: []
       shipping_address.zip_code:
         name: shipping_address.zip_code
         description: ''
         required: false
-        example: ut
+        example: nihil
         type: string
         custom: []
       shipping_address.contact_number:
         name: shipping_address.contact_number
         description: ''
         required: false
-        example: fugiat
+        example: odio
         type: string
         custom: []
       shipping_address.region:
         name: shipping_address.region
         description: ''
         required: false
-        example: non
+        example: voluptate
         type: string
         custom: []
       order_products:
@@ -799,7 +772,7 @@ endpoints:
         description: ''
         required: false
         example:
-          - qui
+          - ipsam
         type: 'string[]'
         custom: []
     responses: []
@@ -821,10 +794,37 @@ endpoints:
         name: id
         description: 'The ID of the order.'
         required: true
-        example: deserunt
+        example: dignissimos
         type: string
         custom: []
     queryParameters: []
     bodyParameters: []
     responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: api/v1/health-check
+    metadata:
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"status":"online","services":{"mysql_db":"online"}}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          x-ratelimit-limit: '60'
+          x-ratelimit-remaining: '35'
+          access-control-allow-origin: '*'
+        description: null
     responseFields: []
