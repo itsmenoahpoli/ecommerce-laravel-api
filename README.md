@@ -6,7 +6,7 @@ Made with Laravel 8.83.5
 
 ```bash
 
-git clone https://bitbucket.org/itsmenoahpoli/ecommerce-laravel-api/src/master/
+git clone https://github.com/itsmenoahpoli/ecommerce-laravel-api/
 
 cd ecommerce-laravel-api
 
