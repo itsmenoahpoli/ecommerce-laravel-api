@@ -12,6 +12,8 @@ cd ecommerce-laravel-api
 
 git checkout develop
 
+git pull
+
 composer install
 
 php artisan key:generate
